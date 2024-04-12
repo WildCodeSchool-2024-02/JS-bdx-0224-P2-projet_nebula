@@ -1,0 +1,45 @@
+@media screen and (min-width: 320px) {
+}
+footer {
+  background: rgba(2, 64, 146, 0.2);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+
+  section {
+    display: flex;
+    gap: 1rem;
+    img {
+      width: 1rem;
+    }
+  }
+
+  p {
+    color: white;
+    font-size: 0.3rem;
+    font-family: Varela Round;
+    font-style: italic;
+    opacity: 50%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  footer {
+    section {
+      img {
+        width: 1.8rem;
+      }
+    }
+    p {
+      font-size: 0.6rem;
+      text-align: center;
+    }
+  }
+}
