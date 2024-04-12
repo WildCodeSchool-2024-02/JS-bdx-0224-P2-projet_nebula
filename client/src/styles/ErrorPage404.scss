@@ -1,0 +1,36 @@
+body {
+  background-image: url(../assets/images/wormhole.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.error404 {
+  color: white;
+  font-size: xx-large;
+  text-align: center;
+  background-color: rgba(2, 64, 146, 0.2);
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(4px);
+  box-shadow: 10px 10px 10px rgba(30, 30, 30, 0.5);
+  padding: 10px;
+  border-radius: 20px;
+}
+h2 {
+  margin: 10px;
+}
+.link {
+  text-decoration: none;
+  color: white;
+  margin: 10px;
+}
