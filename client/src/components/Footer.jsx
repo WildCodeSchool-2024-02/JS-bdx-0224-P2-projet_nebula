@@ -1,10 +1,10 @@
-import ButtonContact from "./ButtonContact";
+import Links from "./Links";
 import "../styles/Footer.scss";
 
 function Footer() {
   return (
     <footer>
-      <ButtonContact />
+      <Links />
       <section>
         <a href="https://discord.com/">
           <img

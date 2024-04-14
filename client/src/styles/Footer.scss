@@ -1,0 +1,32 @@
+@media screen and (min-width: 320px) {
+}
+footer {
+  background: rgba(2, 64, 146, 0.2);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+
+  section {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    a {
+      img {
+        width: 1.5rem;
+      }
+    }
+  }
+
+  p {
+    font-family: Varela Round;
+    font-size: 0.3rem;
+    opacity: 50%;
+    text-align: center;
+    color: white;
+    margin: 0rem 1rem 0.5rem 1rem;
+  }
+}
