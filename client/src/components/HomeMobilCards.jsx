@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
-import "../styles/AccueilMobilCards.scss";
+import Links from "./Links";
+import "../styles/HomeMobilCards.scss";
 
-function AccueilMobilCards({ title, imageLeft, imageMid, imageRight }) {
+function HomeMobilCards({ title, imageLeft, imageMid, imageRight }) {
   return (
     <>
       <h2 className="sectionTitle">{title}</h2>
@@ -16,16 +17,16 @@ function AccueilMobilCards({ title, imageLeft, imageMid, imageRight }) {
           <h2 id="secondTitle">Xenaris</h2>
           <h2 id="thirdTitle">Astrolania</h2>
         </hgroup>
-        <a href="null">En savoir plus</a>
+        <Links linkName="En savoir plus" />
       </section>
     </>
   );
 }
 
-AccueilMobilCards.propTypes = {
+HomeMobilCards.propTypes = {
   title: PropTypes.string.isRequired,
   imageLeft: PropTypes.string.isRequired,
   imageMid: PropTypes.string.isRequired,
   imageRight: PropTypes.string.isRequired,
 };
-export default AccueilMobilCards;
+export default HomeMobilCards;

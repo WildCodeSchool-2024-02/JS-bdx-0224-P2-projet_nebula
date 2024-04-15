@@ -1,10 +1,15 @@
 import "../styles/Links.scss";
+import PropTypes from "prop-types";
 
-function Links() {
+function Links({ linkName }) {
   return (
     <a className="button" href="null">
-      Contactez-nous
+      {linkName}
     </a>
   );
 }
+Links.propTypes = {
+  linkName: PropTypes.string.isRequired,
+};
+
 export default Links;
