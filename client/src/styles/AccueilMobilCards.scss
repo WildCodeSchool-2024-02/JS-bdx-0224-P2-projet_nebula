@@ -1,0 +1,76 @@
+body {
+  background-image: url(/src/assets/images/w`);
+  background-repeat: no-repeat;
+  background-size: 20rem;
+  background-color: #011427;
+}
+
+.sectionTitle {
+  font-family: Varela Round;
+  font-size: 1.5rem;
+  text-align: center;
+  color: white;
+}
+
+.Cards {
+  display: flex;
+  flex-direction: column;
+  background: rgba(2, 64, 146, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 1.7rem;
+  width: 17rem;
+  height: 14rem;
+  align-items: center;
+  margin-left: 1.5rem;
+
+  figcaption {
+    display: flex;
+    flex-direction: row;
+
+    img {
+      width: 5.65rem;
+    }
+
+    #left {
+      border-radius: 1.7rem 0 0 0;
+    }
+
+    #mid {
+      border-left: solid 0.1rem white;
+      border-right: solid 0.1rem white;
+    }
+
+    #right {
+      border-radius: 0 1.7rem 0 0;
+    }
+  }
+
+  hgroup {
+    display: flex;
+    flex-direction: row;
+    font-family: Varela Round;
+    font-size: 0.6rem;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    color: white;
+
+    #secondTitle {
+      margin-left: 2rem;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    background-color: #a05cf9;
+    width: 7rem;
+    text-align: center;
+    font-family: Varela Round;
+    font-size: 0.8rem;
+    border-radius: 3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    box-shadow: 0 0 10px #b580fb;
+  }
+}

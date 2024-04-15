@@ -3,3 +3,13 @@
   margin: 0;
   padding: 0;
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+footer {
+  margin-top: 10rem;
+}
