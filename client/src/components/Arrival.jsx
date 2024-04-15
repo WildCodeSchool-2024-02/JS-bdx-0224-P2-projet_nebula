@@ -1,21 +1,20 @@
-import { useState } from "react"
-
+import { useState } from "react";
 
 export default function Arrival() {
+  const [selectedArrival, setSelectedArrival] = useState("");
 
-    const[selectedArrival, SetSelectedArrival] = useState('')
-    
-    const handleArrival = (e) => {
-        SetSelectedArrival(e.target.value)
-    }
-    return (
-        <>
-            <label htmlFor="arrival">Arrivée à :</label>
-            <input 
-            type="text"
-            value={selectedArrival}
-            onChange={handleArrival}
-            />
-        </>
-    )
+  const handleArrival = (e) => {
+    setSelectedArrival(e.target.value);
+  };
+  return (
+    <>
+      <label htmlFor="arrival">Arrivée à :</label>
+      <input
+        id="arrival"
+        type="text"
+        value={selectedArrival}
+        onChange={handleArrival}
+      />
+    </>
+  );
 }
