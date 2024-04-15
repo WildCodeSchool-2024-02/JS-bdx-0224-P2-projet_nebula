@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function DateSelect() {
-    const [DepartureDate, setDepartureDate] = useState('');
+    const [departureDate, setDepartureDate] = useState('');
     const handleDateChange = (e) => {
         const selectedDate = e.target.value;
         setDepartureDate(selectedDate)
@@ -9,9 +9,10 @@ export default function DateSelect() {
     return (
         <>
             <label htmlFor="departureDate">Date de départ :</label>
-            <input 
+            <input
+            id="departureDate"
             type="date"
-            value={DepartureDate}
+            value={departureDate}
             onChange={handleDateChange}
             />
         </>
