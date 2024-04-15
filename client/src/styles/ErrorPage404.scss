@@ -1,18 +1,20 @@
+$bodyFont: "Varela Round", sans-serif;
+$headerFont: "Tomorrow", sans-serif;
+$whiteColor: #fff8f0;
+
 body {
   background-image: url(../assets/images/wormhole.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
   justify-content: center;
+  align-items: center;
   min-height: 100vh;
 }
 
 .error404 {
-  color: white;
+  color: $whiteColor;
   font-size: xx-large;
   text-align: center;
   background-color: rgba(2, 64, 146, 0.2);
@@ -23,14 +25,25 @@ body {
   );
   backdrop-filter: blur(4px);
   box-shadow: 10px 10px 10px rgba(30, 30, 30, 0.5);
-  padding: 10px;
+  width: fit-content;
+  padding: 1rem;
   border-radius: 20px;
 }
-h2 {
-  margin: 10px;
+.titleError404 {
+  font-family: $headerFont;
+  margin: 2rem;
+  padding: 0.5rem;
+}
+.textError404 {
+  font-family: $bodyFont;
+  color: $whiteColor;
+  padding: 1rem;
+  margin: 1rem;
 }
 .link {
+  font-family: $bodyFont;
   text-decoration: none;
-  color: white;
-  margin: 10px;
+  color: $whiteColor;
+  padding: 1rem;
+  margin: 1rem;
 }
