@@ -9,7 +9,7 @@ function DropdownRoundTrip() {
   };
 
   return (
-    <section className="dropDownRoundTripSection">
+    <>
       <label className="dropDownRoundTripLabel" htmlFor="select-round-trip">
         Type de voyage :
       </label>
@@ -23,7 +23,7 @@ function DropdownRoundTrip() {
         <option value="oneWay">Aller simple</option>
         <option value="roundTrip">Aller-retour</option>
       </select>
-    </section>
+      </>
   );
 }
 
