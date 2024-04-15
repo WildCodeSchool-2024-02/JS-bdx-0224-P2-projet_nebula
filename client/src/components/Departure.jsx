@@ -3,15 +3,16 @@ import { useState } from "react"
 
 export default function Departure() {
 
-    const[selectedDeparture, SetSelectedDeparture] = useState('')
+    const[selectedDeparture, setSelectedDeparture] = useState('')
     
     const handleDeparture = (e) => {
-        SetSelectedDeparture(e.target.value)
+        setSelectedDeparture(e.target.value)
     }
     return (
         <>
-            <label htmlFor="Departure">Arrivée à :</label>
-            <input 
+            <label htmlFor="departure">Arrivée à :</label>
+            <input
+            id='departure'
             type="text"
             value={selectedDeparture}
             onChange={handleDeparture}
