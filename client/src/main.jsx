@@ -7,7 +7,7 @@ import App from "./App"
 
 import Home from "./pages/Home";
 import Planet from "./pages/Planet";
-
+import OurDestinations from "./pages/OurDestinations";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +21,10 @@ const router = createBrowserRouter([
         path : "/planet",
         element: <Planet/>
       },
+      {
+        path:"/ourDestinations",
+        element:<OurDestinations/>
+      }
     ],
   },
 ]);
