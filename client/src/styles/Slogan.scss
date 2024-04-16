@@ -1,0 +1,32 @@
+.slogan {
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+  margin-left: 1rem;
+
+  h4 {
+    font-size: 1.5rem;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.212);
+  }
+  h3 {
+    font-size: 2rem;
+    color: #9548f9;
+    text-shadow: 0 0 10px #9548f9cd;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .slogan {
+    margin-left: 0;
+    text-align: center;
+    margin-bottom: 2rem;
+
+    h3 {
+      padding-bottom: 1rem;
+      font-size: 3rem;
+    }
+    h4 {
+      padding-bottom: 1rem;
+      font-size: 2rem;
+    }
+  }
+}

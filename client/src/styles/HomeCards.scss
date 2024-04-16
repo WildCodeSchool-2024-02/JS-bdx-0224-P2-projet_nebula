@@ -1,0 +1,108 @@
+.sectionTitle {
+  font-family: Varela Round;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.allCards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .Cards {
+    display: flex;
+    flex-direction: column;
+    background: rgba(2, 64, 146, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 1.7rem;
+    width: 17rem;
+    height: 14rem;
+    align-items: center;
+
+    figcaption {
+      display: flex;
+      flex-direction: row;
+
+      img {
+        width: 5.65rem;
+      }
+
+      #left {
+        border-radius: 1.7rem 0 0 0;
+      }
+
+      #mid {
+        border-left: solid 0.1rem white;
+        border-right: solid 0.1rem white;
+      }
+
+      #right {
+        border-radius: 0 1.7rem 0 0;
+      }
+    }
+
+    hgroup {
+      display: flex;
+      flex-direction: row;
+      font-family: Varela Round;
+      font-size: 0.8rem;
+      gap: 4rem;
+      margin-top: 0.5rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      background-color: #a05cf9;
+      width: 7rem;
+      text-align: center;
+      font-family: Varela Round;
+      font-size: 0.8rem;
+      border-radius: 3rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      box-shadow: 0 0 10px #b580fb;
+    }
+
+    a:hover {
+      background-color: #5907c4;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .sectionTitle {
+    font-family: Varela Round;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .allCards {
+    .Cards {
+      width: 30rem;
+      height: 25rem;
+
+      figcaption {
+        img {
+          width: 10rem;
+        }
+      }
+      hgroup {
+        font-size: 1.3rem;
+        gap: 6rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      a {
+        width: 10rem;
+        padding-top: 0.6rem;
+        padding-bottom: 0.6rem;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}

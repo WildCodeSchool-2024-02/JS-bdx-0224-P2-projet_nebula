@@ -1,15 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela+Round&display=swap");
+
+$whiteColor: #fff8f0;
+$blackColor: #011427;
+$headerFont: "Tomorrow", sans-serif;
+$bodyFont: "Varela Round", sans-serif;
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
-main {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
+body {
+  background-image: url("/src/assets/images/ImageFondMobil.png");
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  background-color: $blackColor;
 }
 
-footer {
-  margin-top: 10rem;
+h1,
+h2 {
+  font-family: $headerFont;
+  font-weight: 400;
+  color: $whiteColor;
+}
+
+h3,
+h4,
+h5,
+p,
+li,
+a,
+button {
+  font-family: $bodyFont;
+  color: $whiteColor;
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    background-image: url("/src/assets/images/ImageFondDesk.png");
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    background-color: $blackColor;
+  }
 }

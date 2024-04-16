@@ -1,15 +1,17 @@
+import { Link } from "react-router-dom";
 import "../styles/Links.scss";
 import PropTypes from "prop-types";
 
-function Links({ linkName }) {
+function Links({ linkName, routeLink }) {
   return (
-    <a className="button" href="null">
+    <Link to = {routeLink} className="button">
       {linkName}
-    </a>
+    </Link>
   );
 }
 Links.propTypes = {
   linkName: PropTypes.string.isRequired,
+  routeLink: PropTypes.string.isRequired,
 };
 
 export default Links;

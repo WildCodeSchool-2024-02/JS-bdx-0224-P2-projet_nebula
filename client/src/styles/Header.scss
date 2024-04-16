@@ -1,0 +1,52 @@
+.titleSlider {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  background-image: url(/src/assets/images/carlos-kenobi-Knla5kYvsRE-unsplash.jpg);
+  background-size: cover;
+  height: 10rem;
+  background-repeat: no-repeat;
+
+  h2 {
+    font-family: Varela Round;
+    margin-top: 2rem;
+    text-shadow: 0 0 15px black;
+  }
+  h1 {
+    font-family: Tomorrow;
+    text-shadow: 0 0 15px black;
+  }
+
+  a {
+    width: 5rem;
+    align-self: flex-end;
+    margin-right: 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .titleSlider {
+    background-image: url(/src/assets/images/carlos-kenobi-Knla5kYvsRE-unsplash.jpg);
+    background-position: 0 -10rem;
+    background-size: cover;
+    height: 25rem;
+
+    h2 {
+      margin-top: 5rem;
+      font-size: 4rem;
+    }
+    h1 {
+      font-size: 6rem;
+    }
+    a {
+      width: 7rem;
+      padding-top: 0.7rem;
+      padding-bottom: 0.7rem;
+      font-size: 1.1rem;
+      align-self: center;
+      margin-top: 3rem;
+      margin-right: 0;
+    }
+  }
+}
