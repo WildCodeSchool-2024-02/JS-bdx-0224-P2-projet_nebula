@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import "../styles/NavBar.scss";
 
@@ -15,18 +14,10 @@ function NavBar() {
           src="/src/assets/images/rectangle-Nav.svg"
           alt=""
         />
-        <img
-         
-          src="/src/assets/images/rectangle-Nav.svg"
-          alt=""
-        />
-        <img
-          
-          src="/src/assets/images/rectangle-Nav.svg"
-          alt=""
-        />
+        <img src="/src/assets/images/rectangle-Nav.svg" alt="" />
+        <img src="/src/assets/images/rectangle-Nav.svg" alt="" />
       </section>
-      <section >
+      <section>
         <Link to="/">Accueil</Link>
         <Link to="/ourDestinations">Nos destinations</Link>
         <Link to="/trafficInfo">Info traffic</Link>

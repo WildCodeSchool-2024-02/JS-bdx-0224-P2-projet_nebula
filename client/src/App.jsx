@@ -3,16 +3,15 @@ import "./styles/app.scss";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 
-
 function App() {
   return (
     <>
-    <NavBar/>
-<Outlet/>
-<footer>
-<Footer/>
-</footer>
-</>
+      <NavBar />
+      <Outlet />
+      <footer>
+        <Footer />
+      </footer>
+    </>
   );
 }
 

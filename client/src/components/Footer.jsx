@@ -25,7 +25,7 @@ function Footer() {
         droit d'auteur et des droits de propriété intellectuelle, et entraîner
         des poursuites judiciaires.
       </p>
-      </>
+    </>
   );
 }
 export default Footer;

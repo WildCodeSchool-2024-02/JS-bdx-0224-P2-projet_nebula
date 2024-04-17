@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 function Links({ linkName, routeLink }) {
   return (
-    <Link to = {routeLink} className="button">
+    <Link to={routeLink} className="button">
       {linkName}
     </Link>
   );
