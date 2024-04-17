@@ -3,7 +3,7 @@ import "../styles/Footer.scss";
 
 function Footer() {
   return (
-    <footer>
+    <>
       <Links linkName="Nous contacter" />
       <section>
         <a href="https://discord.com/">
@@ -25,7 +25,7 @@ function Footer() {
         droit d'auteur et des droits de propriété intellectuelle, et entraîner
         des poursuites judiciaires.
       </p>
-    </footer>
+      </>
   );
 }
 export default Footer;

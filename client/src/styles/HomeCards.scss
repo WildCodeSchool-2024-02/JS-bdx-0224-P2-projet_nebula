@@ -44,7 +44,6 @@
     hgroup {
       display: flex;
       flex-direction: row;
-      font-family: Varela Round;
       font-size: 0.8rem;
       gap: 4rem;
       margin-top: 0.5rem;
@@ -52,11 +51,9 @@
 
     a {
       text-decoration: none;
-      color: white;
       background-color: #a05cf9;
       width: 7rem;
       text-align: center;
-      font-family: Varela Round;
       font-size: 0.8rem;
       border-radius: 3rem;
       padding-top: 0.5rem;
@@ -72,7 +69,6 @@
 
 @media screen and (min-width: 992px) {
   .sectionTitle {
-    font-family: Varela Round;
     font-size: 2rem;
     text-align: center;
     margin-top: 2rem;

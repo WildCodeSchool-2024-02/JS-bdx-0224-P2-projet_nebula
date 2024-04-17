@@ -14,7 +14,7 @@ function HomeCards({
   return (
     <>
       <h2 className="sectionTitle">{sectionTitle}</h2>
-      <section className="allCards">
+      <article className="allCards">
         <section className="Cards">
           <figcaption>
             <img id="left" src={imageLeft} alt="" />
@@ -28,7 +28,7 @@ function HomeCards({
           </hgroup>
           <Links linkName="En savoir plus" />
         </section>
-      </section>
+      </article>
     </>
   );
 }

@@ -39,9 +39,5 @@ button {
 @media screen and (min-width: 992px) {
   body {
     background-image: url("/src/assets/images/ImageFondDesk.png");
-    background-size: cover;
-    background-position: bottom;
-    background-attachment: fixed;
-    background-color: $blackColor;
   }
 }

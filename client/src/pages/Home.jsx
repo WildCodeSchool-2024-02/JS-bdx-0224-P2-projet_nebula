@@ -1,6 +1,5 @@
-import Footer from "../components/Footer";
+import TopPlanet from "../components/TopPlanet";
 import HomeCards from "../components/HomeCards";
-import Header from "../components/Header";
 import Slogan from "../components/Slogan";
 import "../styles/app.scss";
 
@@ -8,9 +7,7 @@ function Home() {
   return (
     <>
       <header>
-        <Header 
-        introPlanet="Décollez pour"
-        planetName="Neptune" />
+        <TopPlanet introPlanet="Décollez pour" planetName="Neptune" />
       </header>
       <HomeCards
         sectionTitle="Populaires"
@@ -21,7 +18,6 @@ function Home() {
         imageMid="/src/assets/images/pawel-czerwinski-fAd4u_HTGGY-unsplash (1).jpg"
         imageRight="/src/assets/images/solen-feyissa-AI9Z8vNLcKc-unsplash.jpg"
       />
-
       <HomeCards
         sectionTitle="Proches de vous"
         planetTitleLeft="Virtus"
@@ -31,9 +27,7 @@ function Home() {
         imageMid="/src/assets/images/pawel-czerwinski-fAd4u_HTGGY-unsplash (1).jpg"
         imageRight="/src/assets/images/solen-feyissa-AI9Z8vNLcKc-unsplash.jpg"
       />
-
       <Slogan />
-      <Footer />
     </>
   );
 }
