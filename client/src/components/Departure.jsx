@@ -1,22 +1,42 @@
-import { useState } from "react"
+import { useState } from "react";
+import PropTypes from "prop-types";
 
+export default function Departure({ handleDepartureSelect, suggestions }) {
+  const [inputValue, setInputValue] = useState("");
 
-export default function Departure() {
+  const handleSelectSuggestion = (event) => {
+    const selectedValue = event.target.value;
+    setInputValue(selectedValue);
+    handleDepartureSelect(selectedValue);
+  };
 
-    const[selectedDeparture, setSelectedDeparture] = useState('')
-    
-    const handleDeparture = (e) => {
-        setSelectedDeparture(e.target.value)
-    }
-    return (
-        <>
-            <label htmlFor="departure">Arrivée à :</label>
-            <input
-            id='departure'
-            type="text"
-            value={selectedDeparture}
-            onChange={handleDeparture}
-            />
-        </>
-    )
+  return (
+    <div>
+      <label htmlFor="departure">Départ de :</label>
+      <select
+        id="departure"
+        value={inputValue}
+        onChange={handleSelectSuggestion}
+      >
+        <option value="" disabled hidden>
+          Sélectionnez un départ
+        </option>
+        {suggestions.map((suggestion) => (
+          <option key={suggestion.id} value={suggestion.title}>
+            {suggestion.title}
+          </option>
+        ))}
+      </select>
+    </div>
+  );
 }
+
+Departure.propTypes = {
+  handleDepartureSelect: PropTypes.func.isRequired,
+  suggestions: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
