@@ -8,7 +8,9 @@ function Home() {
   return (
     <>
       <header>
-        <Header planetName="Neptune" />
+        <Header 
+        introPlanet="Décollez pour"
+        planetName="Neptune" />
       </header>
       <HomeCards
         sectionTitle="Populaires"
