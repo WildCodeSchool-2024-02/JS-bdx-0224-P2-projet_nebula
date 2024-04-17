@@ -25,19 +25,18 @@
 
       img {
         width: 5.65rem;
-      }
-
-      #left {
-        border-radius: 1.7rem 0 0 0;
-      }
-
-      #mid {
         border-left: solid 0.1rem white;
         border-right: solid 0.1rem white;
       }
-
-      #right {
+      img:first-of-type {
+        border-radius: 1.7rem 0 0 0;
+        border-left: none;
+        border-right: none;
+      }
+      img:last-of-type {
         border-radius: 0 1.7rem 0 0;
+        border-left: none;
+        border-right: none;
       }
     }
 
