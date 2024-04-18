@@ -1,5 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Sundanese:wght@400..700&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela+Round&display=swap");
+
+$whiteColor: #fff8f0;
+$blackColor: #001f33;
+$primaryColor: #9548f9;
+$BoxShadow: #a05cf9;
+$primaryHover: #5907c4;
+$unavailableButtonColor: #808080;
+$headerFont: "Tomorrow", sans-serif;
+$bodyFont: "Varela Round", sans-serif;
+$glassmorphisme: (
+  background: #0240921a,
+  border-radius: 16px,
+  box-shadow: 0 4px 30px #0000001a,
+  backdrop-filter: blur(4px),
+);
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  background-image: url("https://wallpapercave.com/wp/wp2293442.jpg");
+  background-size: 100%;
+  background-color: $blackColor;
+}
+
+h1 {
+  font-family: $headerFont;
+}
+
+h2,
+h3,
+p,
+li,
+a,
+button {
+  font-family: $bodyFont;
+  color: $whiteColor;
+}
+
+label,
+select,
+input,
+datalist {
+  background-color: $whiteColor;
+  color: $blackColor;
+  font-family: $bodyFont;
+}
+
+button {
+  display: block;
+  background-color: $primaryColor;
+  box-shadow: 0 0 10px $BoxShadow;
+  border-color: $primaryColor;
+  text-align: center;
+  text-decoration: none;
+  margin: auto;
+  border: none;
+  margin-top: 1rem;
+  transition: all ease-in-out 0.3s;
+  border-radius: 2rem;
+  font-size: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+button:hover {
+  background-color: $primaryHover;
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    background-image: "https://i.pinimg.com/originals/2d/fd/7e/2dfd7e86dd416253c18765977a87cc3f.jpg";
+  }
 }
