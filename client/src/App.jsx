@@ -1,7 +1,13 @@
 import Booking from "./pages/Booking";
 import "./styles/app.scss";
+import Footer from "./components/Footer";
 
 function App() {
-  return <Booking/>;
+  return (
+    <>
+      <Booking />
+      <Footer />
+    </>
+  );
 }
 export default App;
