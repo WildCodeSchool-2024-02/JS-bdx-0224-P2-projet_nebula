@@ -2,7 +2,9 @@ import Footer from "./components/Footer";
 import "./styles/app.scss";
 
 function App() {
-  return <Footer />;
+  return (
+      <Footer />
+  );
 }
 
 export default App;
