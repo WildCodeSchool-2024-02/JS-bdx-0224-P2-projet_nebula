@@ -7,7 +7,6 @@ import {
   Button,
 } from "react-aria-components";
 import "../styles/JourneyDetails.scss";
-import "../styles/app.scss";
 
 export default function JourneyDetails() {
   const price = Math.floor(Math.random() * 10000);
@@ -18,9 +17,9 @@ export default function JourneyDetails() {
 
   return (
     <section className="JourneyDetails">
-      <h3 className={confirmButton}>Récapitulatif</h3>
+      <h2 className={confirmButton}>Récapitulatif</h2>
       <article>
-        <h4>Détails :</h4>
+        <h3>Détails :</h3>
         <a className={confirmButton} href="[REDIRIGER VERS FORMULAIRE]">
           Modifier
           <img
@@ -36,7 +35,7 @@ export default function JourneyDetails() {
         </ul>
       </article>
       <article>
-        <h4>Véhicule :</h4>
+        <h3>Véhicule :</h3>
         <a className={confirmButton} href="[REDIRIGER VERS FORMULAIRE]">
           Modifier
           <img
@@ -50,7 +49,6 @@ export default function JourneyDetails() {
         <Button
           type="button"
           className={confirmButton}
-          href=""
           onClick={() => handleClick()}
         >
           Confirmer et payer
@@ -65,7 +63,7 @@ export default function JourneyDetails() {
                 <img
                   src="https://cdnl.iconscout.com/lottie/premium/thumb/eye-scanner-5456745-4561468.gif"
                   width={300}
-                  alt="Retinal scanner"
+                  alt="Scanner rétinien"
                 />
                 <Button onPress={close}>Votre billet</Button>
               </>
