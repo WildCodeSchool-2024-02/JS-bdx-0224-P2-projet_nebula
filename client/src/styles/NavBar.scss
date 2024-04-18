@@ -44,14 +44,17 @@ nav {
   font-size: 1rem;
   display: flex;
   flex-direction: column;
-
-  a {
+  li {
+    list-style: none;
     text-align: center;
     margin-bottom: 2rem;
     text-decoration: none;
-  }
 
-  a:first-of-type {
+    a {
+      text-decoration: none;
+    }
+  }
+  li:first-of-type {
     margin-top: 5rem;
   }
 }
@@ -109,16 +112,23 @@ nav {
     position: fixed;
     top: 0rem;
     right: 0;
+    li {
+      text-align: center;
+      text-decoration: none;
+      margin-top: 1.3rem;
 
-    a:first-of-type {
+      a {
+        text-decoration: none;
+      }
+    }
+    li:first-of-type {
       margin-top: 1.3rem;
     }
-    a:last-of-type {
+    li:last-of-type {
       margin-right: 2rem;
     }
 
     a {
-      margin-top: 1.3rem;
     }
   }
   .logo {

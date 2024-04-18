@@ -7,22 +7,16 @@ footer {
   align-items: center;
   gap: 0.5rem;
 
-  section {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-
-    a {
-      img {
-        width: 1.5rem;
-      }
+  a {
+    img {
+      width: 1.5rem;
     }
   }
+}
 
-  p {
-    font-size: 0.3rem;
-    opacity: 50%;
-    text-align: center;
-    margin: 0rem 1rem 0.5rem 1rem;
-  }
+p {
+  font-size: 0.3rem;
+  opacity: 50%;
+  text-align: center;
+  margin: 0rem 1rem 0.5rem 1rem;
 }

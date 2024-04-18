@@ -17,15 +17,15 @@ function HomeCards({
       <article className="allCards">
         <section className="Cards">
           <figcaption>
-            <img id="left" src={imageLeft} alt="" />
-            <img id="mid" src={imageMid} alt="" />
-            <img id="right" src={imageRight} alt="" />
+            <img src={imageLeft} alt="" />
+            <img src={imageMid} alt="" />
+            <img src={imageRight} alt="" />
           </figcaption>
-          <hgroup>
-            <h3 id="firstTitle">{planetTitleLeft}</h3>
-            <h3 id="secondTitle">{planetTitleMid}</h3>
-            <h3 id="thirdTitle">{planetTitleRight}</h3>
-          </hgroup>
+          <section>
+            <h3>{planetTitleLeft}</h3>
+            <h3>{planetTitleMid}</h3>
+            <h3>{planetTitleRight}</h3>
+          </section>
           <Links routeLink="/planet" linkName="En savoir plus" />
         </section>
       </article>
