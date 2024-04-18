@@ -1,12 +1,11 @@
-import DropdownRoundTrip from "./components/DropdownRounTrip";
-import Footer from "./components/Footer";
+import OurDestination from "./pages/OurDestination";
 import "./styles/app.scss";
 
 function App() {
   return (
     <>
-      <DropdownRoundTrip />
-      <Footer />
+      <OurDestination />
+      <p>coucou</p>
     </>
   );
 }
