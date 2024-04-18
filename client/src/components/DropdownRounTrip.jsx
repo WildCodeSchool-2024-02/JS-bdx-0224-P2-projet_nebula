@@ -1,12 +1,6 @@
-import { useState } from "react";
-import "../styles/DropdownRoundTrip.scss";
+import PropTypes from "prop-types";
 
-function DropdownRoundTrip() {
-  const [selectedOption, setSelectedOption] = useState("");
-
-  const handelSelectedChange = (event) => {
-    setSelectedOption(event.target.value);
-  };
+function DropdownRoundTrip({ value, handleSelect }) {
 
   return (
     <>
@@ -16,15 +10,20 @@ function DropdownRoundTrip() {
       <select
         name="roundTrip"
         id="select-round-trip"
-        value={selectedOption}
-        onChange={handelSelectedChange}
+        value={value}
+        onChange={(e) => handleSelect(e.target.value)}
         className="dropDownRoundTripSelect"
       >
         <option value="oneWay">Aller simple</option>
         <option value="roundTrip">Aller-retour</option>
       </select>
-      </>
+    </>
   );
 }
+
+DropdownRoundTrip.propTypes = {
+  value: PropTypes.string.isRequired,
+  handleSelect: PropTypes.func.isRequired,
+};
 
 export default DropdownRoundTrip;

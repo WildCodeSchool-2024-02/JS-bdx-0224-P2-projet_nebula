@@ -1,12 +1,11 @@
-import { useState } from "react";
 import PropTypes from "prop-types";
-import Arrival from "./Arrival";
+import { useState } from "react";
 import DateSelect from "./DateSelect";
-import Departure from "./Departure";
 import DropdownRoundTrip from "./DropdownRounTrip";
+import DestinationSelect from "./DestinationSelect";
 // import DropDownTraveller from "./DropDownTraveller";
 
-export default function ReservationForm({ handleReservationSubmit, galactapediaData }) {
+export default function ReservationModule({ galactapediaData }) {
   const [formData, setFormData] = useState({
     selectedDeparture: "",
     selectedArrival: "",
@@ -18,41 +17,35 @@ export default function ReservationForm({ handleReservationSubmit, galactapediaD
   const handleInputChange = (name, value) => {
     setFormData({
       ...formData,
-      [name]: value
+      [name]: value,
     });
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    const { selectedDeparture, selectedArrival, selectedDate, selectedTripType } = formData;
-    
-    if (selectedDeparture && selectedArrival && selectedDate && selectedTripType /* && selectedTravellerCount */) {
-      handleReservationSubmit(formData);
-    } else {
-      alert("Veuillez remplir tous les champs du formulaire.");
-    }
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <Departure
-        handleDepartureSelect={(departure) => handleInputChange('selectedDeparture', departure)}
-        suggestions={galactapediaData.data}
+      <DestinationSelect
+        label="Départ de"
         value={formData.selectedDeparture}
-      />
-      <Arrival
-        handleArrivalSelect={(arrival) => handleInputChange('selectedArrival', arrival)}
+        handleSelect={(value) => handleInputChange("selectedDeparture", value)}
         suggestions={galactapediaData.data}
+      />
+      <DestinationSelect
+        label="Arrivée à"
         value={formData.selectedArrival}
+        handleSelect={(value) => handleInputChange("selectedArrival", value)}
+        suggestions={galactapediaData.data}
       />
       <DateSelect
-        handleDateSelect={(date) => handleInputChange('selectedDate', date)}
+        handleSelect={(value) => handleInputChange("selectedDate", value)}
         value={formData.selectedDate}
       />
       {/* <DropDownTraveller onChange={(count) => handleInputChange('selectedTravellerCount', count)} /> */}
       <DropdownRoundTrip
-        onChange={(type) => handleInputChange('selectedTripType', type)}
+        handleSelect={(value) => handleInputChange("selectedTripType", value)}
         value={formData.selectedTripType}
       />
       <button type="submit">Réserver</button>
@@ -60,14 +53,13 @@ export default function ReservationForm({ handleReservationSubmit, galactapediaD
   );
 }
 
-ReservationForm.propTypes = {
-  handleReservationSubmit: PropTypes.func.isRequired,
+ReservationModule.propTypes = {
   galactapediaData: PropTypes.shape({
     data: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.string.isRequired,
-        title: PropTypes.string.isRequired
+        title: PropTypes.string.isRequired,
       })
-    ).isRequired
-  }).isRequired
+    ).isRequired,
+  }).isRequired,
 };
