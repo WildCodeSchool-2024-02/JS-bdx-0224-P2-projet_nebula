@@ -26,7 +26,7 @@ function HomeCards({
             <h3 id="secondTitle">{planetTitleMid}</h3>
             <h3 id="thirdTitle">{planetTitleRight}</h3>
           </hgroup>
-          <Links linkName="En savoir plus" />
+          <Links routeLink="/planet" linkName="En savoir plus" />
         </section>
       </article>
     </>

@@ -11,6 +11,7 @@ import OurDestinations from "./pages/OurDestinations";
 import Booking from "./pages/Booking";
 import TrafficInfo from "./pages/TrafficInfo";
 import YourTrip from "./pages/YourTrip";
+import Contact from "./pages/Contact";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: "/yourTrip",
         element: <YourTrip />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
     ],
   },
