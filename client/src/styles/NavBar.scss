@@ -58,35 +58,35 @@ nav {
 
 .hidden {
   transform: translateX(15rem);
-  transition: all ease-out 0.3s;
+  transition: all ease-out 0.2s;
 }
 
 .visible {
   transform: translateX(0);
   display: inherit;
-  transition: all ease-out 0.3s;
+  transition: all ease-out 0.2s;
 }
 
 .burgerMenu {
   .burger-bar.clicked:nth-child(1) {
     transform: rotate(45deg) translate(0.15rem, 0.5rem);
-    transition: ease-out 0.5s;
+    transition: ease-out 0.3s;
   }
 
   .burger-bar.clicked:nth-child(2) {
     transform: scale(0.1);
-    transition: ease-out 0.5s;
+    transition: ease-out 0.3s;
   }
 
   .burger-bar.clicked:nth-child(3) {
     transform: rotate(-45deg) translate(0.15rem, -0.5rem);
-    transition: ease-out 0.5s;
+    transition: ease-out 0.3s;
   }
 }
 .burgerMenu {
   .burger-bar.unclicked {
     transform: rotate(0) translate(0);
-    transition: ease-out 0.5s;
+    transition: ease-out 0.3s;
   }
 }
 
@@ -123,5 +123,8 @@ nav {
   }
   .logo {
     width: 2.5rem;
+    position: fixed;
+    left: 0.8rem;
+    top: 0.6rem;
   }
 }

@@ -45,11 +45,11 @@ function NavBar() {
         />
       </button>
       <section className={menuClass}>
-        <Link to="/">Accueil</Link>
-        <Link to="/ourDestinations">Nos destinations</Link>
-        <Link to="/trafficInfo">Info traffic</Link>
-        <Link to="/yourTrip">Votre voyage</Link>
-        <Link to="/contact">Nous contacter</Link>
+        <Link to="/" onClick={updateMenu}>Accueil</Link>
+        <Link to="/ourDestinations" onClick={updateMenu}>Nos destinations</Link>
+        <Link to="/trafficInfo" onClick={updateMenu}>Info traffic</Link>
+        <Link to="/yourTrip" onClick={updateMenu}>Votre voyage</Link>
+        <Link to="/contact" onClick={updateMenu}>Nous contacter</Link>
       </section>
     </nav>
     </>
