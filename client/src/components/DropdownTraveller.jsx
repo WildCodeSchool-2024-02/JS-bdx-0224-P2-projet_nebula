@@ -8,7 +8,10 @@ function DropdownTraveller() {
     setSelectedOption(event.target.value);
   };
 
-  const optionArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const optionArray = [];
+  for (let i = 1; i <= 25; i += 1) {
+    optionArray.push(i);
+  }
 
   return (
     <>
