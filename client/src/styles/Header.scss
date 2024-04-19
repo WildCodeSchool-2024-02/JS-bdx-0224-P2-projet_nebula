@@ -1,3 +1,5 @@
+@use "./app.scss" as *;
+
 .titleSlider {
   display: flex;
   flex-direction: column;
@@ -8,15 +10,16 @@
   background-repeat: no-repeat;
 
   h2 {
-    margin-top: 2rem;
     text-shadow: 0 0 15px black;
   }
-  h1 {
-    text-shadow: 0 0 15px black;
+  h2:first-of-type {
+    margin-top: 2rem;
+  }
+  h2:last-of-type {
+    font-size: 2rem;
   }
 
   a {
-    width: 5rem;
     align-self: flex-end;
     margin-right: 1rem;
   }
@@ -30,16 +33,15 @@
     height: 25rem;
 
     h2 {
-      margin-top: 5rem;
       font-size: 4rem;
     }
-    h1 {
-      font-size: 6rem;
+    h2:first-of-type {
+      margin-top: 6rem;
+    }
+    h2:last-of-type {
+      font-size: 5rem;
     }
     a {
-      width: 7rem;
-      padding-top: 0.7rem;
-      padding-bottom: 0.7rem;
       font-size: 1.1rem;
       align-self: center;
       margin-top: 3rem;

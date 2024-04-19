@@ -13,7 +13,10 @@ nav {
   position: absolute;
   z-index: 9999;
   right: 0;
-  overflow-x: hidden;
+
+  .burgerMenu:hover {
+    background-color: transparent;
+  }
 
   .burgerMenu {
     position: absolute;
@@ -25,9 +28,9 @@ nav {
     background-color: transparent;
     height: auto;
     width: auto;
-    border-style: none;
     align-self: flex-end;
     margin-right: 1rem;
+    box-shadow: none;
 
     img {
       width: 3rem;
@@ -60,14 +63,11 @@ nav {
 }
 
 .hidden {
-  transform: translateX(15rem);
-  transition: all ease-out 0.2s;
+  display: none;
 }
 
 .visible {
-  transform: translateX(0);
   display: inherit;
-  transition: all ease-out 0.2s;
 }
 
 .burgerMenu {

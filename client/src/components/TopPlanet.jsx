@@ -6,7 +6,7 @@ function TopPlanet({ introPlanet, planetName }) {
   return (
     <section className="titleSlider">
       <h2>{introPlanet}</h2>
-      <h1>{planetName}</h1>
+      <h2>{planetName}</h2>
       <Links routeLink="/planet" linkName="Découvrir" />
     </section>
   );

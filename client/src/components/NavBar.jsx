@@ -7,7 +7,34 @@ function NavBar() {
   const [menuClass, setMenuClass] = useState("menu hidden");
   const [isMenuClicked, setIsMenuClicked] = useState(false);
 
-  const allLinks = useRef(null);
+  const menuRef = useRef(null);
+
+  useEffect(() => {
+    const handleTabNavigation = (e) => {
+      if (e.key === "Tab" && menuRef.current) {
+        const menuLinks = menuRef.current.querySelectorAll("a, button");
+        const firstLink = menuLinks[0];
+        const lastLink = menuLinks[menuLinks.length - 1];
+
+        if (e.shiftKey) {
+          if (document.activeElement === firstLink) {
+            e.preventDefault();
+            lastLink.focus();
+          }
+        }
+        if (document.activeElement === lastLink) {
+          e.preventDefault();
+          firstLink.focus();
+        }
+      }
+    };
+
+    window.addEventListener("keydown", handleTabNavigation);
+
+    return () => {
+      window.removeEventListener("keydown", handleTabNavigation);
+    };
+  }, []);
 
   const updateMenu = () => {
     if (!isMenuClicked) {
@@ -20,16 +47,10 @@ function NavBar() {
     setIsMenuClicked(!isMenuClicked);
   };
 
-  useEffect(() => {
-    if (!isMenuClicked) {
-      allLinks.current.focus();
-    }
-  }, [isMenuClicked]);
-
   return (
     <>
       <img className="logo" src="/src/assets/images/nebula-logo.svg" alt="" />
-      <nav>
+      <nav ref={menuRef}>
         <button
           type="button"
           aria-label="burgerMenu"
@@ -52,7 +73,7 @@ function NavBar() {
             alt=""
           />
         </button>
-        <ul className={menuClass} ref={allLinks}>
+        <ul className={menuClass}>
           <li>
             <Link to="/" onClick={updateMenu}>
               Accueil
@@ -83,4 +104,5 @@ function NavBar() {
     </>
   );
 }
+
 export default NavBar;

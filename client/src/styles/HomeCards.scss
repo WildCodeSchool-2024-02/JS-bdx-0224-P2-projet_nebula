@@ -1,3 +1,5 @@
+@use "./app.scss" as *;
+
 .sectionTitle {
   font-size: 1.5rem;
   text-align: center;
@@ -25,8 +27,8 @@
 
       img {
         width: 5.65rem;
-        border-left: solid 0.1rem white;
-        border-right: solid 0.1rem white;
+        border-left: solid 0.1rem $whiteColor;
+        border-right: solid 0.1rem $whiteColor;
       }
       img:first-of-type {
         border-radius: 1.7rem 0 0 0;
@@ -49,19 +51,7 @@
     }
 
     a {
-      text-decoration: none;
-      background-color: #a05cf9;
-      width: 7rem;
       text-align: center;
-      font-size: 0.8rem;
-      border-radius: 3rem;
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
-      box-shadow: 0 0 10px #b580fb;
-    }
-
-    a:hover {
-      background-color: #5907c4;
     }
   }
 }
