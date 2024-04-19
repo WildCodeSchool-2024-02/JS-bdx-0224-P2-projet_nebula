@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Sundanese:wght@400..700&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela+Round&display=swap");
 
 $whiteColor: #fff8f0;
-$blackColor: #001f33;
+$blackColor: #011427;
 $primaryColor: #9548f9;
 $BoxShadow: #a05cf9;
 $primaryHover: #5907c4;
@@ -22,13 +22,16 @@ $glassmorphisme: (
 }
 
 body {
-  background-image: url("https://wallpapercave.com/wp/wp2293442.jpg");
-  background-size: 100%;
+  background-image: url("/src/assets/images/ImageFondMobil.png");
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
   background-color: $blackColor;
 }
 
 h1 {
   font-family: $headerFont;
+  color: $whiteColor;
 }
 
 h2,
@@ -54,12 +57,10 @@ button {
   display: block;
   background-color: $primaryColor;
   box-shadow: 0 0 10px $BoxShadow;
-  border-color: $primaryColor;
+  border-style: none;
   text-align: center;
   text-decoration: none;
-  margin: auto;
   border: none;
-  margin-top: 1rem;
   transition: all ease-in-out 0.3s;
   border-radius: 2rem;
   font-size: 1rem;
@@ -74,6 +75,6 @@ button:hover {
 
 @media screen and (min-width: 992px) {
   body {
-    background-image: "https://i.pinimg.com/originals/2d/fd/7e/2dfd7e86dd416253c18765977a87cc3f.jpg";
+    background-image: url("/src/assets/images/ImageFondDesk.png");
   }
 }
