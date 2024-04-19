@@ -11,6 +11,7 @@ import {
 
 function DestinationSelect({ label, handleSelect, suggestions }) {
   return (
+    <section>
     <ComboBox>
       <Label>{label}</Label>
       <div>
@@ -25,6 +26,7 @@ function DestinationSelect({ label, handleSelect, suggestions }) {
         </ListBox>
       </Popover>
     </ComboBox>
+    </section>
   );
 }
 
