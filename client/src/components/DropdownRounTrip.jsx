@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 
 function DropdownRoundTrip({ value, handleSelect }) {
-
   return (
     <>
       <label className="dropDownRoundTripLabel" htmlFor="select-round-trip">

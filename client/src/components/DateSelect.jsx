@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 
 function DateSelect({ value, handleSelect }) {
-
   return (
     <>
       <label htmlFor="departureDate">Date de départ :</label>
