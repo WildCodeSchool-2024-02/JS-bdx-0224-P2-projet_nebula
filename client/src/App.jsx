@@ -1,14 +1,13 @@
-import DropdownRoundTrip from "./components/DropdownRounTrip";
+import Booking from "./pages/Booking";
 import Footer from "./components/Footer";
 import "./styles/app.scss";
 
 function App() {
   return (
     <>
-      <DropdownRoundTrip />
+      <Booking/>
       <Footer />
     </>
   );
 }
-
 export default App;
