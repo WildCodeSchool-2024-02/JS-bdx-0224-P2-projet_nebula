@@ -5,19 +5,16 @@ import {
   Input,
   Label,
   ListBox,
-  ListBoxItem, 
+  ListBoxItem,
   Popover,
 } from "react-aria-components";
 
 function DestinationSelect({ label, handleSelect, suggestions }) {
-
   return (
     <ComboBox>
       <Label>{label}</Label>
       <div>
-        <Input
-          onChange={(e) => handleSelect(e.target.value)}
-        />
+        <Input onChange={(e) => handleSelect(e.target.value)} />
         <Button>▼</Button>
       </div>
       <Popover>
