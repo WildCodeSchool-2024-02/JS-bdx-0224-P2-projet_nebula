@@ -3,10 +3,7 @@ import "./styles/app.scss";
 
 function App() {
   return (
-    <>
       <OurDestination />
-      <p>coucou</p>
-    </>
   );
 }
 
