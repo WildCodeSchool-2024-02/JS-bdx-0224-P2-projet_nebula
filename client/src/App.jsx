@@ -6,7 +6,8 @@ function App() {
   return (
     <>
       <Booking/>
-      <Footer />
+      <Footer/>
+    </>
   );
 }
 export default App;
