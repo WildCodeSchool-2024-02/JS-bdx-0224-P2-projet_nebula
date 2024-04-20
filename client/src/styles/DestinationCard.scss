@@ -1,0 +1,33 @@
+.card {
+  display: grid;
+  grid-template-columns: 17rem 1fr;
+  grid-template-rows: auto;
+  margin: 0% 10% 2% 10%;
+  padding: 1rem;
+  background-color: lightblue;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px gray;
+  color: white;
+  font-size: 1.6rem;
+  text-shadow: 0px 0px 5px gray;
+  h1 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  button {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+}
+
+.cardImg {
+  grid-column: 1/2;
+  grid-row: 1/4;
+  width: 15rem;
+  height: 15rem;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+  background-color: white;
+  border-radius: inherit;
+  box-shadow: inherit;
+}
