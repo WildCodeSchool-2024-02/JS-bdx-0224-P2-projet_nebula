@@ -1,5 +1,5 @@
-function Booking() {
-  return <h1>coucou2</h1>;
-}
+import JourneyDetails from "../components/JourneyDetails";
 
-export default Booking;
+export default function Booking() {
+  return <JourneyDetails />;
+}
