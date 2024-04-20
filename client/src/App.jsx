@@ -1,3 +1,4 @@
+import Booking from "./pages/Booking";
 import Footer from "./components/Footer";
 import ReservationModule from "./components/ReservationModule";
 import "./styles/app.scss";
@@ -50,9 +51,9 @@ function App() {
   return (
     <>
       <ReservationModule galactapediaData={galactapediaData} />
+      <Booking/>
       <Footer />
     </>
   );
 }
-
 export default App;
