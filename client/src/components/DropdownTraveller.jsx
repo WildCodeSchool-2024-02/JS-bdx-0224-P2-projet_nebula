@@ -8,11 +8,6 @@ function DropdownTraveller() {
     setSelectedOption(event.target.value);
   };
 
-  const optionArray = [];
-  for (let i = 1; i <= 25; i += 1) {
-    optionArray.push(i);
-  }
-
   return (
     <>
       <label className="dropDownTravellerLabel" htmlFor="selectNumberTraveller">
@@ -25,9 +20,9 @@ function DropdownTraveller() {
         onChange={handelSelectChange}
         className="dropDownTravellerSelect"
       >
-        {optionArray.map((_, index) => (
-          <option key={optionArray.id} value={index + 1}>
-            {index + 1}
+        {[...Array(25).keys()].map((number) => (
+          <option key={number + 1} value={number + 1}>
+            {number + 1}
           </option>
         ))}
       </select>
