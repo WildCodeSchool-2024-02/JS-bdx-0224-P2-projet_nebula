@@ -3,7 +3,6 @@ import { useState } from "react";
 import DateSelect from "./DateSelect";
 import DropdownRoundTrip from "./DropdownRounTrip";
 import DestinationSelect from "./DestinationSelect";
-// import DropDownTraveller from "./DropDownTraveller";
 
 export default function ReservationModule({ galactapediaData }) {
   const [formData, setFormData] = useState({
@@ -11,7 +10,6 @@ export default function ReservationModule({ galactapediaData }) {
     selectedArrival: "",
     selectedDate: "",
     selectedTripType: "Aller simple",
-    // selectedTravellerCount: 1,
   });
 
   const handleInputChange = (name, value) => {
@@ -43,7 +41,6 @@ export default function ReservationModule({ galactapediaData }) {
         handleSelect={(value) => handleInputChange("selectedDate", value)}
         value={formData.selectedDate}
       />
-      {/* <DropDownTraveller onChange={(count) => handleInputChange('selectedTravellerCount', count)} /> */}
       <DropdownRoundTrip
         handleSelect={(value) => handleInputChange("selectedTripType", value)}
         value={formData.selectedTripType}

@@ -13,10 +13,8 @@ function DestinationSelect({ label, handleSelect, suggestions }) {
   return (
     <ComboBox>
       <Label>{label}</Label>
-      <div>
-        <Input onChange={(e) => handleSelect(e.target.value)} />
-        <Button>▼</Button>
-      </div>
+      <Input onChange={(e) => handleSelect(e.target.value)} />
+      <Button>▼</Button>
       <Popover>
         <ListBox>
           {suggestions.map((suggestion) => (
