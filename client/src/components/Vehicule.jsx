@@ -1,8 +1,20 @@
 import React from "react";
+import "../styles/Vehicules.scss";
+import vehiculeBg from "../assets/images/ship.jpeg";
 
-const Vehicule = () => {
+const Vehicule = ({ vehicules }) => {
+  console.log(vehicules);
   return (
-    <div style={{ backgroundColor: "green", height: "84dvh" }}>Vehicule</div>
+    <div className="main">
+      <img src={vehiculeBg} className="background" />
+      <div className="cards">
+        {vehicules.map((vehicule) => (
+          <div className="card">
+            <h2>Name: {vehicule.name} </h2>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 };
 
