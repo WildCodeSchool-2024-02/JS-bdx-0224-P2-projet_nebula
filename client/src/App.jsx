@@ -1,12 +1,16 @@
-import Booking from "./pages/Booking";
-import Footer from "./components/Footer";
+import { Outlet } from "react-router-dom";
 import "./styles/app.scss";
+import Footer from "./components/Footer";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <>
-      <Booking/>
-      <Footer />
+      <NavBar className="navbar"/>
+      <main>
+        <Outlet />
+      </main>
+        <Footer />
     </>
   );
 }
