@@ -7,7 +7,7 @@ import App from "./App";
 
 import Home from "./pages/Home";
 import Planet from "./pages/Planet";
-import OurDestinations from "./pages/OurDestinations";
+import OurDestination from "./pages/OurDestination";
 import Booking from "./pages/Booking";
 import TrafficInfo from "./pages/TrafficInfo";
 import YourTrip from "./pages/YourTrip";
@@ -28,7 +28,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/ourDestinations",
-        element: <OurDestinations />,
+        element: <OurDestination />,
       },
       {
         path: "/booking",

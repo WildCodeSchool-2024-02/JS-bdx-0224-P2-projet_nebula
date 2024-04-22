@@ -100,7 +100,7 @@ function OurDestination() {
 
   return (
     <main className="mainOurDestination">
-      <h1>Our Destinations</h1>
+      <h1 className="ourDestinationTitle">Our Destinations</h1>
       {planetData.map((planet) => (
         <DestinationCard
           key={planet.id}
