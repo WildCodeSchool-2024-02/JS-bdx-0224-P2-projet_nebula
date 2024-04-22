@@ -1,0 +1,92 @@
+@use "./app.scss" as *;
+
+.sectionTitle {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.allCards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .Cards {
+    display: flex;
+    flex-direction: column;
+    background: rgba(2, 64, 146, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 1.7rem;
+    width: 17rem;
+    height: 14rem;
+    align-items: center;
+
+    figcaption {
+      display: flex;
+      flex-direction: row;
+
+      img {
+        width: 5.65rem;
+        border-left: solid 0.1rem $whiteColor;
+        border-right: solid 0.1rem $whiteColor;
+      }
+      img:first-of-type {
+        border-radius: 1.7rem 0 0 0;
+        border-left: none;
+        border-right: none;
+      }
+      img:last-of-type {
+        border-radius: 0 1.7rem 0 0;
+        border-left: none;
+        border-right: none;
+      }
+    }
+
+    section {
+      display: flex;
+      flex-direction: row;
+      font-size: 0.8rem;
+      gap: 4rem;
+      margin-top: 0.5rem;
+    }
+
+    a {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .sectionTitle {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .allCards {
+    .Cards {
+      width: 30rem;
+      height: 25rem;
+
+      figcaption {
+        img {
+          width: 10rem;
+        }
+      }
+      section {
+        font-size: 1.3rem;
+        gap: 6rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      a {
+        width: 10rem;
+        padding-top: 0.6rem;
+        padding-bottom: 0.6rem;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}

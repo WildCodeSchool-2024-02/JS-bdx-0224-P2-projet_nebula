@@ -1,7 +1,9 @@
-import Booking from "./pages/Booking";
 import Footer from "./components/Footer";
 import ReservationModule from "./components/ReservationModule";
+import { Outlet } from "react-router-dom";
 import "./styles/app.scss";
+import Footer from "./components/Footer";
+import NavBar from "./components/NavBar";
 
 function App() {
   const galactapediaData = {
@@ -50,9 +52,12 @@ function App() {
 
   return (
     <>
+      <NavBar className="navbar"/>
       <ReservationModule galactapediaData={galactapediaData} />
-      <Booking/>
-      <Footer />
+      <main>
+        <Outlet />
+      </main>
+        <Footer />
     </>
   );
 }
