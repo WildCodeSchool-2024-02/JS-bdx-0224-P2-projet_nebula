@@ -1,18 +1,24 @@
+@use "./app.scss" as *;
 .card {
+  @each $property, $value in $glassmorphisme {
+    #{$property}: $value;
+  }
   display: grid;
   grid-template-columns: 17rem 1fr;
   grid-template-rows: auto;
   margin: 0% 10% 2% 10%;
   padding: 1rem;
-  background-color: lightblue;
   border-radius: 5px;
   box-shadow: 0px 0px 5px gray;
   color: white;
   font-size: 1.6rem;
   text-shadow: 0px 0px 5px gray;
-  h1 {
+  h2 {
     grid-column: 2/3;
     grid-row: 1/2;
+  }
+  h1 {
+    color: red;
   }
   .truncate {
     white-space: nowrap;

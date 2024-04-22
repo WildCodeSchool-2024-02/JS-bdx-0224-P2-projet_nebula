@@ -6,7 +6,7 @@ function DestinationCard({ title, thumbnail, translation }) {
   return (
     <section className="card">
       <img src={thumbnail} alt={title} className="cardImg" />
-      <h1>{title}</h1>
+      <h2>{title}</h2>
       <p className="truncate">{translation}</p>
       <button type="button">About</button>
     </section>
