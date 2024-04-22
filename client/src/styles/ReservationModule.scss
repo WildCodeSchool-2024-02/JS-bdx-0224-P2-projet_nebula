@@ -1,0 +1,24 @@
+form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  .reservationButton {
+    width: 6rem;
+    position: absolute;
+    top: 23rem;
+    right: 0.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  form {
+    grid-template-columns: repeat(4, 1fr);
+    .reservationButton {
+      font-size: 1.1rem;
+      width: 10rem;
+      margin-top: 1rem;
+      position: absolute;
+      top: 36rem;
+      right: 1rem;
+    }
+  }
+}

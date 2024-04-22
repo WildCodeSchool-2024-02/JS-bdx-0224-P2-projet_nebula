@@ -1,6 +1,8 @@
 import TopPlanet from "../components/TopPlanet";
 import HomeCards from "../components/HomeCards";
 import Slogan from "../components/Slogan";
+import ReservationModule from "../components/ReservationModule";
+import { GalactapediaProvider } from "../Contexts/GalactapediaContext";
 import "../styles/app.scss";
 
 function Home() {
@@ -9,6 +11,9 @@ function Home() {
       <header>
         <TopPlanet introPlanet="Décollez pour" planetName="Neptune" />
       </header>
+      <GalactapediaProvider>
+        <ReservationModule />
+      </GalactapediaProvider>
       <HomeCards
         sectionTitle="Populaires"
         planetTitleLeft="Virtus"
