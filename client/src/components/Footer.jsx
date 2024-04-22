@@ -1,11 +1,10 @@
-import ButtonContact from "./ButtonContact";
+import Links from "./Links";
 import "../styles/Footer.scss";
 
 function Footer() {
   return (
     <footer>
-      <ButtonContact />
-      <section>
+      <Links routeLink="/contact" linkName="Nous contacter" />
         <a href="https://discord.com/">
           <img
             src="/src/assets/images/discord-icon-svgrepo-com.svg"
@@ -15,15 +14,9 @@ function Footer() {
         <a href="https://slack.com/intl/fr-fr/">
           <img src="/src/assets/images/slack-tile.svg" alt="icon slack" />
         </a>
-      </section>
       <p>
-        © 2024 Tous droits réservés. Le contenu de ce site web, y compris mais
-        sans s'y limiter, le texte, les images, les graphiques et les logos, est
-        la propriété intellectuelle de la société ABC et est protégé par les
-        lois sur le droit d'auteur applicables. Toute utilisation non autorisée
-        du contenu de ce site peut constituer une violation des lois sur le
-        droit d'auteur et des droits de propriété intellectuelle, et entraîner
-        des poursuites judiciaires.
+       Les images utilisées ne nous appartienent pas, elles proviennent de l'API du jeux vidéo Star-Citizen,
+       alors ne nous poursuivez pas en justice, sinon nous enverrons notre équipe de pilotes à votre poursuite à bord de nos vaissaux.
       </p>
     </footer>
   );
