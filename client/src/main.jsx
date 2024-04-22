@@ -5,10 +5,52 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
 
+import Home from "./pages/Home";
+import Planet from "./pages/Planet";
+import OurDestinations from "./pages/OurDestinations";
+import Booking from "./pages/Booking";
+import TrafficInfo from "./pages/TrafficInfo";
+import YourTrip from "./pages/YourTrip";
+import Contact from "./pages/Contact";
+import ErrorPage404 from "./pages/ErrorPage";
+
 const router = createBrowserRouter([
   {
-    path: "/",
     element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/planet",
+        element: <Planet />,
+      },
+      {
+        path: "/ourDestinations",
+        element: <OurDestinations />,
+      },
+      {
+        path: "/booking",
+        element: <Booking />,
+      },
+      {
+        path: "/trafficInfo",
+        element: <TrafficInfo />,
+      },
+      {
+        path: "/yourTrip",
+        element: <YourTrip />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
+        path: "*",
+        element: <ErrorPage404 />,
+      },
+    ],
   },
 ]);
 

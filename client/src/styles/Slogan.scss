@@ -1,0 +1,38 @@
+@use "./app.scss" as *;
+
+.slogan {
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+  margin-left: 1rem;
+
+  h3 {
+    font-size: 2rem;
+    color: $primaryColor;
+    text-shadow: 0 0 10px #9548f9cd;
+  }
+  h3:first-of-type {
+    color: $whiteColor;
+    text-shadow: 0 0 10px #9548f9cd;
+  }
+  h3:nth-child(3) {
+    color: $whiteColor;
+    text-shadow: 0 0 10px #9548f9cd;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .slogan {
+    margin-left: 0;
+    text-align: center;
+    margin-bottom: 2rem;
+
+    h3 {
+      padding-bottom: 1rem;
+      font-size: 3rem;
+    }
+    h4 {
+      padding-bottom: 1rem;
+      font-size: 2rem;
+    }
+  }
+}
