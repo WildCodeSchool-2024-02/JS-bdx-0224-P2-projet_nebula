@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-image: url(/src/assets/images/carlos-kenobi-Knla5kYvsRE-unsplash.jpg);
   background-size: cover;
   height: 10rem;
   background-repeat: no-repeat;
@@ -16,7 +15,7 @@
     margin-top: 2rem;
   }
   h2:last-of-type {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   a {
@@ -27,7 +26,6 @@
 
 @media screen and (min-width: 992px) {
   .titleSlider {
-    background-image: url(/src/assets/images/carlos-kenobi-Knla5kYvsRE-unsplash.jpg);
     background-position: 0 -10rem;
     background-size: cover;
     height: 25rem;

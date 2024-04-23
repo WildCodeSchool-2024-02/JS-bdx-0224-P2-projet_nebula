@@ -42,12 +42,15 @@
       }
     }
 
-    section {
+    .planetTitle {
       display: flex;
       flex-direction: row;
       font-size: 0.8rem;
-      gap: 4rem;
-      margin-top: 0.5rem;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+      margin-left: 0.7rem;
+      margin-bottom: 2rem;
+      text-align: center;
     }
 
     a {
@@ -67,18 +70,18 @@
   .allCards {
     .Cards {
       width: 30rem;
-      height: 25rem;
+      height: 20rem;
 
       figcaption {
         img {
           width: 10rem;
         }
       }
-      section {
+      .planetTitle {
         font-size: 1.3rem;
-        gap: 6rem;
-        margin-top: 1rem;
-        margin-bottom: 2rem;
+        gap: 1rem;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
       }
 
       a {
