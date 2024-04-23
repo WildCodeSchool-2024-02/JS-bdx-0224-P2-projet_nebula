@@ -25,7 +25,7 @@ function ContactForm() {
         id="message"
         cols="30"
         rows="10"
-        placeholder="Votre message ..."
+        placeholder="Your message ..."
         required
       />
       <button type="submit">Submit</button>
