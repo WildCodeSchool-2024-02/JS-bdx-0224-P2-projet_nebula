@@ -1,3 +1,5 @@
+import "../styles/ContactForm.scss";
+
 function ContactForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -10,8 +12,10 @@ function ContactForm() {
   };
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="username">Username</label>
-      <input type="text" minLength="5" id="username" required/>
+      <label className="inputUsername" htmlFor="username">
+        Username
+      </label>
+      <input type="text" minLength="5" id="username" required />
       <label htmlFor="email">Email</label>
       <input
         type="email"
