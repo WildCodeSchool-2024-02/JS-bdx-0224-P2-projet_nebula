@@ -4,19 +4,20 @@
     #{$property}: $value;
   }
   display: grid;
-  grid-template-columns: 17rem 1fr;
+  grid-template-columns: 35% 1fr;
   grid-template-rows: auto;
-  margin: 0% 10% 2% 10%;
-  padding: 1rem;
+  margin: 5% 10% 2% 10%;
+  padding: 0.5rem;
   color: white;
-  font-size: 1.6rem;
   text-shadow: 0px 0px 5px gray;
   .destinationTitle {
     grid-column: 2/3;
     grid-row: 1/2;
     font-family: $headerFont;
+    justify-self: center;
   }
   .truncate {
+    margin-left: 1rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -24,31 +25,36 @@
   button {
     grid-column: 2/3;
     grid-row: 3/4;
+    margin: 0.5rem;
+    padding: 0.3rem;
+    justify-self: center;
   }
 }
 
 .cardImg {
   grid-column: 1/2;
   grid-row: 1/4;
-  width: 15rem;
-  height: 15rem;
+  height: 6rem;
   object-fit: cover;
   margin-bottom: 0.5rem;
   background-color: $whiteColor;
   border-radius: inherit;
-  box-shadow: inherit;
+  justify-self: stretch;
+  align-self: center;
 }
 
 .modal-overlay {
+  @each $property, $value in $glassmorphisme {
+    #{$property}: $value;
+  }
   position: fixed;
-  inset: 0;
+  inset: 1rem 1rem 1rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #0240921a;
-  backdrop-filter: blur(10px);
-  margin: 5rem;
-  padding: 2rem;
+  margin: 1rem;
+  padding: 0.5rem;
+  height: 90%;
 }
 .react-aria-Dialog {
   display: flex;
@@ -56,15 +62,14 @@
   align-items: center;
 
   img {
-    border-radius: 2rem;
+    border-radius: 1rem;
     margin-bottom: 2rem;
   }
   .destinationTitle {
     font-family: $headerFont;
     margin-bottom: 2rem;
   }
-  p {
-    font-size: 1.6rem;
-    margin-bottom: 2rem;
+  .truncate {
+    font-size: 0.8rem;
   }
 }

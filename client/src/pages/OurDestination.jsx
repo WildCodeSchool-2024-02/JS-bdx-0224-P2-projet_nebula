@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import DestinationCard from "../components/DestinationCard";
+import "../styles/OurDestination.scss";
 
 function OurDestination() {
   const galactopedia = {
@@ -55,8 +56,6 @@ function OurDestination() {
       { title: "Rytif", id: "R5pA7q691W" },
       { title: "Saisei", id: "Vy22NQJ1q6" },
       { title: "Selene", id: "0qaa69qqNA" },
-      { title: "Xōl’uu", id: "VYLzwxDrre" },
-      { title: "Spider", id: "VaZwengjJv" },
       { title: "Tangaroa", id: "RX3rnQ3XqM" },
       { title: "Terra IV (Gen)", id: "RMNMv8ekn8" },
       { title: "Terra II (Pike)", id: "Rvl7EggdAr" },
@@ -77,7 +76,6 @@ function OurDestination() {
 
   const [planetData, setPlanetData] = useState([]);
 
-  console.info(path);
   useEffect(() => {
     const fetchData = async () => {
       try {
