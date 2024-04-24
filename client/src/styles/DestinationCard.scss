@@ -8,7 +8,7 @@
   grid-template-rows: auto;
   margin: 5% 10% 2% 10%;
   padding: 0.5rem;
-  color: white;
+  color: $whiteColor;
   text-shadow: 0px 0px 5px gray;
   .destinationTitle {
     grid-column: 2/3;
@@ -44,9 +44,10 @@
 }
 
 .modal-overlay {
-  @each $property, $value in $glassmorphisme {
-    #{$property}: $value;
-  }
+  background: #023b8683;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px #0000001a;
+  backdrop-filter: blur(4px);
   position: fixed;
   inset: 1rem 1rem 1rem 1rem;
   display: flex;
@@ -70,6 +71,39 @@
     margin-bottom: 2rem;
   }
   .truncate {
-    font-size: 0.8rem;
+    text-shadow: $blackColor 0 0 5px;
+    line-height: 1.4rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .card {
+    .destinationTitle {
+      justify-self: center;
+      font-size: 2rem;
+      align-self: center;
+    }
+    .truncate {
+      margin-left: 2rem;
+      margin-right: 2rem;
+      font-size: 1.5rem;
+      align-self: center;
+    }
+    button {
+      padding: 0.3rem;
+      justify-self: center;
+      align-self: center;
+      height: 3rem;
+      width: 10rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  .cardImg {
+    height: 20rem;
+    margin-bottom: 0rem;
+    align-self: center;
   }
 }

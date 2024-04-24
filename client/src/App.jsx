@@ -4,7 +4,6 @@ import NavBar from "./components/NavBar";
 import "./styles/app.scss";
 import Footer from "./components/Footer";
 
-
 function App() {
   const galactapediaData = {
     data: [
@@ -57,7 +56,7 @@ function App() {
       <main>
         <Outlet />
       </main>
-      <Footer/>
+      <Footer />
     </>
   );
 }
