@@ -1,12 +1,7 @@
-import { useState } from "react";
+import PropTypes from "prop-types";
 import "../styles/DropdownTraveller.scss";
 
-function DropdownTraveller() {
-  const [selectedOption, setSelectedOption] = useState("");
-
-  const handelSelectChange = (event) => {
-    setSelectedOption(event.target.value);
-  };
+function DropdownTraveller({value, handleSelect}) {
 
   return (
     <>
@@ -16,8 +11,8 @@ function DropdownTraveller() {
       <select
         name="travellers"
         id="selectNumberTraveller"
-        value={selectedOption}
-        onChange={handelSelectChange}
+        value={value}
+        onChange={(e) => handleSelect(e.target.value)}
         className="dropDownTravellerSelect"
       >
         {[...Array(25).keys()].map((number) => (
@@ -29,5 +24,10 @@ function DropdownTraveller() {
     </>
   );
 }
+
+DropdownTraveller.propTypes = {
+  value: PropTypes.number.isRequired,
+  handleSelect: PropTypes.func.isRequired
+};
 
 export default DropdownTraveller;

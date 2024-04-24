@@ -1,4 +1,6 @@
 import { Outlet } from "react-router-dom";
+import { ReservationProvider } from "./Contexts/ReservationContext";
+import { ButtonProvider } from "./Contexts/ButtonContext";
 import Footer from "./components/Footer";
 import "./styles/app.scss";
 import NavBar from "./components/NavBar";
@@ -8,7 +10,11 @@ function App() {
     <>
       <NavBar className="navbar" />
       <main>
-        <Outlet />
+        <ButtonProvider>
+          <ReservationProvider>
+            <Outlet />
+          </ReservationProvider>
+        </ButtonProvider>
       </main>
       <Footer />
     </>

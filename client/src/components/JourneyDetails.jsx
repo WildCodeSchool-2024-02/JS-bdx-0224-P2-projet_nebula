@@ -1,26 +1,37 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import {
-  Modal,
-  ModalOverlay,
+  Button,
   Dialog,
   DialogTrigger,
-  Button,
+  Modal,
+  ModalOverlay,
 } from "react-aria-components";
+import { ReservationContext } from "../Contexts/ReservationContext";
+import { ButtonContext } from "../Contexts/ButtonContext";
 import "../styles/JourneyDetails.scss";
 
 export default function JourneyDetails() {
+  const { reservationFormData } = useContext(ReservationContext);
+  const { setIsButtonVisible } = useContext(ButtonContext);
   const price = Math.floor(Math.random() * 10000);
   const [confirmButton, setConfirmButton] = useState("display");
   const handleClick = () => {
     setConfirmButton("displayNone");
   };
 
+  const handleModifyClick = () => {
+    setIsButtonVisible(true);
+  };
+
+  const { selectedDeparture, selectedArrival, selectedDate, selectedTripType, selectedTravelers } =
+    reservationFormData;
+
   return (
     <section className="JourneyDetails">
       <h2 className={confirmButton}>Récapitulatif</h2>
       <article>
         <h3>Détails :</h3>
-        <a className={confirmButton} href="[REDIRIGER VERS FORMULAIRE]">
+        <a className={confirmButton} href="http://localhost:3000/booking" onClick={handleModifyClick}>
           Modifier
           <img
             src="src/assets/images/ModifyIcon.svg"
@@ -28,10 +39,11 @@ export default function JourneyDetails() {
           />
         </a>
         <ul>
-          <li>Départ :[composant formulaire(départ)]</li>
-          <li>Destination :[composant formulaire(arrivé)]</li>
-          <li>Date du départ :[composant formulaire(date)]</li>
-          <li>Nombre de voyageurs :[composant formulaire(nbrDePersonnes)]</li>
+          <li>Départ : {selectedDeparture}</li>
+          <li>Destination : {selectedArrival}</li>
+          <li>Date du départ : {selectedDate}</li>
+          <li>Nombre de voyageurs : {selectedTravelers}</li>
+          <li>Type de voyage : {selectedTripType}</li>
         </ul>
       </article>
       <article>

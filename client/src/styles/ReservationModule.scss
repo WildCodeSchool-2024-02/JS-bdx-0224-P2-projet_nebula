@@ -10,6 +10,7 @@ form {
     right: 0.5rem;
   }
 }
+
 @media screen and (min-width: 992px) {
   form {
     grid-template-columns: repeat(4, 1fr);
