@@ -26,3 +26,18 @@
     background-color: rgb(18, 13, 18);
     cursor: pointer;
   }
+
+  .vehiculeName {
+    text-align: center;
+    color: aquamarine;
+    
+  }
+
+  .vehiculeImg {
+    width: 30dvw;
+  }
+
+  .carac{
+    display: flex;
+    justify-content: space-between;
+  }
