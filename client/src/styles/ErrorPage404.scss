@@ -1,8 +1,6 @@
-$bodyFont: "Varela Round", sans-serif;
-$headerFont: "Tomorrow", sans-serif;
-$whiteColor: #fff8f0;
+@use "./app.scss" as *;
 
-body {
+.error404Body {
   background-image: url(../assets/images/wormhole.jpg);
   background-size: cover;
   background-position: center;
@@ -14,20 +12,9 @@ body {
 }
 
 .error404 {
-  color: $whiteColor;
-  font-size: xx-large;
-  text-align: center;
-  background-color: rgba(2, 64, 146, 0.2);
-  background-image: linear-gradient(
-    to bottom right,
-    rgba(255, 255, 255, 0.2),
-    rgba(255, 255, 255, 0)
-  );
-  backdrop-filter: blur(4px);
-  box-shadow: 10px 10px 10px rgba(30, 30, 30, 0.5);
-  width: fit-content;
-  padding: 1rem;
-  border-radius: 20px;
+  @each $property, $value in $glassmorphisme {
+    #{$property}: $value;
+  }
 }
 .titleError404 {
   font-family: $headerFont;
@@ -35,14 +22,14 @@ body {
   padding: 0.5rem;
 }
 .textError404 {
+  text-align: center;
   font-family: $bodyFont;
   color: $whiteColor;
   padding: 1rem;
   margin: 1rem;
 }
-.link {
+.linkError {
   font-family: $bodyFont;
-  text-decoration: none;
   color: $whiteColor;
   padding: 1rem;
   margin: 1rem;
