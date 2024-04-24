@@ -1,10 +1,14 @@
 import PropTypes from "prop-types";
+import "../styles/DateSelect.scss";
 
 function DateSelect({ value, handleSelect }) {
   return (
     <>
-      <label htmlFor="departureDate">Date de départ :</label>
+      <label className="labelDate" htmlFor="departureDate">
+        Date de départ :
+      </label>
       <input
+        className="inputDate"
         id="departureDate"
         type="date"
         min="2948-01-01"
