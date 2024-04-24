@@ -5,13 +5,13 @@ function Footer() {
   return (
     <footer>
       <Links routeLink="/contact" linkName="Nous contacter" />
-      <a href="https://discord.com/">
+      <a href="https://discord.com/" target="_blank" rel="noreferrer">
         <img
           src="/src/assets/images/discord-icon-svgrepo-com.svg"
           alt="icon discord"
         />
       </a>
-      <a href="https://slack.com/intl/fr-fr/">
+      <a href="https://slack.com/intl/fr-fr/" target="_blank" rel="noreferrer">
         <img src="/src/assets/images/slack-tile.svg" alt="icon slack" />
       </a>
       <p>
