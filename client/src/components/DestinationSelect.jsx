@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import PropTypes from "prop-types";
 import {
   Button,
@@ -8,17 +9,26 @@ import {
   ListBoxItem,
   Popover,
 } from "react-aria-components";
+import { GalactapediaContext } from "../Contexts/GalactapediaContext";
+import "../styles/DestinationSelect.scss";
 
-function DestinationSelect({ label, handleSelect, suggestions }) {
+function DestinationSelect({ label, handleSelect }) {
+  const { galactapediaData } = useContext(GalactapediaContext);
   return (
-    <ComboBox>
-      <Label>{label}</Label>
-      <Input onChange={(e) => handleSelect(e.target.value)} />
-      <Button>▼</Button>
-      <Popover>
-        <ListBox>
-          {suggestions.map((suggestion) => (
-            <ListBoxItem key={suggestion.id}>{suggestion.title}</ListBoxItem>
+    <ComboBox className="comboBox">
+      <Label className="label">{label}</Label>
+      <Input
+        className="input"
+        onChange={(e) => handleSelect(e.target.value)}
+        placeholder={label}
+      />
+      <Button className="buttonTriangle">▼</Button>
+      <Popover className="popover">
+        <ListBox className="listBox" value={galactapediaData}>
+          {galactapediaData.map((suggestion) => (
+            <ListBoxItem className="listBoxItem" key={suggestion.id}>
+              {suggestion.title}
+            </ListBoxItem>
           ))}
         </ListBox>
       </Popover>
@@ -29,12 +39,6 @@ function DestinationSelect({ label, handleSelect, suggestions }) {
 DestinationSelect.propTypes = {
   label: PropTypes.string.isRequired,
   handleSelect: PropTypes.func.isRequired,
-  suggestions: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-    })
-  ).isRequired,
 };
 
 export default DestinationSelect;

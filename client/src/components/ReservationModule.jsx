@@ -1,10 +1,11 @@
-import PropTypes from "prop-types";
 import { useState } from "react";
 import DateSelect from "./DateSelect";
 import DropdownRoundTrip from "./DropdownRounTrip";
 import DestinationSelect from "./DestinationSelect";
+import "../styles/ReservationModule.scss";
+import DropdownTraveller from "./DropdownTraveller";
 
-export default function ReservationModule({ galactapediaData }) {
+export default function ReservationModule() {
   const [formData, setFormData] = useState({
     selectedDeparture: "",
     selectedArrival: "",
@@ -29,13 +30,11 @@ export default function ReservationModule({ galactapediaData }) {
         label="Départ de"
         value={formData.selectedDeparture}
         handleSelect={(value) => handleInputChange("selectedDeparture", value)}
-        suggestions={galactapediaData.data}
       />
       <DestinationSelect
         label="Arrivée à"
         value={formData.selectedArrival}
         handleSelect={(value) => handleInputChange("selectedArrival", value)}
-        suggestions={galactapediaData.data}
       />
       <DateSelect
         handleSelect={(value) => handleInputChange("selectedDate", value)}
@@ -45,18 +44,10 @@ export default function ReservationModule({ galactapediaData }) {
         handleSelect={(value) => handleInputChange("selectedTripType", value)}
         value={formData.selectedTripType}
       />
-      <button type="submit">Réserver</button>
+      <DropdownTraveller />
+      <button className="reservationButton" type="submit">
+        Réserver
+      </button>
     </form>
   );
 }
-
-ReservationModule.propTypes = {
-  galactapediaData: PropTypes.shape({
-    data: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        title: PropTypes.string.isRequired,
-      })
-    ).isRequired,
-  }).isRequired,
-};

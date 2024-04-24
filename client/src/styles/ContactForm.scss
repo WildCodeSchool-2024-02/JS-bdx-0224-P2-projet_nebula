@@ -1,0 +1,11 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input,
+textarea {
+  border-radius: 0, 5rem;
+  margin: 0.5rem;
+}

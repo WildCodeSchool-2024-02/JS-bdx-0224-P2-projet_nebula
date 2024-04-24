@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import "../styles/DropdownRoundTrip.scss";
 
 function DropdownRoundTrip({ value, handleSelect }) {
   return (
