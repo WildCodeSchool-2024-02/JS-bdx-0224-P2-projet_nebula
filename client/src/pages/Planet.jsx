@@ -1,5 +1,3 @@
-function Planet() {
-  return <h1>coucou</h1>;
-}
+function Planet() {}
 
 export default Planet;

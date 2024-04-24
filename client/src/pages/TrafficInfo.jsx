@@ -1,5 +1,3 @@
-function TrafficInfo() {
-  return <h1>coucou3</h1>;
-}
+function TrafficInfo() {}
 
 export default TrafficInfo;
