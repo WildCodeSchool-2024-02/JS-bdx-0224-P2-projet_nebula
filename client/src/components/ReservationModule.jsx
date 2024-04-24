@@ -32,12 +32,12 @@ export default function ReservationModule() {
   return (
     <form onSubmit={handleSubmit}>
       <DestinationSelect
-        label="Départ de"
+        label="From"
         value={reservationFormData.selectedDeparture}
         handleSelect={(value) => handleInputChange("selectedDeparture", value)}
       />
       <DestinationSelect
-        label="Arrivée à"
+        label="To"
         value={reservationFormData.selectedArrival}
         handleSelect={(value) => handleInputChange("selectedArrival", value)}
       />
@@ -58,7 +58,7 @@ export default function ReservationModule() {
           className="reservationButton"
           type="submit"
         >
-          Réserver
+          Book now
         </button>
       )}
     </form>

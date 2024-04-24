@@ -6,7 +6,7 @@ function DropdownTraveller({value, handleSelect}) {
   return (
     <>
       <label className="dropDownTravellerLabel" htmlFor="selectNumberTraveller">
-        Nombre de passagers :
+        Number of travellers :
       </label>
       <select
         name="travellers"
