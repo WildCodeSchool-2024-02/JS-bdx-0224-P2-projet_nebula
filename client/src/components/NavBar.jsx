@@ -75,27 +75,47 @@ function NavBar() {
         </button>
         <ul className={menuClass}>
           <li>
-            <Link to="/" onClick={updateMenu}>
+            <Link
+              to="/"
+              onClick={updateMenu}
+              aria-label="link to the Home page"
+            >
               Accueil
             </Link>
           </li>
           <li>
-            <Link to="/ourDestinations" onClick={updateMenu}>
+            <Link
+              to="/ourDestinations"
+              onClick={updateMenu}
+              aria-label="link to Our destinations page"
+            >
               Nos destinations
             </Link>
           </li>
           <li>
-            <Link to="/trafficInfo" onClick={updateMenu}>
+            <Link
+              to="/trafficInfo"
+              onClick={updateMenu}
+              aria-label="link to the Traffic info page"
+            >
               Info traffic
             </Link>
           </li>
           <li>
-            <Link to="/yourTrip" onClick={updateMenu}>
+            <Link
+              to="/yourTrip"
+              onClick={updateMenu}
+              aria-label="link to the Your trip page"
+            >
               Votre voyage
             </Link>
           </li>
           <li>
-            <Link to="/contact" onClick={updateMenu}>
+            <Link
+              to="/contact"
+              onClick={updateMenu}
+              aria-label="link to the Contact page"
+            >
               Nous contacter
             </Link>
           </li>

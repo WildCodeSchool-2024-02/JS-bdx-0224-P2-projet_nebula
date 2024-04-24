@@ -10,6 +10,7 @@ function HomeCards({
   imageLeft,
   imageMid,
   imageRight,
+  descriptionCards,
 }) {
   return (
     <>
@@ -26,7 +27,12 @@ function HomeCards({
             <h3>{planetTitleMid}</h3>
             <h3>{planetTitleRight}</h3>
           </section>
-          <Links routeLink="/planet" linkName="En savoir plus" />
+          <p className="descriptionCards">{descriptionCards}</p>
+          <Links
+            ariaLabel="link to the planet description"
+            routeLink="/planet"
+            linkName="En savoir plus"
+          />
         </section>
       </article>
     </>
@@ -41,5 +47,6 @@ HomeCards.propTypes = {
   imageLeft: PropTypes.string.isRequired,
   imageMid: PropTypes.string.isRequired,
   imageRight: PropTypes.string.isRequired,
+  descriptionCards: PropTypes.string.isRequired,
 };
 export default HomeCards;
