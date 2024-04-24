@@ -6,28 +6,31 @@
   margin: 3rem;
   padding: 1rem;
   line-height: 2rem;
-}
 
-h2 {
-  display: flex;
-  justify-content: center;
-}
+  h2 {
+    display: flex;
+    justify-content: center;
+  }
 
-h3 {
-  display: inline-block;
-}
+  h3 {
+    display: inline-block;
+  }
+  article {
+    padding-left: 2.5rem;
+  }
+  article:last-of-type {
+    margin-top: 2.5rem;
+  }
 
-article:last-of-type {
-  margin-top: 2.5rem;
-}
+  a {
+    display: inline block;
+    float: right;
+  }
 
-a {
-  display: inline block;
-  float: right;
-}
-
-button {
-  width: 10rem;
+  button {
+    margin: auto;
+    width: 10rem;
+  }
 }
 
 .displayNone {
