@@ -1,6 +1,6 @@
 @use "./app.scss" as *;
 
-.dropDownTravellerLabel {
+.labelDate {
   font-size: 0.8rem;
   margin-left: 0.5rem;
   border-radius: 2rem 0 0 2rem;
@@ -10,7 +10,7 @@
   border-right: solid $blackColor 0.01rem;
   margin-bottom: 1rem;
 }
-.dropDownTravellerSelect {
+.inputDate {
   border-style: none;
   margin-right: 0.5rem;
   padding-right: 0.5rem;
@@ -18,21 +18,22 @@
   padding-left: 1rem;
   margin-bottom: 1rem;
 }
-.dropDownTravellerSelect:focus {
+.inputDate:focus {
   outline: none;
 }
-
 @media screen and (min-width: 992px) {
-  .dropDownTravellerLabel {
+  .labelDate {
     font-size: 1rem;
     height: 3rem;
+    margin-top: 2rem;
     padding-top: 0.9rem;
     padding-left: 2rem;
     margin-left: 0;
   }
-  .dropDownTravellerSelect {
+  .inputDate {
     font-size: 1rem;
     height: 3rem;
+    margin-top: 2rem;
     padding-left: 3rem;
     margin-right: 1rem;
   }

@@ -1,4 +1,4 @@
-footer {
+.footer {
   background: rgba(2, 64, 146, 0.2);
   backdrop-filter: blur(10px);
   width: 100%;
@@ -12,11 +12,11 @@ footer {
       width: 1.5rem;
     }
   }
-}
 
-p {
-  font-size: 0.3rem;
-  opacity: 50%;
-  text-align: center;
-  margin: 0rem 1rem 0.5rem 1rem;
+  p {
+    font-size: 0.3rem;
+    opacity: 50%;
+    text-align: center;
+    margin: 0rem 1rem 0.5rem 1rem;
+  }
 }

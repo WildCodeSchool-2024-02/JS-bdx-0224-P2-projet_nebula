@@ -21,7 +21,7 @@ function HomeCards({
             <img src={imageMid} alt="" />
             <img src={imageRight} alt="" />
           </figcaption>
-          <section>
+          <section className="planetTitle">
             <h3>{planetTitleLeft}</h3>
             <h3>{planetTitleMid}</h3>
             <h3>{planetTitleRight}</h3>
