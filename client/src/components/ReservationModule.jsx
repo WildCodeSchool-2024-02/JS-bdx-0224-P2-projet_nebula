@@ -46,7 +46,7 @@ export default function ReservationModule() {
       />
       <DropdownTraveller />
       <button className="reservationButton" type="submit">
-        Booking
+        Book now
       </button>
     </form>
   );

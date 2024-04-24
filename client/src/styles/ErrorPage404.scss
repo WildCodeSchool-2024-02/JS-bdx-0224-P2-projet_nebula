@@ -12,10 +12,9 @@
 }
 
 .error404 {
-  background: #552d895e;
-  border-radius: 16px;
-  box-shadow: 0 4px 30px #0000001a;
-  backdrop-filter: blur(4px);
+  @each $property, $value in $modalGlassmorphism {
+    #{$property}: $value;
+  }
   padding: 2rem;
 }
 .titleError404 {
