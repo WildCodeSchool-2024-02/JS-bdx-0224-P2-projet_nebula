@@ -8,7 +8,7 @@ function DestinationSelect({ value, label, handleSelect }) {
 
   return (
     <>
-      <label className="label">{label}</label>
+      <label className="labelSelect">{label}</label>
       <select
         className="select"
         value={value}
