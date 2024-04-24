@@ -33,7 +33,7 @@ export default function JourneyDetails({
       </article>
       <article>
         <h3>Ship :</h3>
-        <a className={confirmButton} href="#top">
+        <a className={confirmButton} href="#top" aria-label="Modify your informations">
           Modify
           <img
             src="src/assets/images/ModifyIcon.svg"
@@ -59,7 +59,7 @@ export default function JourneyDetails({
           <Dialog>
             {({ close }) => (
               <>
-                <p>Travel price : {price} credits.</p>
+                <p>Travel price : credits.</p>
                 <p className="scan">Retinal scan in progress...</p>
                 <img
                   src="https://cdnl.iconscout.com/lottie/premium/thumb/eye-scanner-5456745-4561468.gif"
