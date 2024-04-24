@@ -3,7 +3,7 @@ import "../styles/Footer.scss";
 
 function Footer() {
   return (
-    <footer>
+    <footer className="footer">
       <Links routeLink="/contact" linkName="Nous contacter" />
       <a href="https://discord.com/">
         <img

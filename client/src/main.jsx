@@ -7,11 +7,12 @@ import App from "./App";
 
 import Home from "./pages/Home";
 import Planet from "./pages/Planet";
-import OurDestinations from "./pages/OurDestinations";
+import OurDestination from "./pages/OurDestination";
 import Booking from "./pages/Booking";
 import TrafficInfo from "./pages/TrafficInfo";
 import YourTrip from "./pages/YourTrip";
 import Contact from "./pages/Contact";
+import ErrorPage404 from "./pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/ourDestinations",
-        element: <OurDestinations />,
+        element: <OurDestination />,
       },
       {
         path: "/booking",
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "*",
+        element: <ErrorPage404 />,
       },
     ],
   },
