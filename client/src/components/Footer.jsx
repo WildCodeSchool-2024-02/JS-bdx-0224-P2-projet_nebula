@@ -3,7 +3,7 @@ import "../styles/Footer.scss";
 
 function Footer() {
   return (
-    <footer>
+    <>
       <Link
         to="/contact"
         ariaLabel="link to the contact formular"
@@ -37,7 +37,7 @@ function Footer() {
         video game API, so don't sue us for justice, otherwise we will send our
         team of pilots after you aboard our ships.
       </p>
-    </footer>
+    </>
   );
 }
 export default Footer;
