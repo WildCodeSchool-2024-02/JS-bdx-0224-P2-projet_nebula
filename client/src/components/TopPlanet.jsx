@@ -25,7 +25,7 @@ function TopPlanet({ introPlanet }) {
       <h2>{titleUrl}</h2>
       <Links
         ariaLabel="link to the planet description"
-        routeLink="/planet"
+        routeLink="/ourDestinations"
         linkName="Discover"
       />
     </section>

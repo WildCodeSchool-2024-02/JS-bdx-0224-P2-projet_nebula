@@ -34,27 +34,28 @@ footer {
       width: 1.5rem;
     }
   }
-}
-.discordLink {
-  grid-column: 3/4;
-  grid-row: 1/2;
-  justify-self: left;
-  align-self: center;
-}
-.slackLink {
-  grid-column: 3/4;
-  grid-row: 1/2;
-  justify-self: right;
-  align-self: center;
-}
 
-p {
-  font-size: 0.3rem;
-  opacity: 50%;
-  text-align: center;
-  margin: 0rem 1rem 0.5rem 1rem;
-  grid-column: 1/5;
-  grid-row: 2/3;
+  .discordLink {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    justify-self: left;
+    align-self: center;
+  }
+  .slackLink {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    justify-self: right;
+    align-self: center;
+  }
+
+  p {
+    font-size: 0.3rem;
+    opacity: 50%;
+    text-align: center;
+    margin: 0rem 1rem 0.5rem 1rem;
+    grid-column: 1/5;
+    grid-row: 2/3;
+  }
 }
 
 @media screen and (min-width: 992px) {

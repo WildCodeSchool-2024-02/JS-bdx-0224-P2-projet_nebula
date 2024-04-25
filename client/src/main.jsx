@@ -6,11 +6,12 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 
 import Home from "./pages/Home";
-import OurDestinations from "./pages/OurDestinations";
+import OurDestination from "./pages/OurDestination";
 import Booking from "./pages/Booking";
 import TrafficInfo from "./pages/TrafficInfo";
 import YourTrip from "./pages/YourTrip";
 import Contact from "./pages/Contact";
+import ErrorPage404 from "./pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/ourDestinations",
-        element: <OurDestinations />,
+        element: <OurDestination />,
       },
       {
         path: "/booking",
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/errorPage",
+        element: <ErrorPage404 />,
       },
     ],
   },

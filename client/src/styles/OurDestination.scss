@@ -1,0 +1,11 @@
+@use "./app.scss" as *;
+
+.mainOurDestination {
+  @each $property, $value in $glassmorphisme {
+    #{$property}: $value;
+  }
+}
+.ourDestinationTitle {
+  text-align: center;
+  padding: 2rem;
+}
