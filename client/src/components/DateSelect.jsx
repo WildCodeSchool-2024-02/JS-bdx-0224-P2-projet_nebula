@@ -5,7 +5,7 @@ function DateSelect({ value, handleSelect }) {
   return (
     <>
       <label className="labelDate" htmlFor="departureDate">
-        Date de départ :
+        Date of departure :
       </label>
       <input
         className="inputDate"

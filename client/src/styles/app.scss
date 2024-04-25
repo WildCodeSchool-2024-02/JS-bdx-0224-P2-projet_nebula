@@ -17,6 +17,10 @@ $glassmorphisme: (
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
+}
+*:focus-visible {
+  outline: solid $primaryColor 0.2rem;
 }
 body {
   background-image: url("/src/assets/images/ImageFondMobil.png");
