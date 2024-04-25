@@ -18,7 +18,9 @@ function App() {
         </ButtonProvider>
         <Arrow />
       </main>
-      <Footer />
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }
