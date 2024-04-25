@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela+Round&display=swap");
+
+$headerFont: "Tomorrow", sans-serif;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: rgba(21, 30, 41, 0.2);
+}
+
+.menu-items {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: purple;
+  font-size: x-large;
+  font-family: $headerFont;
+}
+
+.menu-items.open {
+  display: block;
+}
+
+.menu-items li {
+  padding: 10px;
+}
+
+.menu-items li:hover {
+  background-color: white;
+  cursor: pointer;
+}
+.menu {
+  display: none;
+}
+.close {
+  display: none;
+}
+
+@media screen and (max-width: 380px) {
+  .navbar {
+    display: flex;
+    align-items: flex-start;
+    background: rgba(21, 30, 41, 0.2);
+  }
+  .menu {
+    display: block;
+  }
+  .menu-items {
+    display: none;
+    left: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu-items.open {
+    display: block;
+  }
+
+  .menu-items li {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .menu-items li:last-child {
+    border-bottom: none;
+  }
+}
