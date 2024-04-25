@@ -1,8 +1,9 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ReservationContext } from "../Contexts/ReservationContext";
 import { ButtonContext } from "../Contexts/ButtonContext";
 import "../styles/ReservationModule.scss";
+import { Link } from "react-router-dom";
 import DateSelect from "./DateSelect";
 import DestinationSelect from "./DestinationSelect";
 import DropdownRoundTrip from "./DropdownRounTrip";
@@ -61,6 +62,7 @@ export default function ReservationModule() {
           Book now
         </button>
       )}
+
     </form>
   );
 }

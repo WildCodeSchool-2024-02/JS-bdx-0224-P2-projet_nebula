@@ -9,8 +9,13 @@ import {
 import { ReservationContext } from "../Contexts/ReservationContext";
 import { ButtonContext } from "../Contexts/ButtonContext";
 import "../styles/JourneyDetails.scss";
+import PropTypes from "prop-types";
 
-export default function JourneyDetails() {
+export default function JourneyDetails({
+  selectedShip,
+  travelTime,
+  price,
+}) 
   const { reservationFormData } = useContext(ReservationContext);
   const { setIsButtonVisible } = useContext(ButtonContext);
   const price = Math.floor(Math.random() * 10000);
@@ -28,7 +33,7 @@ export default function JourneyDetails() {
 
   return (
     <section className="JourneyDetails">
-      <h2 className={confirmButton}>Récapitulatif</h2>
+      <h2 className={confirmButton}>Summary</h2>
       <article>
         <h3>Détails :</h3>
         <a className={confirmButton} href="http://localhost:3000/booking" onClick={handleModifyClick}>
@@ -47,15 +52,19 @@ export default function JourneyDetails() {
         </ul>
       </article>
       <article>
-        <h3>Véhicule :</h3>
-        <a className={confirmButton} href="[REDIRIGER VERS FORMULAIRE]">
-          Modifier
+        <h3>Ship :</h3>
+        <a className={confirmButton} href="#top" aria-label="Modify your informations">
+          Modify
           <img
             src="src/assets/images/ModifyIcon.svg"
-            alt="modify your vehicule"
+            alt="modify your informations"
           />
         </a>
-        [composant vehicule]
+        <p>{selectedShip.name}</p>
+        <ul>
+          <li>Travel time : {travelTime} days</li>
+          <li>Price : {price} credits</li>
+        </ul>
       </article>
       <DialogTrigger>
         <Button
@@ -63,21 +72,21 @@ export default function JourneyDetails() {
           className={confirmButton}
           onClick={() => handleClick()}
         >
-          Confirmer et payer
+          Confirm & Pay
         </Button>
         <ModalOverlay className="modal-overlay">
           <Modal className="modal" />
           <Dialog>
             {({ close }) => (
               <>
-                <p>Prix de votre voyage : {price} crédit.</p>
-                <p className="scan">Scan rétinien en cours...</p>
+                <p>Travel price : credits.</p>
+                <p className="scan">Retinal scan in progress...</p>
                 <img
                   src="https://cdnl.iconscout.com/lottie/premium/thumb/eye-scanner-5456745-4561468.gif"
                   width={300}
                   alt="Scanner rétinien"
                 />
-                <Button onPress={close}>Votre billet</Button>
+                <Button onPress={close}>Your ticket</Button>
               </>
             )}
           </Dialog>
@@ -87,3 +96,11 @@ export default function JourneyDetails() {
     </section>
   );
 }
+
+JourneyDetails.propTypes = {
+  selectedShip: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+  }).isRequired,
+  travelTime: PropTypes.number.isRequired,
+  price: PropTypes.number.isRequired,
+};

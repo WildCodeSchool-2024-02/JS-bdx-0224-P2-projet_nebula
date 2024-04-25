@@ -49,8 +49,13 @@
       gap: 0.5rem;
       margin-top: 1.5rem;
       margin-left: 0.7rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
       text-align: center;
+    }
+    .descriptionCards {
+      font-size: 0.7rem;
+      color: $whiteColor;
+      opacity: 80%;
     }
 
     a {
@@ -69,17 +74,17 @@
 
   .allCards {
     .Cards {
-      width: 30rem;
-      height: 20rem;
+      width: 60rem;
+      height: 35rem;
 
       figcaption {
         img {
-          width: 10rem;
+          width: 20rem;
         }
       }
       .planetTitle {
-        font-size: 1rem;
-        gap: 1rem;
+        font-size: 1.5rem;
+        gap: 6rem;
         margin-top: 3rem;
         margin-bottom: 1.5rem;
         margin-right: 0.8rem;
@@ -90,6 +95,13 @@
         padding-top: 0.6rem;
         padding-bottom: 0.6rem;
         font-size: 1.1rem;
+      }
+      .descriptionCards {
+        font-size: 1.3rem;
+        color: $whiteColor;
+        opacity: 80%;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
       }
     }
   }

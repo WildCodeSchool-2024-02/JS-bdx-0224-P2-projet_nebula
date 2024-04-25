@@ -4,6 +4,7 @@ import { ButtonProvider } from "./Contexts/ButtonContext";
 import Footer from "./components/Footer";
 import "./styles/app.scss";
 import NavBar from "./components/NavBar";
+import Arrow from "./components/Arrow";
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
             <Outlet />
           </ReservationProvider>
         </ButtonProvider>
+        <Outlet />
+        <Arrow />
       </main>
       <Footer />
     </>
