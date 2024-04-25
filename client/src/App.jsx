@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { ReservationProvider } from "./Contexts/ReservationContext";
 import { ButtonProvider } from "./Contexts/ButtonContext";
+import { GalactapediaProvider } from "./Contexts/GalactapediaContext";
 import Footer from "./components/Footer";
 import "./styles/app.scss";
 import NavBar from "./components/NavBar";
@@ -13,7 +14,9 @@ function App() {
       <main>
         <ButtonProvider>
           <ReservationProvider>
-            <Outlet />
+            <GalactapediaProvider>
+              <Outlet />
+            </GalactapediaProvider>{" "}
           </ReservationProvider>
         </ButtonProvider>
         <Arrow />

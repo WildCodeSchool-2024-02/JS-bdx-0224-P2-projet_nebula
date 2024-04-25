@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import TopPlanet from "../components/TopPlanet";
 import HomeCards from "../components/HomeCards";
 import ReservationModule from "../components/ReservationModule";
-import { GalactapediaProvider } from "../Contexts/GalactapediaContext";
 import "../styles/app.scss";
 
 function Home() {
@@ -59,13 +58,9 @@ function Home() {
   return (
     <>
       <header>
-        <GalactapediaProvider>
-          <TopPlanet introPlanet="Take off for" />
-        </GalactapediaProvider>
+        <TopPlanet introPlanet="Take off for" />
       </header>
-      <GalactapediaProvider>
-        <ReservationModule />
-      </GalactapediaProvider>
+      <ReservationModule />
       <HomeCards
         sectionTitle="Popular"
         planetTitleLeft={thumbnail1.title}
