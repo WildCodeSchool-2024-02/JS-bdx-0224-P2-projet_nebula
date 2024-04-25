@@ -5,7 +5,7 @@ function DropdownRoundTrip({ value, handleSelect }) {
   return (
     <>
       <label className="dropDownRoundTripLabel" htmlFor="select-round-trip">
-        Type of trip:
+        Fare :
       </label>
       <select
         name="roundTrip"

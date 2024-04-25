@@ -1,4 +1,2 @@
-function Contact() {
-  return <h1>coucou</h1>;
-}
+function Contact() {}
 export default Contact;
