@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import Links from "./Links";
+import Slogan from "./Slogan";
 import "../styles/Header.scss";
 
 function TopPlanet({ introPlanet }) {
@@ -19,9 +20,14 @@ function TopPlanet({ introPlanet }) {
       className="titleSlider"
       style={{ backgroundImage: `url(${thumbnailUrl})` }}
     >
+      <Slogan />
       <h2>{introPlanet}</h2>
       <h2>{titleUrl}</h2>
-      <Links routeLink="/planet" linkName="Découvrir" />
+      <Links
+        ariaLabel="link to the planet description"
+        routeLink="/ourDestinations"
+        linkName="Discover"
+      />
     </section>
   );
 }

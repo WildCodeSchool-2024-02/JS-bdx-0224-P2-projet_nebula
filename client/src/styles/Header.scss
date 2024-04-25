@@ -5,7 +5,7 @@
   flex-direction: column;
   text-align: center;
   background-size: cover;
-  height: 10rem;
+  height: 26rem;
   background-repeat: no-repeat;
 
   h2 {
@@ -16,11 +16,11 @@
   }
   h2:last-of-type {
     font-size: 1.8rem;
+    margin-bottom: 1rem;
   }
 
   a {
-    align-self: flex-end;
-    margin-right: 1rem;
+    align-self: center;
   }
 }
 
@@ -28,13 +28,13 @@
   .titleSlider {
     background-position: 0 -10rem;
     background-size: cover;
-    height: 25rem;
+    height: 40rem;
 
     h2 {
       font-size: 4rem;
     }
     h2:first-of-type {
-      margin-top: 6rem;
+      margin-top: 5rem;
     }
     h2:last-of-type {
       font-size: 5rem;
@@ -43,7 +43,6 @@
       font-size: 1.1rem;
       align-self: center;
       margin-top: 3rem;
-      margin-right: 0;
     }
   }
 }
