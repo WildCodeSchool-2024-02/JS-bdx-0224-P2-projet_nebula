@@ -17,7 +17,7 @@ function DestinationCard({ title, thumbnail, translation }) {
       <p className="truncate">{translation}</p>
 
       <DialogTrigger>
-      <Button type="button" aria-label="About">
+        <Button type="button" aria-label="About">
           About
         </Button>
         <ModalOverlay className="modal-overlay">

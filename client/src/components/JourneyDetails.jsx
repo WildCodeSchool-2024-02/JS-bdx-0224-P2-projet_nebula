@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { useContext, useState } from "react";
 import {
   Button,
@@ -6,20 +7,16 @@ import {
   Modal,
   ModalOverlay,
 } from "react-aria-components";
-import { ReservationContext } from "../Contexts/ReservationContext";
 import { ButtonContext } from "../Contexts/ButtonContext";
+import { ReservationContext } from "../Contexts/ReservationContext";
 import "../styles/JourneyDetails.scss";
-import PropTypes from "prop-types";
 
-export default function JourneyDetails({
-  selectedShip,
-  travelTime,
-  price,
-}) 
+export default function JourneyDetails({ selectedShip, travelTime }) {
   const { reservationFormData } = useContext(ReservationContext);
   const { setIsButtonVisible } = useContext(ButtonContext);
   const price = Math.floor(Math.random() * 10000);
   const [confirmButton, setConfirmButton] = useState("display");
+
   const handleClick = () => {
     setConfirmButton("displayNone");
   };
@@ -28,15 +25,24 @@ export default function JourneyDetails({
     setIsButtonVisible(true);
   };
 
-  const { selectedDeparture, selectedArrival, selectedDate, selectedTripType, selectedTravelers } =
-    reservationFormData;
+  const {
+    selectedDeparture,
+    selectedArrival,
+    selectedDate,
+    selectedTripType,
+    selectedTravelers,
+  } = reservationFormData;
 
   return (
     <section className="JourneyDetails">
       <h2 className={confirmButton}>Summary</h2>
       <article>
         <h3>Détails :</h3>
-        <a className={confirmButton} href="http://localhost:3000/booking" onClick={handleModifyClick}>
+        <a
+          className={confirmButton}
+          href="http://localhost:3000/booking"
+          onClick={handleModifyClick}
+        >
           Modifier
           <img
             src="src/assets/images/ModifyIcon.svg"
@@ -53,7 +59,11 @@ export default function JourneyDetails({
       </article>
       <article>
         <h3>Ship :</h3>
-        <a className={confirmButton} href="#top" aria-label="Modify your informations">
+        <a
+          className={confirmButton}
+          href="#top"
+          aria-label="Modify your informations"
+        >
           Modify
           <img
             src="src/assets/images/ModifyIcon.svg"
@@ -102,5 +112,4 @@ JourneyDetails.propTypes = {
     name: PropTypes.string.isRequired,
   }).isRequired,
   travelTime: PropTypes.number.isRequired,
-  price: PropTypes.number.isRequired,
 };

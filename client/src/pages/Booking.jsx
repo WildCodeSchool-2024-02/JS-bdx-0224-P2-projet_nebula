@@ -4,7 +4,6 @@ import ReservationModule from "../components/ReservationModule";
 import VehiculeSelect from "../components/VehiculeSelect";
 import { GalactapediaProvider } from "../Contexts/GalactapediaContext";
 
-
 export default function Booking() {
   const ships = [
     {

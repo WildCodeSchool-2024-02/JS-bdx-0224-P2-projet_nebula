@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { ReservationContext } from "../Contexts/ReservationContext";
 import { ButtonContext } from "../Contexts/ButtonContext";
@@ -25,7 +25,7 @@ export default function ReservationModule() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setIsButtonVisible(false)
+    setIsButtonVisible(false);
     navigate("/booking");
   };
 
@@ -54,10 +54,7 @@ export default function ReservationModule() {
         value={reservationFormData.selectedTravelers}
       />
       {isButtonVisible && (
-        <button
-          className="reservationButton"
-          type="submit"
-        >
+        <button className="reservationButton" type="submit">
           Book now
         </button>
       )}

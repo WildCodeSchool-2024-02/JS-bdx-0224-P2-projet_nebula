@@ -1,8 +1,7 @@
 import PropTypes from "prop-types";
 import "../styles/DropdownTraveller.scss";
 
-function DropdownTraveller({value, handleSelect}) {
-
+function DropdownTraveller({ value, handleSelect }) {
   return (
     <>
       <label className="dropDownTravellerLabel" htmlFor="selectNumberTraveller">
@@ -27,7 +26,7 @@ function DropdownTraveller({value, handleSelect}) {
 
 DropdownTraveller.propTypes = {
   value: PropTypes.number.isRequired,
-  handleSelect: PropTypes.func.isRequired
+  handleSelect: PropTypes.func.isRequired,
 };
 
 export default DropdownTraveller;

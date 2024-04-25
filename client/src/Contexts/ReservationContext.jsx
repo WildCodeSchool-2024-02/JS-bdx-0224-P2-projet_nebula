@@ -9,7 +9,7 @@ export function ReservationProvider({ children }) {
     selectedArrival: "",
     selectedDate: "",
     selectedTripType: "oneWay",
-    selectedTravelers: 1
+    selectedTravelers: 1,
   });
 
   const updateReservationFormData = (newFormData) => {
