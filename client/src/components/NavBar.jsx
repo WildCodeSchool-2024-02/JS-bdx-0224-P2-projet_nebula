@@ -49,7 +49,13 @@ function NavBar() {
 
   return (
     <>
-      <img className="logo" src="/src/assets/images/nebula-logo.svg" alt="" />
+      <a href="/">
+        <img
+          className="logo"
+          src="/src/assets/images/nebula-logo.svg"
+          alt="logo nebula"
+        />
+      </a>
       <nav ref={menuRef}>
         <button
           type="button"
