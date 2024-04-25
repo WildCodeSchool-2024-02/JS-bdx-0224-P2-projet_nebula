@@ -1,4 +1,5 @@
 @use "./app.scss" as *;
+
 .card {
   @each $property, $value in $glassmorphisme {
     #{$property}: $value;
@@ -15,20 +16,26 @@
     grid-row: 1/2;
     font-family: $headerFont;
     justify-self: center;
+    text-align: center;
+    font-size: 0.9rem;
   }
   .truncate {
     margin-left: 1rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-size: 0.8rem;
+    align-content: center;
   }
-  button {
-    width: 5rem;
+  .aboutButton {
+    width: 4rem;
+    height: 1.7rem;
     grid-column: 2/3;
     grid-row: 3/4;
     margin: 0.5rem;
     padding: 0.3rem;
     justify-self: center;
+    font-size: 0.8rem;
   }
 }
 
@@ -49,9 +56,8 @@
     #{$property}: $value;
   }
   position: fixed;
+  z-index: 999999;
   inset: 3rem 1rem 1rem 1rem;
-  display: flex;
-  justify-content: center;
   align-items: center;
   margin: 1rem;
   padding: 1.5rem;
@@ -70,17 +76,20 @@
   .destinationTitle {
     font-family: $headerFont;
     margin-bottom: 2rem;
+    text-align: center;
   }
   .truncate {
     text-shadow: $blackColor 0 0 5px;
     line-height: 1.4rem;
     font-size: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     padding: 1rem;
-    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 25;
+    -webkit-line-clamp: 15;
     -webkit-box-orient: vertical;
+    width: 70vw;
   }
   .closeButton {
     width: 5rem;
@@ -102,12 +111,12 @@
       font-size: 1.5rem;
       align-self: center;
     }
-    button {
+    .aboutButton {
       padding: 0.3rem;
       justify-self: center;
       align-self: center;
-      height: 3rem;
-      width: 10rem;
+      height: 2.5rem;
+      width: 8rem;
       font-size: 1.2rem;
     }
   }
@@ -131,7 +140,9 @@
       -webkit-box-orient: vertical;
     }
     .closeButton {
+      font-size: 1.2rem;
       width: 5rem;
+      height: 2.5rem;
       margin-bottom: 1.5rem;
       padding: 0.3rem;
     }

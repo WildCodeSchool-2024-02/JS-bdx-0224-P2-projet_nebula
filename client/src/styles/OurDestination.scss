@@ -9,3 +9,9 @@
   text-align: center;
   padding: 2rem;
 }
+
+@media screen and (min-width: 992px) {
+  .ourDestinationTitle {
+    margin-top: 4rem;
+  }
+}
