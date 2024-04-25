@@ -6,10 +6,14 @@ import {
   DialogTrigger,
   Button,
 } from "react-aria-components";
+import PropTypes from "prop-types";
 import "../styles/JourneyDetails.scss";
 
-export default function JourneyDetails() {
-  const price = Math.floor(Math.random() * 10000);
+export default function JourneyDetails({
+  selectedShip,
+  travelTime,
+  price,
+}) {
   const [confirmButton, setConfirmButton] = useState("display");
   const handleClick = () => {
     setConfirmButton("displayNone");
@@ -17,33 +21,30 @@ export default function JourneyDetails() {
 
   return (
     <section className="JourneyDetails">
-      <h2 className={confirmButton}>Récapitulatif</h2>
+      <h2 className={confirmButton}>Summary</h2>
       <article>
-        <h3>Détails :</h3>
-        <a className={confirmButton} href="[REDIRIGER VERS FORMULAIRE]">
-          Modifier
+        <h3>Details :</h3>
+        <ul>
+          <li>Departure : [composant formulaire(départ)]</li>
+          <li>Destination :[composant formulaire(arrivé)]</li>
+          <li>Departure date :[composant formulaire(date)]</li>
+          <li>Number of passengers :[composant formulaire(nbrDePersonnes)]</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Ship :</h3>
+        <a className={confirmButton} href="#top" aria-label="Modify your informations">
+          Modify
           <img
             src="src/assets/images/ModifyIcon.svg"
             alt="modify your informations"
           />
         </a>
+        <p>{selectedShip.name}</p>
         <ul>
-          <li>Départ :[composant formulaire(départ)]</li>
-          <li>Destination :[composant formulaire(arrivé)]</li>
-          <li>Date du départ :[composant formulaire(date)]</li>
-          <li>Nombre de voyageurs :[composant formulaire(nbrDePersonnes)]</li>
+          <li>Travel time : {travelTime} days</li>
+          <li>Price : {price} credits</li>
         </ul>
-      </article>
-      <article>
-        <h3>Véhicule :</h3>
-        <a className={confirmButton} href="[REDIRIGER VERS FORMULAIRE]">
-          Modifier
-          <img
-            src="src/assets/images/ModifyIcon.svg"
-            alt="modify your vehicule"
-          />
-        </a>
-        [composant vehicule]
       </article>
       <DialogTrigger>
         <Button
@@ -51,21 +52,21 @@ export default function JourneyDetails() {
           className={confirmButton}
           onClick={() => handleClick()}
         >
-          Confirmer et payer
+          Confirm & Pay
         </Button>
         <ModalOverlay className="modal-overlay">
           <Modal className="modal" />
           <Dialog>
             {({ close }) => (
               <>
-                <p>Prix de votre voyage : {price} crédit.</p>
-                <p className="scan">Scan rétinien en cours...</p>
+                <p>Travel price : credits.</p>
+                <p className="scan">Retinal scan in progress...</p>
                 <img
                   src="https://cdnl.iconscout.com/lottie/premium/thumb/eye-scanner-5456745-4561468.gif"
                   width={300}
                   alt="Scanner rétinien"
                 />
-                <Button onPress={close}>Votre billet</Button>
+                <Button onPress={close}>Your ticket</Button>
               </>
             )}
           </Dialog>
@@ -75,3 +76,11 @@ export default function JourneyDetails() {
     </section>
   );
 }
+
+JourneyDetails.propTypes = {
+  selectedShip: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+  }).isRequired,
+  travelTime: PropTypes.number.isRequired,
+  price: PropTypes.number.isRequired,
+};

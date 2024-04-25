@@ -15,7 +15,9 @@
   h3 {
     display: inline-block;
   }
-
+  article {
+    padding-left: 2.5rem;
+  }
   article:last-of-type {
     margin-top: 2.5rem;
   }
@@ -26,83 +28,84 @@
   }
 
   button {
+    margin: auto;
     width: 10rem;
   }
+}
 
-  .displayNone {
-    display: none;
-  }
+.displayNone {
+  display: none;
+}
 
-  .modal-overlay {
-    position: fixed;
-    inset: 0;
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0240921a;
+  backdrop-filter: blur(10px);
+}
+
+.react-aria-Dialog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  p,
+  img {
     display: flex;
     justify-content: center;
-    align-items: center;
-    background: #0240921a;
-    backdrop-filter: blur(10px);
+    border-radius: 2rem;
   }
+}
 
-  .react-aria-Dialog {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    p,
-    img {
-      display: flex;
-      justify-content: center;
-      border-radius: 2rem;
-    }
+.scan {
+  visibility: hidden;
+  position: relative;
+}
+
+.scan:after {
+  visibility: visible;
+  position: absolute;
+  content: "Scan terminé !";
+  animation: change-text 5s linear;
+}
+
+@keyframes change-text {
+  0% {
+    content: "Approchez vous de la caméra";
   }
-
-  .scan {
-    visibility: hidden;
-    position: relative;
+  33% {
+    content: "Scan rétinien en cours...";
   }
-
-  .scan:after {
-    visibility: visible;
-    position: absolute;
+  66% {
+    content: "Scan presque terminé...";
+  }
+  99% {
     content: "Scan terminé !";
-    animation: change-text 5s linear;
   }
+}
 
-  @keyframes change-text {
-    0% {
-      content: "Approchez vous de la caméra";
-    }
-    33% {
-      content: "Scan rétinien en cours...";
-    }
-    66% {
-      content: "Scan presque terminé...";
-    }
-    99% {
-      content: "Scan terminé !";
-    }
+.react-aria-Button {
+  box-shadow: 0 0 10px $unavailableButtonColor;
+  background-color: $unavailableButtonColor;
+  width: 7rem;
+  transition:
+    background-color 1s,
+    transform 1s;
+  animation: button-animation 2s ease 4s infinite;
+}
+
+@keyframes button-animation {
+  0% {
+    transform: scale(1);
+    background-color: $primaryColor;
   }
-
-  .react-aria-Button {
-    box-shadow: 0 0 10px $unavailableButtonColor;
-    background-color: $unavailableButtonColor;
-    width: 7rem;
-    transition:
-      background-color 1s,
-      transform 1s;
-    animation: button-animation 2s ease 4s infinite;
+  50% {
+    transform: scale(1.2);
   }
-
-  @keyframes button-animation {
-    0% {
-      transform: scale(1);
-      background-color: $primaryColor;
-    }
-    50% {
-      transform: scale(1.2);
-    }
-    100% {
-      transform: scale(1);
-    }
+  100% {
+    transform: scale(1);
   }
 }
 
