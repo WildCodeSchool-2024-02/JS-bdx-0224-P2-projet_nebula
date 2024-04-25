@@ -5,6 +5,7 @@ const vehicles = [
     description: "The 600i is a luxurious touring vessel designed for comfort and style. With its sleek exterior and spacious interior, it's the epitome of elegance among spacecraft. Despite its opulent amenities, it maintains impressive speed and agility, making it ideal for both leisurely cruises and swift journeys across the galaxy.",
     speed: "Fast",
     agility: "Moderate",
+    Size: "large",
     img: "https://media.starcitizen.tools/thumb/8/80/600i_Landed_on_luxury_Island_-_Isometric.jpg/1920px-600i_Landed_on_luxury_Island_-_Isometric.jpg"
   },
   {
@@ -13,6 +14,7 @@ const vehicles = [
     description: "The 400i strikes a balance between luxury and functionality. Its streamlined design not only exudes sophistication but also enhances performance, allowing for smooth navigation through space. With its advanced propulsion systems, the 400i offers impressive speed and agility, making it a versatile choice for exploration and transportation.",
     speed: "High",
     agility: "High",
+    Size:"Capital",
     img: "https://media.starcitizen.tools/thumb/b/b9/400i_-_Landed_Loaded_with_personal_luggage.png/1920px-400i_-_Landed_Loaded_with_personal_luggage.png"
   },
   {
@@ -21,6 +23,7 @@ const vehicles = [
     description: "The 890 Jump is the pinnacle of luxury among spacecraft, offering unparalleled comfort and opulence. Its lavish interiors rival those of the most extravagant estates, providing a truly indulgent experience for its passengers. Despite its grandeur, the 890 Jump doesn't sacrifice speed or agility, ensuring swift and graceful travels through the cosmos.",
     speed: "Moderate",
     agility: "Low",
+    Size: "Medium",
     img: "https://media.starcitizen.tools/thumb/b/bd/890Jump_beach.jpg/1920px-890Jump_beach.jpg"
   },
   {
@@ -29,11 +32,12 @@ const vehicles = [
     description: "The 100i is a sleek and nimble spacecraft designed for solo or small crew exploration missions. Its compact size belies its capabilities, as it boasts impressive speed and agility for swift traversal of space. With its minimalist yet functional interior, the 100i is perfect for those seeking adventure without sacrificing comfort.",
     speed: "High",
     agility: "High",
+    Size:"Small",
     img: "https://media.starcitizen.tools/thumb/b/b8/100i_Sunset.jpg/1920px-100i_Sunset.jpg"
   },
   {
     nom: "Terrapin",
-    id: 115,
+    id:115,
     description: "The Terrapin is a rugged and durable spacecraft built for long-range reconnaissance and exploration missions. Its robust hull and advanced sensor suite make it ideal for traversing hazardous environments with ease. While it may not match the speed of sleeker vessels, the Terrapin more than compensates with its unmatched durability and resilience.",
     speed: "Moderate",
     agility: "Low",
