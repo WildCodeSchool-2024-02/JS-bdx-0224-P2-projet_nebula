@@ -1,43 +1,44 @@
 .main {
-    background-color: purple;
-  }
-  .cards {
-    display: flex;
-    width: 100dvw;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
-  .background {
-    width: 98.7dvw;
-    height: 60dvh;
-  }
-  .card {
-    padding: 4rem;
-    border: 2px solid white;
-    border-radius: 40px;
-    background-color: rgb(134, 99, 134);
-    width: 30dvw;
-    margin: 3rem;
-    color: white;
-  }
-  
-  .card:hover {
-    background-color: rgb(18, 13, 18);
-    cursor: pointer;
-  }
+  background-color: purple;
+}
+.cards {
+  display: flex;
+  width: 100dvw;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.background {
+  width: 98.7dvw;
+  height: 60dvh;
+}
+.card {
+  padding: 4rem;
+  border: 2px solid white;
+  border-radius: 40px;
+  background-color: rgb(134, 99, 134);
+  width: 30dvw;
+  margin: 3rem;
+  color: white;
+}
 
-  .vehiculeName {
-    text-align: center;
-    color: aquamarine;
-    
-  }
+.card:hover {
+  background-color: rgb(18, 13, 18);
+  cursor: pointer;
+}
 
-  .vehiculeImg {
-    width: 30dvw;
-  }
+.vehiculeName {
+  text-align: center;
+  color: aquamarine;
+}
 
-  .carac{
-    display: flex;
-    justify-content: space-between;
-  }
+.vehiculeImg {
+  width: 30rem;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.carac {
+  display: flex;
+  justify-content: space-between;
+}
