@@ -1,39 +1,69 @@
-import { useState } from "react";
+import PropTypes from "prop-types";
+import { useContext, useState } from "react";
 import {
-  Modal,
-  ModalOverlay,
+  Button,
   Dialog,
   DialogTrigger,
-  Button,
+  Modal,
+  ModalOverlay,
 } from "react-aria-components";
-import PropTypes from "prop-types";
+import { ButtonContext } from "../Contexts/ButtonContext";
+import { ReservationContext } from "../Contexts/ReservationContext";
 import "../styles/JourneyDetails.scss";
 
-export default function JourneyDetails({
-  selectedShip,
-  travelTime,
-  price,
-}) {
+export default function JourneyDetails({ selectedShip, travelTime }) {
+  const { reservationFormData } = useContext(ReservationContext);
+  const { setIsButtonVisible } = useContext(ButtonContext);
+  const price = Math.floor(Math.random() * 10000);
   const [confirmButton, setConfirmButton] = useState("display");
+
   const handleClick = () => {
     setConfirmButton("displayNone");
   };
+
+  const handleModifyClick = () => {
+    setIsButtonVisible(true);
+  };
+
+  const {
+    selectedDeparture,
+    selectedArrival,
+    selectedDate,
+    selectedTripType,
+    selectedTravelers,
+  } = reservationFormData;
 
   return (
     <section className="JourneyDetails">
       <h2 className={confirmButton}>Summary</h2>
       <article>
-        <h3>Details :</h3>
+        <h3>Détails :</h3>
+        <a
+          className={confirmButton}
+          href="http://localhost:3000/booking"
+          onClick={handleModifyClick}
+        >
+          Modifier
+          <img
+            src="src/assets/images/ModifyIcon.svg"
+            alt="modify your informations"
+          />
+        </a>
         <ul>
-          <li>Departure : [composant formulaire(départ)]</li>
-          <li>Destination :[composant formulaire(arrivé)]</li>
-          <li>Departure date :[composant formulaire(date)]</li>
-          <li>Number of passengers :[composant formulaire(nbrDePersonnes)]</li>
+          <li>Départ : {selectedDeparture}</li>
+          <li>Destination : {selectedArrival}</li>
+          <li>Date du départ : {selectedDate}</li>
+          <li>Nombre de voyageurs : {selectedTravelers}</li>
+          <li>Type de voyage : {selectedTripType}</li>
         </ul>
       </article>
       <article>
         <h3>Ship :</h3>
-        <a className={confirmButton} href="#top" aria-label="Modify your informations">
+        <a
+          className={confirmButton}
+          href="#top"
+          aria-label="Modify your informations"
+        >
           Modify
           <img
             src="src/assets/images/ModifyIcon.svg"
@@ -82,5 +112,4 @@ JourneyDetails.propTypes = {
     name: PropTypes.string.isRequired,
   }).isRequired,
   travelTime: PropTypes.number.isRequired,
-  price: PropTypes.number.isRequired,
 };
