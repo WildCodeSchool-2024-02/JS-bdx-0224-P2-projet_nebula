@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import PropTypes from "prop-types";
 import "../styles/Navbar.scss";
-import Logo from "../assets/images/logo.svg";
 import { IoMdMenu, IoMdCloseCircle } from "react-icons/io";
+import Logo from "../assets/images/logo.svg";
 
 function Navbar({ setCurrentLocation }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,29 +15,40 @@ function Navbar({ setCurrentLocation }) {
     <nav className={`navbar ${isOpen ? "open" : ""}`}>
       <img src={Logo} alt="Logo" />
       <div>
-        <a
-          className={isOpen ? "menu1" : "menu"}
-          onClick={toggleMenu}
-          src={Logo}
-          alt="Menu"
-        >
-          {isOpen ? <IoMdCloseCircle /> : <IoMdMenu />}
-        </a>
+        <input type="button" />
+        className={isOpen ? "menu1" : "menu"}
+        onClick={toggleMenu}
+        src={Logo}
+        alt="Menu"
+        {isOpen ? <IoMdCloseCircle /> : <IoMdMenu />}
         <ul className={`menu-items ${isOpen ? "open" : ""}`}>
-          <li className="close" onClick={toggleMenu}>
-            X
+          <li className="close">
+            <button type="button" onClick={toggleMenu}>
+              X
+            </button>
           </li>
           <li>
-            <a onClick={() => setCurrentLocation("/")}>Accueil</a>
+            <button type="button" onClick={() => setCurrentLocation("/")}>
+              Accueil
+            </button>
           </li>
           <li>
-            <a onClick={() => setCurrentLocation("/vehicule")}>Vehicule</a>
+            <button
+              type="button"
+              onClick={() => setCurrentLocation("/vehicule")}
+            >
+              Vehicule
+            </button>
           </li>
           <li>
-            <a onClick={() => setCurrentLocation("/info")}>Info traffic</a>
+            <button type="button" onClick={() => setCurrentLocation("/info")}>
+              Info traffic
+            </button>
           </li>
           <li>
-            <a onClick={() => setCurrentLocation("/voyage")}>Votre voyage</a>
+            <button type="button" onClick={() => setCurrentLocation("/voyage")}>
+              Votre voyage
+            </button>
           </li>
         </ul>
       </div>
@@ -44,4 +56,7 @@ function Navbar({ setCurrentLocation }) {
   );
 }
 
+Navbar.propTypes = {
+  setCurrentLocation: PropTypes.func.isRequired,
+};
 export default Navbar;
