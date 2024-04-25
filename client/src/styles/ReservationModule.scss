@@ -33,7 +33,7 @@ form {
       transition: all ease-in-out 0.3s;
     }
     .reservationButton:hover {
-      background-color: #5907c4;
+      background-color: $primaryHover;
     }
   }
 }

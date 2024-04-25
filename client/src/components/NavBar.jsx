@@ -80,7 +80,7 @@ function NavBar() {
               onClick={updateMenu}
               aria-label="link to the Home page"
             >
-              Accueil
+              Home
             </Link>
           </li>
           <li>
@@ -89,7 +89,7 @@ function NavBar() {
               onClick={updateMenu}
               aria-label="link to Our destinations page"
             >
-              Nos destinations
+              Our destinations
             </Link>
           </li>
           <li>
@@ -98,7 +98,7 @@ function NavBar() {
               onClick={updateMenu}
               aria-label="link to the Traffic info page"
             >
-              Info traffic
+              Traffic info
             </Link>
           </li>
           <li>
@@ -107,7 +107,7 @@ function NavBar() {
               onClick={updateMenu}
               aria-label="link to the Your trip page"
             >
-              Votre voyage
+              Your trip
             </Link>
           </li>
           <li>
@@ -116,7 +116,7 @@ function NavBar() {
               onClick={updateMenu}
               aria-label="link to the Contact page"
             >
-              Nous contacter
+              Contact us
             </Link>
           </li>
         </ul>

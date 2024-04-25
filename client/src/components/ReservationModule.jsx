@@ -28,12 +28,12 @@ export default function ReservationModule() {
   return (
     <form onSubmit={handleSubmit}>
       <DestinationSelect
-        label="Départ de"
+        label="Departure to"
         value={formData.selectedDeparture}
         handleSelect={(value) => handleInputChange("selectedDeparture", value)}
       />
       <DestinationSelect
-        label="Arrivée à"
+        label="Arrive at"
         value={formData.selectedArrival}
         handleSelect={(value) => handleInputChange("selectedArrival", value)}
       />
@@ -47,7 +47,7 @@ export default function ReservationModule() {
       />
       <DropdownTraveller />
       <Link to="/booking" className="reservationButton" aria-label="réserver">
-        Réserver
+        To book
       </Link>
     </form>
   );

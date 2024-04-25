@@ -55,6 +55,7 @@ nav {
 
     a {
       text-decoration: none;
+      text-shadow: 0 0 10px black;
     }
   }
   li:first-of-type {
@@ -126,9 +127,6 @@ nav {
     }
     li:last-of-type {
       margin-right: 2rem;
-    }
-
-    a {
     }
   }
   .logo {

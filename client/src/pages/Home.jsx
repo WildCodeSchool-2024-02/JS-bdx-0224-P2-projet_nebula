@@ -67,7 +67,7 @@ function Home() {
         <ReservationModule />
       </GalactapediaProvider>
       <HomeCards
-        sectionTitle="Populaires"
+        sectionTitle="Popular"
         planetTitleLeft={thumbnail1.title}
         planetTitleMid={thumbnailUrl2.title}
         planetTitleRight={thumbnailUrl3.title}
@@ -77,7 +77,7 @@ function Home() {
         descriptionCards="Discover the 3 Humans' Favorite Planets"
       />
       <HomeCards
-        sectionTitle="Proches de vous"
+        sectionTitle="Close to you"
         planetTitleLeft={thumbnailUrl4.title}
         planetTitleMid={thumbnailUrl5.title}
         planetTitleRight={thumbnailUrl6.title}

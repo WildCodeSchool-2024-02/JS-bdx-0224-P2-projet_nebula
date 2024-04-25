@@ -31,7 +31,7 @@ function HomeCards({
           <Links
             ariaLabel="link to the planet description"
             routeLink="/planet"
-            linkName="En savoir plus"
+            linkName="Learn more"
           />
         </section>
       </article>
