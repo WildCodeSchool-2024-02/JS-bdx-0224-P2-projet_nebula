@@ -13,6 +13,7 @@ function DestinationSelect({ value, label, handleSelect }) {
         className="select"
         value={value}
         onChange={(e) => handleSelect(e.target.value)}
+        required
       >
         <option value="">Select a destination</option>
         {galactapediaData.map((suggestion) => (

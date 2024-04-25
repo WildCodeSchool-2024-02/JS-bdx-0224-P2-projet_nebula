@@ -5,6 +5,7 @@ form {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   margin-top: 5rem;
+  padding: 0 3rem;
   .reservationButton {
     background-color: $primaryColor;
     box-shadow: 0 0 10px #ac76f2;
