@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import DateSelect from "./DateSelect";
 import DropdownRoundTrip from "./DropdownRounTrip";
 import DestinationSelect from "./DestinationSelect";
@@ -28,12 +27,12 @@ export default function ReservationModule() {
   return (
     <form onSubmit={handleSubmit}>
       <DestinationSelect
-        label="Departure to"
+        label="From"
         value={formData.selectedDeparture}
         handleSelect={(value) => handleInputChange("selectedDeparture", value)}
       />
       <DestinationSelect
-        label="Arrive at"
+        label="To"
         value={formData.selectedArrival}
         handleSelect={(value) => handleInputChange("selectedArrival", value)}
       />
@@ -46,9 +45,9 @@ export default function ReservationModule() {
         value={formData.selectedTripType}
       />
       <DropdownTraveller />
-      <Link to="/booking" className="reservationButton" aria-label="réserver">
-        To book
-      </Link>
+      <button className="reservationButton" type="submit">
+        Book now
+      </button>
     </form>
   );
 }

@@ -1,4 +1,2 @@
-function YourTrip() {
-  return <h1>coucou4</h1>;
-}
+function YourTrip() {}
 export default YourTrip;

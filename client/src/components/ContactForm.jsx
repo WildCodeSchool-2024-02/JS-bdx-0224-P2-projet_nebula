@@ -32,7 +32,9 @@ function ContactForm() {
         placeholder="Your message ..."
         required
       />
-      <button type="submit">Submit</button>
+      <button type="submit" aria-label="submit">
+        Submit
+      </button>
     </form>
   );
 }

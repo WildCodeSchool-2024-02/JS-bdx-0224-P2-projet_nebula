@@ -5,7 +5,7 @@ function DropdownRoundTrip({ value, handleSelect }) {
   return (
     <>
       <label className="dropDownRoundTripLabel" htmlFor="select-round-trip">
-        Type of trip:
+        Fare :
       </label>
       <select
         name="roundTrip"
@@ -14,8 +14,8 @@ function DropdownRoundTrip({ value, handleSelect }) {
         onChange={(e) => handleSelect(e.target.value)}
         className="dropDownRoundTripSelect"
       >
-        <option value="oneWay">Aller simple</option>
-        <option value="roundTrip">Aller-retour</option>
+        <option value="oneWay">One way</option>
+        <option value="roundTrip">Return</option>
       </select>
     </>
   );

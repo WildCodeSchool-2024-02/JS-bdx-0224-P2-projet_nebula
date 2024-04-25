@@ -22,7 +22,9 @@ function DestinationSelect({ label, handleSelect }) {
         onChange={(e) => handleSelect(e.target.value)}
         placeholder={label}
       />
-      <Button className="buttonTriangle">▼</Button>
+      <Button className="buttonTriangle" aria-label="open list of destination">
+        ▼
+      </Button>
       <Popover className="popover">
         <ListBox className="listBox" value={galactapediaData}>
           {galactapediaData.map((suggestion) => (

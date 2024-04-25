@@ -17,7 +17,9 @@ function DestinationCard({ title, thumbnail, translation }) {
       <p className="truncate">{translation}</p>
 
       <DialogTrigger>
-        <Button type="button">About</Button>
+        <Button type="button" aria-label="About">
+          About
+        </Button>
         <ModalOverlay className="modal-overlay">
           <Modal className="modal" />
           <Dialog>
@@ -26,7 +28,13 @@ function DestinationCard({ title, thumbnail, translation }) {
                 <img src={thumbnail} alt={title} className="cardImg" />
                 <h2 className="destinationTitle">{title}</h2>
                 <p className="truncate">{translation}</p>
-                <Button onPress={close}>Close</Button>
+                <Button
+                  className="closeButton"
+                  onPress={close}
+                  aria-label="close"
+                >
+                  Close
+                </Button>
               </>
             )}
           </Dialog>
