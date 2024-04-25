@@ -11,28 +11,39 @@ function ContactForm() {
     alert(`${username} Your form has been submitted successfully!`);
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <label className="inputUsername" htmlFor="username">
+    <form className="ContactForm" onSubmit={handleSubmit}>
+      <label className="labelContact" htmlFor="username">
         Username
       </label>
-      <input type="text" minLength="5" id="username" required />
-      <label htmlFor="email">Email</label>
       <input
+        className="inputContact"
+        type="text"
+        minLength="5"
+        id="username"
+        required
+      />
+      <label className="labelContact" htmlFor="email">
+        Email
+      </label>
+      <input
+        className="inputContact"
         type="email"
         id="email"
         pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
         required
       />
-      <label htmlFor="message">Message</label>
+      <label className="labelContact" htmlFor="message">
+        Message
+      </label>
       <textarea
+        className="textareaContact"
         name="message"
         id="message"
         cols="30"
         rows="10"
-        placeholder="Your message ..."
         required
       />
-      <button type="submit" aria-label="submit">
+      <button className="contactButton" type="submit" aria-label="submit">
         Submit
       </button>
     </form>

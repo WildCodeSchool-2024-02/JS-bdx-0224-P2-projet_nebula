@@ -16,7 +16,6 @@ function App() {
             <Outlet />
           </ReservationProvider>
         </ButtonProvider>
-        <Outlet />
         <Arrow />
       </main>
       <Footer />
