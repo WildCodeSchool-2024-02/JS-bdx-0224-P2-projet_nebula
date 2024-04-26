@@ -29,7 +29,7 @@ function DestinationSelect({ value, label, handleSelect }) {
 DestinationSelect.propTypes = {
   label: PropTypes.string.isRequired,
   handleSelect: PropTypes.func.isRequired,
-  value: PropTypes.string.isRequired, // Assurez-vous que la valeur est requise
+  value: PropTypes.string.isRequired
 };
 
 export default DestinationSelect;
