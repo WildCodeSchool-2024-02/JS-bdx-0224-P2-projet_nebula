@@ -16,7 +16,7 @@ function TopPlanet({ introPlanet }) {
     });
 
   return (
-    <section
+    <section id="header"
       className="titleSlider"
       style={{ backgroundImage: `url(${thumbnailUrl})` }}
     >

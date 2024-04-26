@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Spline from "@splinetool/react-spline";
 import TopPlanet from "../components/TopPlanet";
 import HomeCards from "../components/HomeCards";
 import ReservationModule from "../components/ReservationModule";
@@ -56,8 +57,24 @@ function Home() {
       });
   }, []);
 
+  const [isVisible, setIsVisible] = useState("visible");
+  const changeState = () =>
+    setTimeout(() => {
+      setIsVisible("notVisible");
+    }, 1000);
+
   return (
     <>
+      <section className={isVisible}>
+        <h2 className="titleAnim">Discover</h2>
+        <Spline
+          className="spline"
+          scene="https://prod.spline.design/cgzwYfDzL193Eq0L/scene.splinecode"
+        />
+        <a className="startLink" href="#header" onClick={changeState}>
+          Start
+        </a>
+      </section>
       <header>
         <GalactapediaProvider>
           <TopPlanet introPlanet="Take off for" />
