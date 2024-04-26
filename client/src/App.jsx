@@ -1,29 +1,29 @@
-import { useState, useEffect } from "react";
-import "./App.css";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import Vehicule from "./components/Vehicule";
-import Info from "./components/Info";
-import Voyage from "./components/Voyage";
-import VehiculesDb from "./db/VehiculesDb";
+import { Outlet } from "react-router-dom";
+import { ReservationProvider } from "./Contexts/ReservationContext";
+import { ButtonProvider } from "./Contexts/ButtonContext";
+import { GalactapediaProvider } from "./Contexts/GalactapediaContext";
+import Footer from "./components/Footer";
+import NavBar from "./components/Navbar_old";
+import Arrow from "./components/Arrow";
 
 function App() {
-  const [currentLocation, setCurrentLocation] = useState("/");
-  /* const [vehicules, setVehicules] = useState();
-  useEffect(() => {
-    fetch("https://api.star-citizen.wiki/api/vehicles?limit=10")
-      .then((response) => response.json())
-      .then((data) => setVehicules(data.data));
-  }, []);  */
   return (
-    <div className="container">
-      <Navbar setCurrentLocation={setCurrentLocation} />
-      {currentLocation === "/" && <Home />}
-      {currentLocation === "/vehicule" && <Vehicule vehicules={VehiculesDb} />}
-      {currentLocation === "/info" && <Info />}
-      {currentLocation === "/voyage" && <Voyage />}
-    </div>
+    <>
+      <NavBar className="navbar" />
+      <main>
+        <ButtonProvider>
+          <ReservationProvider>
+            <GalactapediaProvider>
+              <Outlet />
+            </GalactapediaProvider>
+          </ReservationProvider>
+        </ButtonProvider>
+        <Arrow />
+      </main>
+      <footer>
+        <Footer />
+      </footer>
+    </>
   );
 }
-
 export default App;

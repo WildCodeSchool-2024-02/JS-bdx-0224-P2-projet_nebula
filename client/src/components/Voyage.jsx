@@ -1,11 +1,5 @@
-import React from 'react'
-
-const Voyage = () => {
-  return (
-    <div style={{backgroundColor: 'red', height:"84dvh"}}>
-      Voyage
-    </div>
-  )
+function Voyage() {
+  return <div>Voyage</div>;
 }
 
-export default Voyage
+export default Voyage;

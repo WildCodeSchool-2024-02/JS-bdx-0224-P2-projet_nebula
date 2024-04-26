@@ -1,0 +1,33 @@
+@use "./app.scss" as *;
+
+.slogan {
+  text-align: center;
+  margin-top: 5rem;
+  h3 {
+    font-size: 2rem;
+    color: $primaryColor;
+    text-shadow: 0 0 10px #000000;
+  }
+  h3:first-of-type {
+    color: $whiteColor;
+    text-shadow: 0 0 10px #000000;
+  }
+  h3:nth-child(3) {
+    color: $whiteColor;
+    text-shadow: 0 0 10px #000000;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .slogan {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 10rem;
+
+    h3 {
+      font-size: 3rem;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@use "./app.scss" as *;
+
+.labelSelect {
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+  border-radius: 2rem 0 0 2rem;
+  height: 2rem;
+  padding-top: 0.6rem;
+  padding-left: 1rem;
+  border-right: solid $blackColor 0.01rem;
+  margin-bottom: 1rem;
+}
+
+.select {
+  border-style: none;
+  margin-right: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 0 2rem 2rem 0;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.select:focus {
+  outline: none;
+}
+
+@media screen and (min-width: 992px) {
+  .labelSelect {
+    font-size: 1rem;
+    height: 3rem;
+    margin-top: 2rem;
+    padding-top: 0.9rem;
+    padding-left: 2rem;
+    margin-left: 1rem;
+  }
+  .select {
+    font-size: 1rem;
+    height: 3rem;
+    margin-top: 2rem;
+    padding-left: 3rem;
+    margin-right: 1rem;
+  }
+}

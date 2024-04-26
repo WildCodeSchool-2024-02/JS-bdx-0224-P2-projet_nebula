@@ -5,10 +5,47 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
 
+import Home from "./pages/Home";
+import OurDestination from "./pages/OurDestination";
+import Booking from "./pages/Booking";
+import TrafficInfo from "./pages/TrafficInfo";
+import YourTrip from "./pages/YourTrip";
+import Contact from "./pages/Contact";
+import ErrorPage404 from "./pages/ErrorPage";
+
 const router = createBrowserRouter([
   {
-    path: "/",
     element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/ourDestinations",
+        element: <OurDestination />,
+      },
+      {
+        path: "/booking",
+        element: <Booking />,
+      },
+      {
+        path: "/trafficInfo",
+        element: <TrafficInfo />,
+      },
+      {
+        path: "/yourTrip",
+        element: <YourTrip />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
+        path: "*",
+        element: <ErrorPage404 />,
+      },
+    ],
   },
 ]);
 
@@ -17,5 +54,5 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
