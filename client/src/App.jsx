@@ -10,22 +10,24 @@ import Arrow from "./components/Arrow";
 
 function App() {
   return (
-    <IntroProvider>
-      <NavBar className="navbar" />
-      <main>
-        <ButtonProvider>
-          <ReservationProvider>
-            <GalactapediaProvider>
-              <Outlet />
-            </GalactapediaProvider>
-          </ReservationProvider>
-        </ButtonProvider>
-        <Arrow />
-      </main>
+    <>
+      <IntroProvider>
+        <NavBar />
+        <main>
+          <ButtonProvider>
+            <ReservationProvider>
+              <GalactapediaProvider>
+                <Outlet />
+              </GalactapediaProvider>
+            </ReservationProvider>
+          </ButtonProvider>
+          <Arrow />
+        </main>
+      </IntroProvider>
       <footer>
         <Footer />
       </footer>
-      </IntroProvider>
+    </>
   );
 }
 export default App;

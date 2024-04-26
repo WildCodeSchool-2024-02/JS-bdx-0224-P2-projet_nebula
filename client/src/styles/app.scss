@@ -19,7 +19,10 @@ $glassmorphisme: (
   box-shadow: 0 4px 30px #0000001a,
   backdrop-filter: blur(4px),
 );
-.visible {
+.visibleIntro {
+  display: none;
+}
+.notVisibleIntro {
   display: none;
 }
 * {
@@ -32,7 +35,7 @@ $glassmorphisme: (
   outline: solid $primaryColor 0.2rem;
 }
 body {
-  background-image: url("/src/assets/images/ImageFondMobil.png");
+  background-image: url("/src/assets/images/imageFondMobil.png");
   background-size: cover;
   background-position: bottom;
   background-attachment: fixed;
@@ -80,15 +83,14 @@ button:hover {
 }
 @media screen and (min-width: 992px) {
   body {
-    background-image: url("/src/assets/images/ImageFondDesk.png");
+    background-image: url("/src/assets/images/imageFontDesk.png");
   }
   footer {
     position: relative;
     bottom: 0;
   }
   .spline {
-    margin-top: -3rem;
-    box-shadow: 0 20px 0 0 black;
+    margin-top: -1rem;
   }
   .titleAnim {
     text-align: center;
@@ -113,10 +115,10 @@ button:hover {
   .startLink:hover {
     background-color: $primaryHover;
   }
-  .visible {
+  .visibleIntro {
     display: inherit;
   }
-  .notVisible {
+  .notVisibleIntro {
     display: none;
   }
 }

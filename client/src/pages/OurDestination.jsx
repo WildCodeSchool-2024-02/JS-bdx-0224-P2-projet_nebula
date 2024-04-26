@@ -38,7 +38,7 @@ function OurDestination() {
     <main className="mainOurDestination">
       <h1 className="ourDestinationTitle">Our Destinations</h1>
       <input
-      className="ourDestinationInput"
+        className="ourDestinationInput"
         type="text"
         placeholder="Search planets..."
         value={searchTerm}
