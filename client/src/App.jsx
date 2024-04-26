@@ -3,7 +3,7 @@ import { ReservationProvider } from "./Contexts/ReservationContext";
 import { ButtonProvider } from "./Contexts/ButtonContext";
 import { GalactapediaProvider } from "./Contexts/GalactapediaContext";
 import Footer from "./components/Footer";
-import NavBar from "./components/Navbar_old";
+import NavBar from "./components/NavBar";
 import Arrow from "./components/Arrow";
 
 function App() {

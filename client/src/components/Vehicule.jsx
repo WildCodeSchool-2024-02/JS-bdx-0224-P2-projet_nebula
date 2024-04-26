@@ -5,12 +5,12 @@ import "../styles/Vehicules.scss";
 function Vehicule({ vehicules }) {
   console.info(vehicules);
   return (
-    <main className="main">
+    <main className="mainOurDestination">
       <ReactPlayer url="https://youtu.be/QGMxGdzYVY8" width="100%" />
 
       <div className="cards">
         {vehicules.map((vehicule) => (
-          <div key={vehicule.id} className="card">
+          <div key={vehicule.id} className="cardVehicule">
             <img className="vehiculeImg" src={vehicule.img} alt="img" />
             <h2 className="vehiculeName">{vehicule.nom} </h2>
             <h4>Description: {vehicule.description} </h4>

@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import "../styles/Navbar_old.scss";
+import "../styles/NavBar.scss";
 
 function NavBar() {
   const [burgerClass, setBurgerClass] = useState("burger-bar unclicked");
