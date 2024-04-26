@@ -1,12 +1,12 @@
 @use "./app.scss" as *;
 
 .labelSelect {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   margin-left: 0.5rem;
   border-radius: 2rem 0 0 2rem;
   height: 2rem;
-  padding-top: 0.5rem;
-  padding-left: 0.5rem;
+  padding-top: 0.6rem;
+  padding-left: 1rem;
   border-right: solid $blackColor 0.01rem;
   margin-bottom: 1rem;
 }

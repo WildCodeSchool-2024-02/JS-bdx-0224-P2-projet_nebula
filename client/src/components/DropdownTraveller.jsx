@@ -5,7 +5,7 @@ function DropdownTraveller({ value, handleSelect }) {
   return (
     <>
       <label className="dropDownTravellerLabel" htmlFor="selectNumberTraveller">
-        Number of travellers :
+        Travellers :
       </label>
       <select
         name="travellers"

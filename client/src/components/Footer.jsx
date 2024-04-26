@@ -6,7 +6,7 @@ function Footer() {
     <>
       <Link
         to="/contact"
-        ariaLabel="link to the contact formular"
+        aria-label="link to the contact formular"
         className="contactButton"
       >
         Contact us
