@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
 import Spline from "@splinetool/react-spline";
+import { useEffect, useState } from "react";
+import { useIntro } from "../Contexts/IntroContext";
 import TopPlanet from "../components/TopPlanet";
 import HomeCards from "../components/HomeCards";
 import ReservationModule from "../components/ReservationModule";
@@ -56,12 +57,7 @@ function Home() {
         setThumbnailUrl6({ url: data.data.thumbnail, title: data.data.title });
       });
   }, []);
-
-  const [isVisible, setIsVisible] = useState("visible");
-  const changeState = () =>
-    setTimeout(() => {
-      setIsVisible("notVisible");
-    }, 1000);
+  const { isVisible, changeState } = useIntro();
 
   return (
     <>

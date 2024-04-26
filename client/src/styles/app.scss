@@ -113,7 +113,7 @@ button:hover {
     background-color: $primaryHover;
   }
   .visible {
-    display: block;
+    display: inherit;
   }
   .notVisible {
     display: none;
