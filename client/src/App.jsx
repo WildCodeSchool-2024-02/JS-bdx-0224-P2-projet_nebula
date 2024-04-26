@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import { IntroProvider } from "./Contexts/IntroContext";
 import { ReservationProvider } from "./Contexts/ReservationContext";
 import { ButtonProvider } from "./Contexts/ButtonContext";
 import { GalactapediaProvider } from "./Contexts/GalactapediaContext";
@@ -9,7 +10,7 @@ import Arrow from "./components/Arrow";
 
 function App() {
   return (
-    <>
+    <IntroProvider>
       <NavBar className="navbar" />
       <main>
         <ButtonProvider>
@@ -24,7 +25,7 @@ function App() {
       <footer>
         <Footer />
       </footer>
-    </>
+      </IntroProvider>
   );
 }
 export default App;
