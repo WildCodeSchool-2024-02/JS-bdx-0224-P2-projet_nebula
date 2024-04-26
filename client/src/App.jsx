@@ -16,7 +16,7 @@ function App() {
           <ReservationProvider>
             <GalactapediaProvider>
               <Outlet />
-            </GalactapediaProvider>{" "}
+            </GalactapediaProvider>
           </ReservationProvider>
         </ButtonProvider>
         <Arrow />
