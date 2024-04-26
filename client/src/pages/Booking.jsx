@@ -2,7 +2,6 @@ import { useState } from "react";
 import JourneyDetails from "../components/JourneyDetails";
 import ReservationModule from "../components/ReservationModule";
 import VehiculeSelect from "../components/VehiculeSelect";
-import { GalactapediaProvider } from "../Contexts/GalactapediaContext";
 
 export default function Booking() {
   const ships = [
@@ -21,9 +20,7 @@ export default function Booking() {
   const [selectedShip, setSelectedShip] = useState([]);
   return (
     <main>
-      <GalactapediaProvider>
-        <ReservationModule />
-      </GalactapediaProvider>
+      <ReservationModule />
       <VehiculeSelect ships={ships} setSelectedShip={setSelectedShip} />
       <JourneyDetails selectedShip={selectedShip} />
     </main>
