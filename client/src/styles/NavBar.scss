@@ -11,7 +11,7 @@ nav {
   display: flex;
   flex-direction: column;
   position: absolute;
-  z-index: 9999;
+  z-index: 99999999;
   right: 0;
   top: -0.4rem;
 
@@ -69,7 +69,7 @@ nav {
 }
 
 .visible {
-  display: inherit;
+  display: block;
 }
 
 .burgerMenu {
