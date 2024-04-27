@@ -13,6 +13,7 @@ function DestinationSelect({ value, label, handleSelect }) {
         className="select"
         value={value}
         onChange={(e) => handleSelect(e.target.value)}
+        required
       >
         <option value="">Select a destination</option>
         {galactapediaData.map((suggestion) => (
@@ -28,7 +29,7 @@ function DestinationSelect({ value, label, handleSelect }) {
 DestinationSelect.propTypes = {
   label: PropTypes.string.isRequired,
   handleSelect: PropTypes.func.isRequired,
-  value: PropTypes.string.isRequired, // Assurez-vous que la valeur est requise
+  value: PropTypes.string.isRequired,
 };
 
 export default DestinationSelect;

@@ -4,15 +4,15 @@ form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
+  margin-top: 5rem;
+  padding: 0 3rem;
   .reservationButton {
     background-color: $primaryColor;
     box-shadow: 0 0 10px #ac76f2;
-    text-align: center;
     text-decoration: none;
     font-family: $bodyFont;
     border-radius: 2rem;
     height: 1.8rem;
-    align-content: center;
     font-size: 0.8rem;
     width: 6rem;
     grid-column: 1/3;

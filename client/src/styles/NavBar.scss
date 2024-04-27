@@ -11,8 +11,9 @@ nav {
   display: flex;
   flex-direction: column;
   position: absolute;
-  z-index: 9999;
+  z-index: 99999999;
   right: 0;
+  top: -0.4rem;
 
   .burgerMenu:hover {
     background-color: transparent;
@@ -41,7 +42,7 @@ nav {
 
 .menu {
   width: 15rem;
-  height: 100vh;
+  height: 110vh;
   background: rgba(2, 64, 146, 0.2);
   backdrop-filter: blur(10px);
   font-size: 1rem;
@@ -68,7 +69,7 @@ nav {
 }
 
 .visible {
-  display: inherit;
+  display: block;
 }
 
 .burgerMenu {

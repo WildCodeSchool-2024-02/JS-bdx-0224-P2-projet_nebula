@@ -4,10 +4,30 @@
   @each $property, $value in $glassmorphisme {
     #{$property}: $value;
   }
+  display: flex;
+  flex-direction: column;
 }
 .ourDestinationTitle {
   text-align: center;
   padding: 2rem;
+}
+
+.ourDestinationInput {
+  @each $property, $value in $modalGlassmorphism {
+    #{$property}: $value;
+  }
+  width: 50vw;
+  text-align: center;
+  border-style: none;
+  color: $whiteColor;
+  box-shadow: 0 0 5px;
+  border-radius: 1rem;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.ourDestinationInput::placeholder {
+  color: $whiteColor;
 }
 
 @media screen and (min-width: 992px) {

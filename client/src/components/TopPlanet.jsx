@@ -17,6 +17,7 @@ function TopPlanet({ introPlanet }) {
 
   return (
     <section
+      id="header"
       className="titleSlider"
       style={{ backgroundImage: `url(${thumbnailUrl})` }}
     >
@@ -24,7 +25,7 @@ function TopPlanet({ introPlanet }) {
       <h2>{introPlanet}</h2>
       <h2>{titleUrl}</h2>
       <Links
-        ariaLabel="link to the planet description"
+        labelName="link to the planet description"
         routeLink="/ourDestinations"
         linkName="Discover"
       />

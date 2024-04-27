@@ -39,38 +39,23 @@ export default function JourneyDetails({ selectedShip, travelTime }) {
       <h2 className={confirmButton}>Summary</h2>
       <article>
         <h3>Détails :</h3>
-        <a
-          className={confirmButton}
-          href="http://localhost:3000/booking"
-          onClick={handleModifyClick}
-        >
-          Modifier
-          <img
-            src="src/assets/images/ModifyIcon.svg"
-            alt="modify your informations"
-          />
-        </a>
-        <ul>
-          <li>Départ : {selectedDeparture}</li>
-          <li>Destination : {selectedArrival}</li>
-          <li>Date du départ : {selectedDate}</li>
-          <li>Nombre de voyageurs : {selectedTravelers}</li>
-          <li>Type de voyage : {selectedTripType}</li>
-        </ul>
-      </article>
-      <article>
-        <h3>Ship :</h3>
-        <a
-          className={confirmButton}
-          href="#top"
-          aria-label="Modify your informations"
-        >
+        <a className={confirmButton} href=" " onClick={handleModifyClick}>
           Modify
           <img
             src="src/assets/images/ModifyIcon.svg"
             alt="modify your informations"
           />
         </a>
+        <ul>
+          <li>Departure : {selectedDeparture}</li>
+          <li>Destination : {selectedArrival}</li>
+          <li>Departure Date : {selectedDate}</li>
+          <li>Number of passengers : {selectedTravelers}</li>
+          <li>Fare : {selectedTripType}</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Ship :</h3>
         <p>{selectedShip.name}</p>
         <ul>
           <li>Travel time : {travelTime} days</li>

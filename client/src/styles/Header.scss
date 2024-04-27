@@ -7,8 +7,10 @@
   background-size: cover;
   height: 26rem;
   background-repeat: no-repeat;
+  box-shadow: 0px 0px 40px 40px;
 
   h2 {
+    font-family: $headerFont;
     text-shadow: 0 0 15px black;
   }
   h2:first-of-type {

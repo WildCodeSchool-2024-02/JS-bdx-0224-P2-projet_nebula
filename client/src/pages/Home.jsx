@@ -1,8 +1,9 @@
+import Spline from "@splinetool/react-spline";
 import { useEffect, useState } from "react";
+import { useIntro } from "../Contexts/IntroContext";
 import TopPlanet from "../components/TopPlanet";
 import HomeCards from "../components/HomeCards";
 import ReservationModule from "../components/ReservationModule";
-import { GalactapediaProvider } from "../Contexts/GalactapediaContext";
 import "../styles/app.scss";
 
 function Home() {
@@ -55,17 +56,24 @@ function Home() {
         setThumbnailUrl6({ url: data.data.thumbnail, title: data.data.title });
       });
   }, []);
+  const { isVisible, changeState } = useIntro();
 
   return (
     <>
+      <section className={isVisible}>
+        <h2 className="titleAnim">Discover</h2>
+        <Spline
+          className="spline"
+          scene="https://prod.spline.design/cgzwYfDzL193Eq0L/scene.splinecode"
+        />
+        <a className="startLink" href="#header" onClick={changeState}>
+          Start
+        </a>
+      </section>
       <header>
-        <GalactapediaProvider>
-          <TopPlanet introPlanet="Take off for" />
-        </GalactapediaProvider>
+        <TopPlanet introPlanet="Take off for" />
       </header>
-      <GalactapediaProvider>
-        <ReservationModule />
-      </GalactapediaProvider>
+      <ReservationModule />
       <HomeCards
         sectionTitle="Popular"
         planetTitleLeft={thumbnail1.title}

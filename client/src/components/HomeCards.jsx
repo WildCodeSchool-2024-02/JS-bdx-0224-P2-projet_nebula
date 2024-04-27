@@ -29,7 +29,7 @@ function HomeCards({
           </section>
           <p className="descriptionCards">{descriptionCards}</p>
           <Links
-            ariaLabel="link to the planet description"
+            labelName="link to the planet description"
             routeLink="/ourDestinations"
             linkName="Learn more"
           />

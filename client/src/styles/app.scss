@@ -19,6 +19,12 @@ $glassmorphisme: (
   box-shadow: 0 4px 30px #0000001a,
   backdrop-filter: blur(4px),
 );
+.visibleIntro {
+  display: none;
+}
+.notVisibleIntro {
+  display: none;
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -29,11 +35,11 @@ $glassmorphisme: (
   outline: solid $primaryColor 0.2rem;
 }
 body {
-  background-image: url("/src/assets/images/ImageFondMobil.png");
+  background-image: url("/src/assets/images/imageFondMobil.png");
   background-size: cover;
   background-position: bottom;
   background-attachment: fixed;
-  background-color: $blackColor;
+  background-color: black;
 }
 h1 {
   font-family: $headerFont;
@@ -77,6 +83,42 @@ button:hover {
 }
 @media screen and (min-width: 992px) {
   body {
-    background-image: url("/src/assets/images/ImageFondDesk.png");
+    background-image: url("/src/assets/images/imageFontDesk.png");
+  }
+  footer {
+    position: relative;
+    bottom: 0;
+  }
+  .spline {
+    margin-top: -1rem;
+  }
+  .titleAnim {
+    text-align: center;
+    position: relative;
+    z-index: 999999;
+    top: 14rem;
+    color: $whiteColor;
+    font-size: 7rem;
+    font-family: $headerFont;
+  }
+  .startLink {
+    position: relative;
+    top: -5em;
+    left: 46%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-color: $primaryColor;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 2rem;
+    transition: all ease-in-out 0.3s;
+  }
+  .startLink:hover {
+    background-color: $primaryHover;
+  }
+  .visibleIntro {
+    display: inherit;
+  }
+  .notVisibleIntro {
+    display: none;
   }
 }

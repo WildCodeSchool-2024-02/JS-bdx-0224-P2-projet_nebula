@@ -15,6 +15,7 @@ function DateSelect({ value, handleSelect }) {
         max="3000-12-31"
         value={value}
         onChange={(e) => handleSelect(e.target.value)}
+        required
       />
     </>
   );

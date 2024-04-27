@@ -14,11 +14,10 @@
   }
   img {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50rem;
+    margin: auto;
+    width: 100%;
     border-radius: 2rem;
-    margin-top: 1rem;
+    margin: 2rem 0 1rem 0;
   }
 }
 
@@ -30,15 +29,16 @@ figcaption {
 .trafficSection {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .trafficCard {
   @each $property, $value in $glassmorphisme {
     #{$property}: $value;
   }
-  margin: 3rem 3rem 0 0;
+  justify-content: center;
+  margin: auto;
+  margin-top: 2rem;
   padding: 1rem;
   line-height: 2rem;
-  width: 40%;
+  width: 100%;
 }
