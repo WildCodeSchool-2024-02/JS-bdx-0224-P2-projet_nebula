@@ -1,0 +1,60 @@
+@use "./app.scss" as *;
+body {
+  overflow-x: hidden;
+}
+
+h1 {
+  position: relative;
+  left: 45%;
+  margin-top: 4.5rem;
+}
+.yourTrip {
+  @each $property, $value in $glassmorphisme {
+    #{$property}: $value;
+    margin: 3rem;
+    padding: 1rem;
+    line-height: 2rem;
+  }
+  display: flex;
+  flex-direction: column;
+  h2 {
+    position: relative;
+    margin: auto;
+    padding-bottom: 1rem;
+  }
+  .summaryTicket {
+    background-image: url("../assets/images/TicketNebula.png");
+    background-size: contain;
+    border-radius: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 17rem;
+    position: relative;
+  }
+  ul {
+    position: fixed;
+    top: 4rem;
+    left: 24rem;
+    line-height: clamp(14px, 2.5vw, 19px);
+  }
+  li {
+    list-style-type: none;
+    margin-left: 7rem;
+    font-size: clamp(12px, 2.5vw, 17px);
+  }
+  li:nth-of-type(3) {
+    padding: 2.2rem 0 2.2rem 0;
+  }
+  p {
+    margin: auto;
+    padding: 1rem 0 1rem 0;
+  }
+  button {
+    margin: auto;
+    width: 10rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+}

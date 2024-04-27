@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useContext, useState } from "react";
 import {
@@ -94,9 +95,12 @@ export default function JourneyDetails({ selectedShip, travelTime }) {
                 <img
                   src="https://cdnl.iconscout.com/lottie/premium/thumb/eye-scanner-5456745-4561468.gif"
                   width={300}
-                  alt="Scanner rétinien"
+                  alt="Retinnal scan"
                 />
-                <Button onPress={close}>Your ticket</Button>
+                <Button onPress={close} aria-label="clone the scanner">
+                  X
+                </Button>
+                <Link to="/yourTrip">Your trip</Link>
               </>
             )}
           </Dialog>
