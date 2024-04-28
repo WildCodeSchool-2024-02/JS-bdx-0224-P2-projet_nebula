@@ -57,7 +57,7 @@
   margin-top: 4dvh;
 }
 
-.divStyle{
+.divStyle {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,37 +73,37 @@
 }
 
 .divWidth {
-  width: 30dvw
+  width: 30dvw;
 }
 
 @media screen and (max-width: 992px) {
   .cardVehicule {
-  @each $property, $value in $glassmorphisme {
-    #{$property}: $value;
+    @each $property, $value in $glassmorphisme {
+      #{$property}: $value;
+    }
+    text-shadow: 0px 0px 5px gray;
+    padding: 4rem;
+    border: 2px solid white;
+    border-radius: 40px;
+    width: 90dvw;
+    margin: 3rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
-  text-shadow: 0px 0px 5px gray;
-  padding: 4rem;
-  border: 2px solid white;
-  border-radius: 40px;
-  width: 90dvw;
-  margin: 3rem;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.vehiculeImg {
-  width: 80dvw;
-  height: 15 rem;
-  object-fit: cover;
-  border-radius: 40px;
-}
-.divWidth {
-  width: 80dvw
-}
-.videoPlayer{
-  margin-top: 11dvh;
-  width: 80dvw;
-}
+  .vehiculeImg {
+    width: 80dvw;
+    height: 15 rem;
+    object-fit: cover;
+    border-radius: 40px;
+  }
+  .divWidth {
+    width: 80dvw;
+  }
+  .videoPlayer {
+    margin-top: 11dvh;
+    width: 80dvw;
+  }
 }
