@@ -1,4 +1,3 @@
-import { useState } from "react";
 import PropTypes from "prop-types";
 import ReactPlayer from "react-player";
 import { Slide } from "react-slideshow-image";
@@ -25,6 +24,7 @@ const equipementsIMG = [
 ];
 
 function Vehicule({ vehicules }) {
+  const handleFavClicked = () => {};
   return (
     <main className="mainOurDestination">
       <ReactPlayer
@@ -66,9 +66,7 @@ function Vehicule({ vehicules }) {
                 />
                 <span className="spanStyle">
                   {slideImage.caption}{" "}
-                  <button
-                    onClick={() => (slideImage.favorite = !slideImage.favorite)}
-                  >
+                  <button type="button" onClick={() => handleFavClicked}>
                     {slideImage.favorite ? "❤️" : "🖤"}
                   </button>
                 </span>
@@ -85,6 +83,7 @@ Vehicule.propTypes = {
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
+      isFav: PropTypes.bool.isRequired,
       // Ajoutez d'autres propriétés et leurs types si nécessaire
     }),
   ).isRequired,
