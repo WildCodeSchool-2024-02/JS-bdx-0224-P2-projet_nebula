@@ -11,6 +11,7 @@ export function ReservationProvider({ children }) {
     selectedTripType: "oneWay",
     selectedTravelers: 1,
     returnSelected: false,
+    selectedReturnDate: "",
   });
 
   const updateReservationFormData = (newFormData) => {

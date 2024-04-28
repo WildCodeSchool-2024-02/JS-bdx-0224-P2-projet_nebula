@@ -31,6 +31,7 @@ export default function JourneyDetails({ selectedShip, travelTime }) {
     selectedDate,
     selectedTripType,
     selectedTravelers,
+    selectedReturnDate,
   } = reservationFormData;
 
   return (
@@ -51,6 +52,9 @@ export default function JourneyDetails({ selectedShip, travelTime }) {
           <li>Departure Date : {selectedDate}</li>
           <li>Number of passengers : {selectedTravelers}</li>
           <li>Fare : {selectedTripType}</li>
+          {selectedTripType === "roundTrip" && ( 
+            <li>Return Date: {selectedReturnDate}</li>
+          )}
         </ul>
       </article>
       <article>
