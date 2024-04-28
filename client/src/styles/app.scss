@@ -30,6 +30,7 @@ $glassmorphisme: (
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  line-height: 1.5;
 }
 *:focus-visible {
   outline: solid $primaryColor 0.2rem;

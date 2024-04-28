@@ -10,6 +10,7 @@ export function ReservationProvider({ children }) {
     selectedDate: "",
     selectedTripType: "oneWay",
     selectedTravelers: 1,
+    returnSelected: false,
   });
 
   const updateReservationFormData = (newFormData) => {

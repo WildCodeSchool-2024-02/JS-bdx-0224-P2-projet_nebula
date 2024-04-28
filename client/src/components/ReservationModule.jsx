@@ -21,6 +21,12 @@ export default function ReservationModule() {
       [name]: value,
     };
     updateReservationFormData(newFormData);
+
+    if (name === "selectedTripType" && value === "roundTrip") {
+      newFormData.returnSelected = true;
+    } else {
+      newFormData.returnSelected = false;
+    }
   };
 
   const handleSubmit = (event) => {
@@ -49,6 +55,13 @@ export default function ReservationModule() {
         handleSelect={(value) => handleInputChange("selectedTripType", value)}
         value={reservationFormData.selectedTripType}
       />
+      {reservationFormData.returnSelected && (
+        <DateSelect
+          label="Return Date"
+          handleSelect={(value) => handleInputChange("selectedReturnDate", value)}
+          value={reservationFormData.returnSelected}
+        />
+      )}
       <DropdownTraveller
         handleSelect={(value) => handleInputChange("selectedTravelers", value)}
         value={reservationFormData.selectedTravelers}
