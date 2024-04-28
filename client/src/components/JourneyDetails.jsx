@@ -14,7 +14,7 @@ import "../styles/JourneyDetails.scss";
 
 export default function JourneyDetails() {
   const { reservationFormData } = useContext(ReservationContext);
-  const { isButtonVisible , setIsButtonVisible } = useContext(ButtonContext);
+  const { isButtonVisible, setIsButtonVisible } = useContext(ButtonContext);
   const { ships } = useContext(ShipContext);
   const { selectedShipIndex, selectedShipsData } = reservationFormData;
 
@@ -41,7 +41,10 @@ export default function JourneyDetails() {
         {!isButtonVisible && (
           <a href=" # " onClick={handleModifyClick}>
             Modify
-            <img src="src/assets/images/ModifyIcon.svg" alt="modify your informations" />
+            <img
+              src="src/assets/images/ModifyIcon.svg"
+              alt="modify your informations"
+            />
           </a>
         )}
         <ul>
@@ -57,18 +60,14 @@ export default function JourneyDetails() {
       <article>
         <h3>Ship :</h3>
         {selectedShip ? (
-          <>
-            <p>{selectedShip.name}</p>
-            <ul>
-              <li>
-                Travel time : {selectedShipData.travelTime || "Not available"}{" "}
-                days
-              </li>
-              <li>
-                Price : {selectedShipData.price || "Not available"} credits
-              </li>
-            </ul>
-          </>
+          <ul>
+            <li>{selectedShip.name}</li>
+            <li>
+              Travel time : {selectedShipData.travelTime || "Not available"}{" "}
+              days
+            </li>
+            <li>Price : {selectedShipData.price || "Not available"} credits</li>
+          </ul>
         ) : (
           <p>No ship selected</p>
         )}
@@ -89,7 +88,9 @@ export default function JourneyDetails() {
                   width={300}
                   alt="Retinnal scan"
                 />
-                  <Link to="/yourTrip">Your trip</Link>
+                <Link className="ticketLink" to="/yourTrip">
+                  Your trip
+                </Link>
               </>
             )}
           </Dialog>

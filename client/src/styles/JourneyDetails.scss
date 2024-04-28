@@ -67,26 +67,26 @@
 .scan:after {
   visibility: visible;
   position: absolute;
-  content: "Scan terminé !";
+  content: "Scan completed !";
   animation: change-text 5s linear;
 }
 
 @keyframes change-text {
   0% {
-    content: "Approchez vous de la caméra";
+    content: "Come closer to the camera";
   }
   33% {
-    content: "Scan rétinien en cours...";
+    content: "Retinal scan in progress...";
   }
   66% {
-    content: "Scan presque terminé...";
+    content: "Scan almost finished...";
   }
   99% {
-    content: "Scan terminé !";
+    content: "Scan completed !";
   }
 }
 
-.react-aria-Button {
+.ticketLink {
   box-shadow: 0 0 10px $unavailableButtonColor;
   background-color: $unavailableButtonColor;
   width: 7rem;
@@ -94,6 +94,11 @@
     background-color 1s,
     transform 1s;
   animation: button-animation 2s ease 4s infinite;
+  border-radius: 2rem;
+  font-size: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
 }
 
 @keyframes button-animation {
@@ -103,9 +108,11 @@
   }
   50% {
     transform: scale(1.2);
+    background-color: $primaryColor;
   }
   100% {
     transform: scale(1);
+    background-color: $primaryColor;
   }
 }
 
