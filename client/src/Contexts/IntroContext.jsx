@@ -4,10 +4,10 @@ import PropTypes from "prop-types";
 const Intro = createContext();
 
 export function IntroProvider({ children }) {
-  const [isVisible, setIsVisible] = useState("visible");
+  const [isVisible, setIsVisible] = useState("visibleIntro");
   const changeState = () =>
     setTimeout(() => {
-      setIsVisible("notVisible");
+      setIsVisible("notVisibleIntro");
     }, 1000);
   const contextIntroValue = useMemo(() => ({
     isVisible,
