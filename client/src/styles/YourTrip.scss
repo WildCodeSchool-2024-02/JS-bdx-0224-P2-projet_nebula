@@ -11,8 +11,6 @@ h1 {
 .yourTrip {
   @each $property, $value in $glassmorphisme {
     #{$property}: $value;
-    margin: 3rem;
-    padding: 1rem;
     line-height: 2rem;
   }
   display: flex;
@@ -26,24 +24,26 @@ h1 {
     background-image: url("../assets/images/TicketNebula.png");
     background-size: contain;
     border-radius: 10px;
-    background-position: center;
+    background-position: top left;
+    aspect-ratio: 30 /13;
     background-repeat: no-repeat;
-    height: 17rem;
     position: relative;
+    margin: 0 auto;
+    max-width: 660px;
+    width: 100%;
   }
   ul {
-    position: fixed;
-    top: 4rem;
-    left: 24rem;
+    position: absolute;
+    top: 24%;
+    left: 18%;
     line-height: clamp(14px, 2.5vw, 19px);
   }
   li {
     list-style-type: none;
-    margin-left: 7rem;
-    font-size: clamp(12px, 2.5vw, 17px);
+    font-size: clamp(12px, 2.5vw, 15px);
   }
   li:nth-of-type(3) {
-    padding: 2.2rem 0 2.2rem 0;
+    padding: 35% 0 50% 0;
   }
   p {
     margin: auto;
@@ -56,5 +56,28 @@ h1 {
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (max-width: 475px) {
+  .summaryTicket {
+    transform: rotate(-90deg);
+
+    article {
+      margin-bottom: 10rem;
+    }
+  }
+  .yourTrip {
+    padding-top: 8rem;
+    ul {
+      position: absolute;
+      top: 24%;
+      left: 18%;
+      line-height: clamp(10px, 1.5vw, 15px);
+    }
+    li {
+      list-style-type: none;
+      font-size: clamp(10px, 1.5vw, 13px);
+    }
+    p {
+      margin-top: 8rem;
+    }
+  }
 }
