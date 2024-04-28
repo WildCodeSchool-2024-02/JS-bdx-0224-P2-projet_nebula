@@ -99,6 +99,12 @@ function NavBar() {
             </Link>
           </li>
           <li>
+            <Link to="/OurVehicles" aria-label="link to the Traffic info page">
+              {" "}
+              Our vehicles
+            </Link>
+          </li>
+          <li>
             <Link
               to="/trafficInfo"
               onClick={updateMenu}

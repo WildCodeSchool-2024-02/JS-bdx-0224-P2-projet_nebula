@@ -55,6 +55,7 @@ const vehicles = [
       "The Carrack is a versatile and formidable exploration vessel, capable of undertaking extended missions into uncharted territories. Its spacious interior accommodates a wide range of amenities, including research facilities and living quarters for extended stays. Despite its size, the Carrack maintains impressive speed and agility, ensuring efficient exploration of even the most remote regions of space.",
     speed: "Moderate",
     agility: "Moderate",
+    Size: "Small",
     img: "https://media.starcitizen.tools/thumb/c/cd/EXT_Carrack_Microtech_112019-Min.jpg/1920px-EXT_Carrack_Microtech_112019-Min.jpg",
   },
   {
@@ -64,6 +65,7 @@ const vehicles = [
       "The Constellation Aquila is a versatile multi-crew exploration vessel equipped for long-duration missions. Its modular design allows for easy customization to suit various mission profiles, from exploration to commerce. With its combination of speed, firepower, and versatility, the Aquila is a dependable choice for those seeking adventure beyond the stars.",
     speed: "High",
     agility: "Moderate",
+    Size: "Small",
     img: "https://media.starcitizen.tools/thumb/2/20/Constellation_Aquila_-_Flying_over_world.jpg/1280px-Constellation_Aquila_-_Flying_over_world.jpg",
   },
   {
@@ -73,6 +75,7 @@ const vehicles = [
       "The Starfarrer is a rugged and reliable fuel transporter, essential for supporting long-range exploration missions. Its massive fuel tanks ensure extended operational range, making it indispensable for journeys into the unknown. While not built for speed or agility, the Starfarrer excels in its role as a dependable workhorse of the stars.",
     speed: "Low",
     agility: "Low",
+    Size: "Small",
     img: "https://media.starcitizen.tools/2/2a/Philip-howlett-starfarer-final-02.jpg",
   },
   {
@@ -82,6 +85,7 @@ const vehicles = [
       "The E1 Spirit is a versatile and agile spacecraft suitable for a variety of missions, from exploration to light transport. Its sleek design and advanced maneuvering thrusters make it ideal for navigating densely populated space lanes or exploring remote star systems. With its compact yet functional interior, the E1 Spirit offers a perfect balance of speed, agility, and versatility.",
     speed: "High",
     agility: "High",
+    Size: "Small",
     img: "https://media.starcitizen.tools/thumb/9/9e/Spirit_E1_landed_with_passengers_and_luggage.jpg/1920px-Spirit_E1_landed_with_passengers_and_luggage.jpg",
   },
   {
@@ -91,6 +95,7 @@ const vehicles = [
       "The C2 Hercules is a massive cargo transporter designed to haul heavy loads across the galaxy. Its cavernous cargo bay can accommodate a wide variety of goods, from vehicles to bulk materials. Despite its size, the C2 Hercules is surprisingly agile for its class, allowing it to navigate through spaceports and planetary atmospheres with ease.",
     speed: "Moderate",
     agility: "Low",
+    Size: "Small",
     img: "https://media.starcitizen.tools/thumb/c/cc/C2_Feature_Style_clouds.jpg/1920px-C2_Feature_Style_clouds.jpg",
   },
 ];
