@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useMemo, } from "react";
+import { createContext, useContext, useState, useMemo } from "react";
 import PropTypes from "prop-types";
 
 const Intro = createContext();
@@ -19,7 +19,7 @@ export function IntroProvider({ children }) {
 }
 
 IntroProvider.propTypes = {
-    children: PropTypes.node.isRequired,
-  };
-  
+  children: PropTypes.node.isRequired,
+};
+
 export const useIntro = () => useContext(Intro);

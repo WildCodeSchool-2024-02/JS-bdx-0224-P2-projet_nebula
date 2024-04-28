@@ -1,8 +1,12 @@
 @use "./app.scss" as *;
 
+.contactTitle {
+  margin-top: 5rem;
+  text-align: center;
+}
+
 .ContactForm {
   position: relative;
-  top: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
