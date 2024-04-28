@@ -1,8 +1,9 @@
 @use "./app.scss" as *;
 
 footer {
-  background: rgba(2, 64, 146, 0.2);
-  backdrop-filter: blur(10px);
+  @each $property, $value in $glassmorphisme {
+    #{$property}: $value;
+  }
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);

@@ -35,6 +35,7 @@ figcaption {
   @each $property, $value in $glassmorphisme {
     #{$property}: $value;
   }
+  border-radius: 1.5rem;
   justify-content: center;
   margin: auto;
   margin-top: 2rem;

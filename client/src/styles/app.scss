@@ -8,16 +8,15 @@ $unavailableButtonColor: #808080;
 $headerFont: "Tomorrow", sans-serif;
 $bodyFont: "Varela Round", sans-serif;
 $modalGlassmorphism: (
-  background: #552d895e,
+  background: #27104661,
   border-radius: 16px,
   box-shadow: 0 4px 30px #0000001a,
-  backdrop-filter: blur(4px),
+  backdrop-filter: blur(10px),
 );
 $glassmorphisme: (
-  background: #0240921a,
-  border-radius: 16px,
+  background: #011f3b63,
   box-shadow: 0 4px 30px #0000001a,
-  backdrop-filter: blur(4px),
+  backdrop-filter: blur(10px),
 );
 .visibleIntro {
   display: none;

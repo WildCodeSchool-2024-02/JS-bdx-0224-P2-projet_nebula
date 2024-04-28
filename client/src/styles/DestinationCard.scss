@@ -4,6 +4,7 @@
   @each $property, $value in $glassmorphisme {
     #{$property}: $value;
   }
+  border-radius: 1rem;
   display: grid;
   grid-template-columns: 35% 1fr;
   grid-template-rows: auto;
@@ -55,6 +56,7 @@
   @each $property, $value in $modalGlassmorphism {
     #{$property}: $value;
   }
+  box-shadow: inset rgba(0, 0, 0, 0.495) 0 0 150px;
   position: fixed;
   z-index: 999999;
   inset: 3rem 1rem 1rem 1rem;
@@ -80,10 +82,10 @@
   }
   .truncate {
     text-shadow: $blackColor 0 0 5px;
-    line-height: 1.4rem;
-    font-size: 1rem;
-    margin-bottom: 2rem;
-    padding: 1rem;
+    line-height: 1.6rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    padding: 0 1rem 0 1rem;
     overflow-y: scroll;
     overflow-x: hidden;
     display: -webkit-box;
@@ -100,6 +102,9 @@
 
 @media screen and (min-width: 992px) {
   .card {
+    .modal-overlay {
+      box-shadow: inset rgba(0, 0, 0, 0.495) 0 0 150px;
+    }
     .destinationTitle {
       justify-self: center;
       font-size: 2rem;
@@ -122,15 +127,15 @@
   }
 
   .cardImg {
-    height: 20rem;
+    height: 13rem;
     margin-bottom: 0rem;
     align-self: center;
   }
   .react-aria-Dialog {
     .truncate {
       text-shadow: $blackColor 0 0 5px;
-      line-height: 1.4rem;
-      font-size: 1rem;
+      line-height: 1.8rem;
+      font-size: 1.2rem;
       margin-bottom: 1.5rem;
       padding-left: 3rem;
       padding-right: 3rem;

@@ -1,9 +1,6 @@
 @use "./app.scss" as *;
 
 .mainOurDestination {
-  @each $property, $value in $glassmorphisme {
-    #{$property}: $value;
-  }
   display: flex;
   flex-direction: column;
 }
@@ -24,6 +21,7 @@
   border-radius: 1rem;
   margin: 2rem auto;
   padding: 1rem;
+  font-size: 0.8rem;
 }
 
 .ourDestinationInput::placeholder {
@@ -33,5 +31,8 @@
 @media screen and (min-width: 992px) {
   .ourDestinationTitle {
     margin-top: 4rem;
+  }
+  .ourDestinationInput {
+    font-size: 1.1rem;
   }
 }
