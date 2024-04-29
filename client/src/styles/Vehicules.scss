@@ -1,0 +1,111 @@
+@use "./app.scss" as *;
+.cards {
+  display: flex;
+  width: 100dvw;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cardVehicule {
+  @each $property, $value in $glassmorphisme {
+    #{$property}: $value;
+  }
+  text-shadow: 0px 0px 5px gray;
+  padding: 4rem;
+  border-radius: 40px;
+  width: 30dvw;
+  height: auto;
+  margin: 3rem;
+  color: $whiteColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  p {
+    font-family: $bodyFont;
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+}
+
+.cardVehicule:hover {
+  background-color: rgb(18, 13, 18);
+  cursor: pointer;
+}
+
+.vehiculeName {
+  text-align: center;
+  color: $primaryColor;
+  background-color: $whiteColor;
+  border-radius: 20px;
+  font-family: $bodyFont;
+  width: 12rem;
+  margin-bottom: 4dvh;
+  margin-top: 4dvh;
+}
+
+.vehiculeImg {
+  width: 25vw;
+  height: 40vh;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+.carac {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 3dvh;
+}
+
+.spanStyle {
+  padding: 20px;
+  background-color: transparent;
+  color: #fff;
+  margin-top: 4dvh;
+}
+
+.divStyle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 30dvh;
+}
+
+@media screen and (max-width: 992px) {
+  .cardVehicule {
+    @each $property, $value in $glassmorphisme {
+      #{$property}: $value;
+    }
+    text-shadow: 0px 0px 5px gray;
+    padding: 4rem;
+    border: 2px solid white;
+    border-radius: 40px;
+    width: 90dvw;
+    margin: 3rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    p {
+      font-family: $bodyFont;
+      font-size: 1rem;
+      line-height: 1.4rem;
+    }
+  }
+  .vehiculeImg {
+    width: 80dvw;
+    height: 15 rem;
+    object-fit: cover;
+    border-radius: 40px;
+  }
+  .divWidth {
+    width: 80dvw;
+  }
+  .videoPlayer {
+    margin-top: 11dvh;
+    width: 80dvw;
+  }
+}

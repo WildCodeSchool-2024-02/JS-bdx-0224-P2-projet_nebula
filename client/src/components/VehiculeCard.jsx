@@ -8,9 +8,8 @@ export default function VehiculeCard({
   selected,
   handleSelectShip,
 }) {
-  const { reservationFormData, updateReservationFormData } = useContext(
-    ReservationContext
-  );
+  const { reservationFormData, updateReservationFormData } =
+    useContext(ReservationContext);
 
   // Utiliser useState pour stocker les valeurs aléatoires
   const [travelTime] = useState(

@@ -12,6 +12,8 @@ import TrafficInfo from "./pages/TrafficInfo";
 import YourTrip from "./pages/YourTrip";
 import Contact from "./pages/Contact";
 import ErrorPage404 from "./pages/ErrorPage";
+import Vehicule from "./components/Vehicule";
+import vehicules from "./db/VehiculesDb";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/ourDestinations",
         element: <OurDestination />,
+      },
+      {
+        path: "/OurVehicles",
+        element: <Vehicule vehicules={vehicules} />,
       },
       {
         path: "/booking",

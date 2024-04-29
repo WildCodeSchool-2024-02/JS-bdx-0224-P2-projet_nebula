@@ -7,11 +7,13 @@ export function ShipProvider({ children }) {
   const initialShips = [
     {
       name: "C2 Hercule",
-      image: "https://media.starcitizen.tools/thumb/c/cc/C2_Feature_Style_clouds.jpg/1920px-C2_Feature_Style_clouds.jpg",
+      image:
+        "https://media.starcitizen.tools/thumb/c/cc/C2_Feature_Style_clouds.jpg/1920px-C2_Feature_Style_clouds.jpg",
     },
     {
       name: "E1 Spirit",
-      image: "https://media.starcitizen.tools/thumb/c/cd/EXT_Carrack_Microtech_112019-Min.jpg/1920px-EXT_Carrack_Microtech_112019-Min.jpg",
+      image:
+        "https://media.starcitizen.tools/thumb/c/cd/EXT_Carrack_Microtech_112019-Min.jpg/1920px-EXT_Carrack_Microtech_112019-Min.jpg",
     },
   ];
 
@@ -19,12 +21,8 @@ export function ShipProvider({ children }) {
 
   const value = useMemo(() => ({ ships, setShips }), [ships, setShips]);
 
-  return (
-    <ShipContext.Provider value={value}>
-      {children}
-    </ShipContext.Provider>
-  );
-};
+  return <ShipContext.Provider value={value}>{children}</ShipContext.Provider>;
+}
 ShipProvider.propTypes = {
   children: PropTypes.node.isRequired,
 };
