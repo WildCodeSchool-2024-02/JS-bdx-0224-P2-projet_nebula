@@ -1,4 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Sundanese:wght@400..700&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela+Round&display=swap");
+@font-face {
+  font-family: "Alien Sans Latin basic";
+  src: url("https://db.onlinewebfonts.com/t/420dab62909e25af5db5bb86fa024058.eot");
+  src:
+    url("https://db.onlinewebfonts.com/t/420dab62909e25af5db5bb86fa024058.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/420dab62909e25af5db5bb86fa024058.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/420dab62909e25af5db5bb86fa024058.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/420dab62909e25af5db5bb86fa024058.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/420dab62909e25af5db5bb86fa024058.svg#Alien Sans Latin basic")
+      format("svg");
+}
+
+:root {
+  --font-family: "Varela Round", sans-serif;
+}
+
 $whiteColor: #fff8f0;
 $blackColor: #011427;
 $primaryColor: #9548f9;
@@ -7,6 +27,7 @@ $primaryHover: #5907c4;
 $unavailableButtonColor: #808080;
 $headerFont: "Tomorrow", sans-serif;
 $bodyFont: "Varela Round", sans-serif;
+$alienFont: "Alien Sans Latin basic";
 $modalGlassmorphism: (
   background: #552d895e,
   border-radius: 16px,
@@ -52,7 +73,7 @@ p,
 li,
 a,
 button {
-  font-family: $bodyFont;
+  font-family: var(--font-family);
   color: $whiteColor;
 }
 label,
@@ -61,7 +82,7 @@ input,
 datalist {
   background-color: $whiteColor;
   color: $blackColor;
-  font-family: $bodyFont;
+  font-family: var(--font-family);
 }
 button {
   display: block;
