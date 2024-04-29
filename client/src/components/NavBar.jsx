@@ -100,7 +100,6 @@ function NavBar() {
           </li>
           <li>
             <Link to="/OurVehicles" aria-label="link to the Traffic info page">
-              {" "}
               Our vehicles
             </Link>
           </li>
