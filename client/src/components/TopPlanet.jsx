@@ -5,13 +5,11 @@ import Slogan from "./Slogan";
 import "../styles/Header.scss";
 
 function TopPlanet({ introPlanet }) {
-  const [thumbnailUrl, setThumbnailUrl] = useState(" ");
   const [titleUrl, setTitleUrl] = useState(" ");
 
-  fetch("https://api.star-citizen.wiki/api/galactapedia/VarZxj1Qav")
+  fetch("https://api.star-citizen.wiki/api/galactapedia/Rvl7EggdAr")
     .then((response) => response.json())
     .then((data) => {
-      setThumbnailUrl(data.data.thumbnail);
       setTitleUrl(data.data.title);
     });
 
@@ -19,7 +17,6 @@ function TopPlanet({ introPlanet }) {
     <section
       id="header"
       className="titleSlider"
-      style={{ backgroundImage: `url(${thumbnailUrl})` }}
     >
       <Slogan />
       <h2>{introPlanet}</h2>
