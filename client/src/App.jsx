@@ -6,7 +6,7 @@ import { GalactapediaProvider } from "./Contexts/GalactapediaContext";
 import { ShipProvider } from "./Contexts/ShipContext";
 
 import Footer from "./components/Footer";
-import "./styles/app.scss"
+import "./styles/app.scss";
 import NavBar from "./components/NavBar";
 import Arrow from "./components/Arrow";
 

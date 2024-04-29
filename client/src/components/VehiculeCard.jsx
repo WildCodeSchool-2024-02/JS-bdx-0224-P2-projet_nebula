@@ -14,11 +14,11 @@ export default function VehiculeCard({
   // Utiliser useState pour stocker les valeurs aléatoires
   const [travelTime] = useState(
     reservationFormData.selectedShipsData[index]?.travelTime ||
-      Math.floor(Math.random() * 41 + 10),
+      Math.floor(Math.random() * 41 + 10)
   );
   const [price] = useState(
     reservationFormData.selectedShipsData[index]?.price ||
-      Math.floor(Math.random() * 10000),
+      Math.floor(Math.random() * 10000)
   );
 
   const handleSelect = () => {

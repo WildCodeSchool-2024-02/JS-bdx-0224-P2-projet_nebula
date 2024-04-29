@@ -31,7 +31,7 @@ function OurDestination() {
   }, []);
 
   const filteredPlanets = planetData.filter((planet) =>
-    planet.title.toLowerCase().includes(searchTerm.toLowerCase()),
+    planet.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (

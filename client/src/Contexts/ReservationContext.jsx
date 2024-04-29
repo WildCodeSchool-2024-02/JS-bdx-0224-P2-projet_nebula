@@ -19,7 +19,7 @@ export function ReservationProvider({ children }) {
 
   const contextValue = useMemo(
     () => ({ reservationFormData, updateReservationFormData }),
-    [reservationFormData],
+    [reservationFormData]
   );
 
   return (

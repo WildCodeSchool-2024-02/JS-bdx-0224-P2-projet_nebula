@@ -48,7 +48,7 @@ export function GalactapediaProvider({ children }) {
 
   const contextValue = useMemo(
     () => ({ galactapediaData, setGalactapediaData }),
-    [galactapediaData, setGalactapediaData],
+    [galactapediaData, setGalactapediaData]
   );
 
   return (

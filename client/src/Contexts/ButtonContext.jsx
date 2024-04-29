@@ -11,7 +11,7 @@ export function ButtonProvider({ children }) {
       isButtonVisible,
       setIsButtonVisible,
     }),
-    [isButtonVisible],
+    [isButtonVisible]
   );
 
   return (

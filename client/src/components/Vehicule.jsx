@@ -40,7 +40,7 @@ Vehicule.propTypes = {
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
       isFav: PropTypes.bool.isRequired,
-    }),
+    })
   ).isRequired,
 };
 export default Vehicule;
