@@ -27,11 +27,7 @@ export default function JourneyDetails() {
   };
 
   const {
-    selectedDeparture,
-    selectedArrival,
-    selectedDate,
     selectedTripType,
-    selectedTravelers,
     selectedReturnDate,
   } = reservationFormData;
   
