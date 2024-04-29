@@ -3,7 +3,6 @@
   display: flex;
   width: 100dvw;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
 }
 .cardVehicule {
@@ -14,12 +13,18 @@
   padding: 4rem;
   border-radius: 40px;
   width: 30dvw;
+  height: auto;
   margin: 3rem;
-  color: white;
+  color: $whiteColor;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  p {
+    font-family: $bodyFont;
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
 }
 
 .cardVehicule:hover {
@@ -29,14 +34,18 @@
 
 .vehiculeName {
   text-align: center;
-  color: aquamarine;
+  color: $primaryColor;
+  background-color: $whiteColor;
+  border-radius: 20px;
+  font-family: $bodyFont;
+  width: 12rem;
   margin-bottom: 4dvh;
   margin-top: 4dvh;
 }
 
 .vehiculeImg {
-  width: 25rem;
-  height: 15 rem;
+  width: 25vw;
+  height: 40vh;
   object-fit: cover;
   border-radius: 40px;
 }
@@ -64,17 +73,6 @@
   height: 30dvh;
 }
 
-.generic {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.divWidth {
-  width: 30dvw;
-}
-
 @media screen and (max-width: 992px) {
   .cardVehicule {
     @each $property, $value in $glassmorphisme {
@@ -91,6 +89,11 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    p {
+      font-family: $bodyFont;
+      font-size: 1rem;
+      line-height: 1.4rem;
+    }
   }
   .vehiculeImg {
     width: 80dvw;
