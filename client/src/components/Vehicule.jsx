@@ -38,7 +38,7 @@ function Vehicule({ vehicules }) {
         width="100%"
       />
 
-      <div className="cards">
+      <section className="cards">
         {vehicules.map((vehicule) => (
           <div key={vehicule.id} className="cardVehicule">
             <img className="vehiculeImg" src={vehicule.img} alt="img" />
@@ -57,7 +57,7 @@ function Vehicule({ vehicules }) {
             </div>
           </div>
         ))}
-      </div>
+      </section>
       <section className="generic">
         <h1 className="vehiculeName">Equipments</h1>
         <div className="divWidth">
