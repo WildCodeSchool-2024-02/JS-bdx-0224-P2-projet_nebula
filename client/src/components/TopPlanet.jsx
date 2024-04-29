@@ -17,9 +17,6 @@ function TopPlanet({ introPlanet }) {
     <section
       id="header"
       className="titleSlider"
-      style={{
-        backgroundImage: `url(/src/assets/images/twisc020524.png)`,
-      }}
     >
       <Slogan />
       <h2>{introPlanet}</h2>
