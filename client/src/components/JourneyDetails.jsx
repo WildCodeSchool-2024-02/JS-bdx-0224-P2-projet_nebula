@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
-import { useContext, useState } from "react";
+import { Link } from "react-router-dom";
+import { useContext } from "react";
 import {
   Button,
   Dialog,
@@ -9,16 +9,17 @@ import {
 } from "react-aria-components";
 import { ButtonContext } from "../Contexts/ButtonContext";
 import { ReservationContext } from "../Contexts/ReservationContext";
+import { ShipContext } from "../Contexts/ShipContext";
 import "../styles/JourneyDetails.scss";
 
-export default function JourneyDetails({ selectedShip, travelTime }) {
+export default function JourneyDetails() {
   const { reservationFormData } = useContext(ReservationContext);
-  const { setIsButtonVisible } = useContext(ButtonContext);
-  const price = Math.floor(Math.random() * 10000);
-  const [confirmButton, setConfirmButton] = useState("display");
+  const { isButtonVisible, setIsButtonVisible } = useContext(ButtonContext);
+  const { ships } = useContext(ShipContext);
+  const { selectedShipIndex, selectedShipsData } = reservationFormData;
 
   const handleClick = () => {
-    setConfirmButton("displayNone");
+    setIsButtonVisible(true);
   };
 
   const handleModifyClick = () => {
@@ -26,62 +27,78 @@ export default function JourneyDetails({ selectedShip, travelTime }) {
   };
 
   const {
-    selectedDeparture,
-    selectedArrival,
-    selectedDate,
     selectedTripType,
-    selectedTravelers,
+    selectedReturnDate,
   } = reservationFormData;
+  
+  const selectedShip =
+    selectedShipIndex !== null ? ships[selectedShipIndex] : null;
+  const selectedShipData =
+    selectedShipIndex !== null
+      ? selectedShipsData[selectedShipIndex] || {}
+      : {};
 
   return (
     <section className="JourneyDetails">
-      <h2 className={confirmButton}>Summary</h2>
+      <h2>Summary</h2>
       <article>
-        <h3>Détails :</h3>
-        <a className={confirmButton} href=" " onClick={handleModifyClick}>
-          Modify
-          <img
-            src="src/assets/images/ModifyIcon.svg"
-            alt="modify your informations"
-          />
-        </a>
+        <h3>Details :</h3>
+        {!isButtonVisible && (
+          <a href=" # " onClick={handleModifyClick}>
+            Modify
+            <img
+              src="src/assets/images/ModifyIcon.svg"
+              alt="modify your informations"
+            />
+          </a>
+        )}
         <ul>
-          <li>Departure : {selectedDeparture}</li>
-          <li>Destination : {selectedArrival}</li>
-          <li>Departure Date : {selectedDate}</li>
-          <li>Number of passengers : {selectedTravelers}</li>
-          <li>Fare : {selectedTripType}</li>
+          <li>Departure : {reservationFormData.selectedDeparture}</li>
+          <li>Destination : {reservationFormData.selectedArrival}</li>
+          <li>Departure Date : {reservationFormData.selectedDate}</li>
+          <li>
+            Number of passengers : {reservationFormData.selectedTravelers}
+          </li>
+          <li>Fare : {reservationFormData.selectedTripType}</li>
+          {selectedTripType === "roundTrip" && ( 
+            <li>Return Date: {selectedReturnDate}</li>
+          )}
         </ul>
       </article>
       <article>
         <h3>Ship :</h3>
-        <p>{selectedShip.name}</p>
-        <ul>
-          <li>Travel time : {travelTime} days</li>
-          <li>Price : {price} credits</li>
-        </ul>
+        {selectedShip ? (
+          <ul>
+            <li>{selectedShip.name}</li>
+            <li>
+              Travel time : {selectedShipData.travelTime || "Not available"}{" "}
+              days
+            </li>
+            <li>Price : {selectedShipData.price || "Not available"} credits</li>
+          </ul>
+        ) : (
+          <p>No ship selected</p>
+        )}
       </article>
       <DialogTrigger>
-        <Button
-          type="button"
-          className={confirmButton}
-          onClick={() => handleClick()}
-        >
+        <Button type="button" onClick={handleClick}>
           Confirm & Pay
         </Button>
         <ModalOverlay className="modal-overlay">
           <Modal className="modal" />
           <Dialog>
-            {({ close }) => (
+            {() => (
               <>
-                <p>Travel price : credits.</p>
+                <p>Travel price : {selectedShipData.price} credits.</p>
                 <p className="scan">Retinal scan in progress...</p>
                 <img
                   src="https://cdnl.iconscout.com/lottie/premium/thumb/eye-scanner-5456745-4561468.gif"
                   width={300}
-                  alt="Scanner rétinien"
+                  alt="Retinnal scan"
                 />
-                <Button onPress={close}>Your ticket</Button>
+                <Link className="ticketLink" to="/yourTrip">
+                  Your trip
+                </Link>
               </>
             )}
           </Dialog>
@@ -91,10 +108,3 @@ export default function JourneyDetails({ selectedShip, travelTime }) {
     </section>
   );
 }
-
-JourneyDetails.propTypes = {
-  selectedShip: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-  }).isRequired,
-  travelTime: PropTypes.number.isRequired,
-};

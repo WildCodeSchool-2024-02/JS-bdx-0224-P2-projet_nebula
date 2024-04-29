@@ -14,14 +14,14 @@ function ContactForm() {
     <>
       <h2 className="contactTitle">Send us a message</h2>
       <form className="ContactForm" onSubmit={handleSubmit}>
-        <label className="labelContact" htmlFor="username">
-          Username
+        <label className="labelContact" htmlFor="name">
+          Name
         </label>
         <input
           className="inputContact"
           type="text"
           minLength="5"
-          id="username"
+          id="name"
           required
         />
         <label className="labelContact" htmlFor="email">

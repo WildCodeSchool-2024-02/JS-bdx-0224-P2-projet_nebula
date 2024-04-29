@@ -47,6 +47,10 @@ function NavBar() {
     setIsMenuClicked(!isMenuClicked);
   };
 
+  const handleChangeLanguage = (font) => {
+    document.documentElement.style.setProperty("--font-family", font);
+  };
+
   return (
     <>
       <a href="/">
@@ -124,6 +128,26 @@ function NavBar() {
             >
               Contact us
             </Link>
+          </li>
+          <li>
+            <button
+              type="button"
+              aria-label="change to Engligh"
+              className="language"
+              onClick={() => handleChangeLanguage("Varela Round, sans-serif")}
+            >
+              <img src=".\src\assets\images\British-flag.png" alt="" />
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              aria-label="change to alien"
+              className="language"
+              onClick={() => handleChangeLanguage("Alien Sans Latin basic")}
+            >
+              <img src=".\src\assets\images\Alien-flag.png" alt="" />
+            </button>
           </li>
         </ul>
       </nav>
