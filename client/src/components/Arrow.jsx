@@ -11,7 +11,7 @@ function Arrow() {
     >
       <img
         className="arrow"
-        src="/src/assets/images/icons8-fusée-100 (1).png"
+        src="/src/assets/images/icons8-fusée-100.png"
         alt="Arrow"
       />
       <p className="returnText">return top</p>
