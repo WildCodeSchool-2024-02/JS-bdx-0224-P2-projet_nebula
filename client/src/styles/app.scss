@@ -35,6 +35,9 @@ $glassmorphisme: (
 *:focus-visible {
   outline: solid $primaryColor 0.2rem;
 }
+footer {
+  margin-top: 2rem;
+}
 body {
   background-image: url("/src/assets/images/imageFondMobil.png");
   background-size: cover;
@@ -86,10 +89,6 @@ button:hover {
   body {
     background-image: url("/src/assets/images/imageFontDesk.png");
   }
-  footer {
-    position: relative;
-    bottom: 0;
-  }
   .spline {
     margin-top: -1rem;
   }
@@ -117,7 +116,7 @@ button:hover {
     background-color: $primaryHover;
   }
   .visibleIntro {
-    display: inherit;
+    display: block;
   }
   .notVisibleIntro {
     display: none;

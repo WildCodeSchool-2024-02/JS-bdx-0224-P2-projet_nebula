@@ -12,6 +12,7 @@ export function ReservationProvider({ children }) {
     selectedTravelers: 1,
     returnSelected: false,
     selectedReturnDate: "",
+    selectedShipsData: {},
   });
 
   const updateReservationFormData = (newFormData) => {

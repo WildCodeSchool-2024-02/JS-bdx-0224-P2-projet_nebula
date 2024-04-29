@@ -3,6 +3,8 @@ import { IntroProvider } from "./Contexts/IntroContext";
 import { ReservationProvider } from "./Contexts/ReservationContext";
 import { ButtonProvider } from "./Contexts/ButtonContext";
 import { GalactapediaProvider } from "./Contexts/GalactapediaContext";
+import { ShipProvider } from "./Contexts/ShipContext";
+
 import Footer from "./components/Footer";
 import "./styles/app.scss";
 import NavBar from "./components/NavBar";
@@ -17,7 +19,9 @@ function App() {
           <ButtonProvider>
             <ReservationProvider>
               <GalactapediaProvider>
-                <Outlet />
+                <ShipProvider>
+                  <Outlet />
+                </ShipProvider>
               </GalactapediaProvider>
             </ReservationProvider>
           </ButtonProvider>
