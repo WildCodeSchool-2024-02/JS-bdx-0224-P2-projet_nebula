@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import PropTypes from "prop-types";
 import "../styles/VehiculeSelect.scss";
 import VehiculeCard from "./VehiculeCard";
+import { ShipContext } from "../Contexts/ShipContext";
 
-export default function VehiculeSelect({ ships, setSelectedShip }) {
+export default function VehiculeSelect({ setSelectedShip }) {
+  const { ships } = useContext(ShipContext);
+
   const [selectedShipIndex, setSelectedShipIndex] = useState(null);
 
   const handleSelectShip = (index) => {
@@ -27,11 +30,5 @@ export default function VehiculeSelect({ ships, setSelectedShip }) {
 }
 
 VehiculeSelect.propTypes = {
-  ships: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      image: PropTypes.string.isRequired,
-    })
-  ).isRequired,
   setSelectedShip: PropTypes.func.isRequired,
 };
