@@ -21,6 +21,11 @@ const equipementsIMG = [
     caption: "Helmet 3",
     favorite: false,
   },
+  {
+    url: "https://media.robertsspaceindustries.com/ymfc96ij31rfz/slideshow.jpg",
+    caption: "Helmet 3",
+    favorite: false,
+  },
 ];
 
 function Vehicule({ vehicules }) {
