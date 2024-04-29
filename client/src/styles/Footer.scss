@@ -5,7 +5,7 @@ footer {
   backdrop-filter: blur(10px);
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, 1fr);
   margin-top: 3rem;
   padding-top: 1rem;
@@ -23,7 +23,7 @@ footer {
     font-size: 0.8rem;
     transition: all ease-in-out 0.3s;
     box-shadow: 0 0 0.5rem #a05cf9;
-    grid-column: 2/3;
+    grid-column: 3/4;
   }
   .contactButton:hover {
     background-color: $primaryHover;
@@ -36,15 +36,15 @@ footer {
   }
 
   .discordLink {
-    grid-column: 3/4;
+    grid-column: 2/3;
     grid-row: 1/2;
-    justify-self: left;
+    justify-self: right;
     align-self: center;
   }
   .slackLink {
-    grid-column: 3/4;
+    grid-column: 4/5;
     grid-row: 1/2;
-    justify-self: right;
+    justify-self: left;
     align-self: center;
   }
 
@@ -53,32 +53,31 @@ footer {
     opacity: 50%;
     text-align: center;
     margin: 0rem 1rem 0.5rem 1rem;
-    grid-column: 1/5;
+    grid-column: 1/6;
     grid-row: 2/3;
   }
 }
 
 @media screen and (min-width: 992px) {
   footer {
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(13, 1fr);
     .contactButton {
       font-size: 1.1rem;
       width: 9rem;
       height: 2.5rem;
       transition: all ease-in-out 0.3s;
-      grid-column: 6/7;
+      grid-column: 7/8;
     }
     .discordLink {
-      justify-self: left;
-      grid-column: 7/8;
+      grid-column: 6/7;
     }
     .slackLink {
-      grid-column: 7/8;
+      grid-column: 8/9;
       padding-right: 1rem;
     }
     p {
       font-size: 0.7rem;
-      grid-column: 1/13;
+      grid-column: 1/14;
     }
     a {
       img {
