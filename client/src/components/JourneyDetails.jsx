@@ -26,11 +26,8 @@ export default function JourneyDetails() {
     setIsButtonVisible(true);
   };
 
-  const {
-    selectedTripType,
-    selectedReturnDate,
-  } = reservationFormData;
-  
+  const { selectedTripType, selectedReturnDate } = reservationFormData;
+
   const selectedShip =
     selectedShipIndex !== null ? ships[selectedShipIndex] : null;
   const selectedShipData =
@@ -60,7 +57,7 @@ export default function JourneyDetails() {
             Number of passengers : {reservationFormData.selectedTravelers}
           </li>
           <li>Fare : {reservationFormData.selectedTripType}</li>
-          {selectedTripType === "roundTrip" && ( 
+          {selectedTripType === "roundTrip" && (
             <li>Return Date: {selectedReturnDate}</li>
           )}
         </ul>
@@ -81,9 +78,11 @@ export default function JourneyDetails() {
         )}
       </article>
       <DialogTrigger>
-        <Button type="button" onClick={handleClick}>
-          Confirm & Pay
-        </Button>
+        {!isButtonVisible && (
+          <Button type="button" onClick={handleClick}>
+            Confirm & Pay
+          </Button>
+        )}
         <ModalOverlay className="modal-overlay">
           <Modal className="modal" />
           <Dialog>
