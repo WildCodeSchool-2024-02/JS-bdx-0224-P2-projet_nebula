@@ -1,0 +1,39 @@
+@use "./app.scss" as *;
+
+.arrow {
+  width: 2rem;
+}
+.buttonTop {
+  background-color: transparent;
+  box-shadow: none;
+  position: fixed;
+  bottom: 0.5rem;
+  right: 0.1rem;
+  z-index: 9999;
+}
+
+.buttonTop:hover {
+  background-color: transparent;
+  box-shadow: none;
+}
+.buttonTop:hover {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.returnText {
+  font-size: 0.5rem;
+  text-align: center;
+  color: $whiteColor;
+  opacity: 100%;
+}
+
+@media screen and (min-width: 992px) {
+  .buttonTop {
+    bottom: 1rem;
+    right: 1rem;
+  }
+  .arrow {
+    width: 3rem;
+  }
+}

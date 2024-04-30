@@ -1,0 +1,38 @@
+@use "./app.scss" as *;
+
+.error404Body {
+  background-image: url(../assets/images/wormhole.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.error404 {
+  @each $property, $value in $modalGlassmorphism {
+    #{$property}: $value;
+  }
+  padding: 2rem;
+}
+.titleError404 {
+  text-align: center;
+  font-family: $headerFont;
+  margin: 2rem;
+  padding: 0.5rem;
+}
+.textError404 {
+  text-align: center;
+  font-family: $bodyFont;
+  color: $whiteColor;
+  padding: 1rem;
+  margin: 1rem;
+}
+.linkError {
+  display: flex;
+  justify-content: center;
+  font-family: $bodyFont;
+  color: $whiteColor;
+}

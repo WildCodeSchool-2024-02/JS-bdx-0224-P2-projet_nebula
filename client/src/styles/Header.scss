@@ -1,0 +1,49 @@
+@use "./app.scss" as *;
+
+.titleSlider {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-image: url(/src/assets/images/twisc020524.png);
+  background-size: cover;
+  height: 30rem;
+  background-repeat: no-repeat;
+
+  h2 {
+    font-family: $headerFont;
+    text-shadow: 0 0 15px black;
+  }
+  h2:first-of-type {
+    margin-top: 2rem;
+  }
+  h2:last-of-type {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  a {
+    align-self: center;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .titleSlider {
+    background-position: 0 0rem;
+    background-size: cover;
+    height: 45rem;
+    h2 {
+      font-size: 4rem;
+    }
+    h2:first-of-type {
+      margin-top: 5rem;
+    }
+    h2:last-of-type {
+      font-size: 5rem;
+    }
+    a {
+      font-size: 1.1rem;
+      align-self: center;
+      margin-top: 3rem;
+    }
+  }
+}

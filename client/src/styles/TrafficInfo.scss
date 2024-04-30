@@ -1,0 +1,44 @@
+@use "./app.scss" as *;
+
+.trafficPage {
+  margin: 3rem;
+  padding: 1rem;
+  line-height: 2rem;
+  h1,
+  figcaption {
+    display: flex;
+    justify-content: center;
+  }
+  h1 {
+    margin-top: 0.8rem;
+  }
+  img {
+    display: block;
+    margin: auto;
+    width: 100%;
+    border-radius: 2rem;
+    margin: 2rem 0 1rem 0;
+  }
+}
+
+figcaption {
+  font-family: $bodyFont;
+  color: $whiteColor;
+}
+
+.trafficSection {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.trafficCard {
+  @each $property, $value in $glassmorphisme {
+    #{$property}: $value;
+  }
+  justify-content: center;
+  margin: auto;
+  margin-top: 2rem;
+  padding: 1rem;
+  line-height: 2rem;
+  width: 100%;
+}
